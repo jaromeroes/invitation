@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jose & Oarda · 31 Octubre 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --paper:   #fdf6ed;
+  --warm:    #f5ead6;
+  --terra:   #c4603a;
+  --terra2:  #e8895a;
+  --gold:    #c4973a;
+  --gold2:   #ddb96a;
+  --garnet:  #8b2635;
+  --garnet2: #b03545;
+  --sage:    #6b7c5a;
+  --dark:    #1a120a;
+  --text:    #2a1e12;
+  --muted:   #6a5240;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ═══════════════════════════════
+   LANG BAR
+═══════════════════════════════ */
+#lang-bar {
+  position: fixed; top: 1.2rem; right: 1.5rem; z-index: 200;
+  display: flex;
+  background: rgba(26,18,10,0.88);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(196,151,58,0.35);
+  padding: 0.3rem 0.45rem;
+}
+.lang-btn {
+  font-size: 1.3rem; background: none; border: none; cursor: pointer;
+  padding: 0.2rem 0.4rem; opacity: 0.45; transition: opacity 0.25s; line-height: 1;
+}
+.lang-btn:hover  { opacity: 0.85; }
+.lang-btn.active { opacity: 1; filter: drop-shadow(0 0 5px rgba(196,151,58,0.7)); }
+
+/* ═══════════════════════════════
+   HERO
+═══════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  background: var(--paper);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 5rem 2rem 7rem;
+  position: relative; overflow: hidden;
+}
+
+/* Overlay oscuro inicial que desaparece */
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--dark); z-index: 20;
+  animation: fadeOut 1s ease 0.4s forwards;
+  pointer-events: none;
+}
+@keyframes fadeOut { to { opacity: 0; } }
+
+/* Peonia izquierda */
+.hero-floral-left {
+  position: absolute; left: -30px; top: -10px;
+  width: min(420px, 52vw); pointer-events: none;
+  animation: floralL 1.3s cubic-bezier(0.22,1,0.36,1) 1.1s both;
+}
+/* Peonia derecha */
+.hero-floral-right {
+  position: absolute; right: -30px; bottom: -10px;
+  width: min(420px, 52vw); pointer-events: none;
+  animation: floralR 1.3s cubic-bezier(0.22,1,0.36,1) 1.3s both;
+}
+@keyframes floralL { from { opacity:0; transform:translateX(-60px); } to { opacity:1; transform:translateX(0); } }
+@keyframes floralR { from { opacity:0; transform:translateX(60px);  } to { opacity:1; transform:translateX(0); } }
+
+/* Velas decorativas */
+.hero-candles {
+  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: min(500px, 80vw); pointer-events: none;
+  animation: riseIn 1s ease 2s both;
+}
+
+.hero-content { position: relative; z-index: 2; }
+
+.hero-eyebrow {
+  font-size: 0.58rem; letter-spacing: 0.6em;
+  color: var(--terra); text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  animation: riseIn 0.9s ease 1.3s both;
+}
+.hero-names {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(4rem,12vw,9.5rem);
+  line-height: 0.88; color: var(--dark);
+  animation: riseIn 1.1s cubic-bezier(0.22,1,0.36,1) 1.55s both;
+}
+.hero-names em { font-style: italic; color: var(--garnet); }
+.hero-names .amp {
+  display: block; font-size: 0.42em; font-style: italic;
+  color: var(--gold); margin: 0.3em 0; letter-spacing: 0.05em;
+}
+.hero-date-block {
+  margin-top: 2.2rem;
+  animation: riseIn 0.9s ease 2s both;
+}
+.hero-date-block .d1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.9rem,2vw,1.1rem);
+  letter-spacing: 0.38em; color: var(--muted);
+}
+.hero-date-block .d2 {
+  font-size: 0.72rem; letter-spacing: 0.3em;
+  color: var(--gold); margin-top: 0.5rem; font-style: italic;
+}
+
+@keyframes riseIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+
+.scroll-cue {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+  cursor: pointer; z-index: 3; animation: riseIn 0.8s ease 2.8s both;
+}
+.scroll-cue span { font-size: 0.5rem; letter-spacing: 0.45em; color: var(--gold); text-transform: uppercase; }
+.scroll-line { width: 1px; height: 44px; background: linear-gradient(to bottom, var(--gold), transparent); animation: linePulse 1.6s ease-in-out 3.2s infinite; }
+@keyframes linePulse {
+  0%,100% { transform: scaleY(0.1); opacity:0.2; }
+  50%      { transform: scaleY(1);   opacity:1; }
+}
+
+/* ═══════════════════════════════
+   BANDA ROMBOS NAZARÍES
+═══════════════════════════════ */
+.diamond-band {
+  width: 100%; overflow: hidden; line-height: 0;
+  background: var(--dark);
+}
+.diamond-band svg { display: block; width: 100%; }
+
+/* ═══════════════════════════════
+   COUNTDOWN
+═══════════════════════════════ */
+.cd-wrap {
+  background: var(--dark); padding: 5rem 2rem;
+  text-align: center; position: relative; overflow: hidden;
+}
+.cd-wrap::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(196,96,58,0.08) 0%, transparent 70%);
+}
+.cd-label { font-size: 0.56rem; letter-spacing: 0.55em; color: rgba(196,151,58,0.55); text-transform: uppercase; margin-bottom: 0.8rem; }
+.cd-title { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: clamp(1.8rem,4vw,2.8rem); color: var(--paper); margin-bottom: 3rem; }
+.cd-grid { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; align-items: flex-start; }
+.cd-unit { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
+.cd-num { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem,8vw,5.5rem); font-weight: 300; color: var(--paper); line-height: 1; border-bottom: 1px solid rgba(196,151,58,0.2); padding-bottom: 0.4rem; min-width: 2ch; text-align: center; }
+.cd-lbl { font-size: 0.53rem; letter-spacing: 0.45em; color: var(--gold); text-transform: uppercase; }
+.cd-dot  { font-size: 2rem; color: rgba(196,151,58,0.25); line-height: 1; padding-top: 0.5rem; }
+
+/* ═══════════════════════════════
+   HISTORIA
+═══════════════════════════════ */
+.story-band {
+  background: var(--warm); padding: 6rem 2rem;
+  position: relative; overflow: hidden;
+}
+.story-corner {
+  position: absolute; width: min(220px,35vw); opacity: 0.22; pointer-events: none;
+}
+.story-corner.tl { top: -10px; left: -10px; }
+.story-corner.br { bottom: -10px; right: -10px; transform: rotate(180deg); }
+
+.story-quote {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300;
+  font-size: clamp(1.25rem,3vw,1.85rem); color: var(--dark); line-height: 1.8;
+  margin: 2rem 0; border-left: 2px solid var(--gold);
+  padding-left: 2rem; text-align: left;
+}
+
+/* ═══════════════════════════════
+   ARCO NAZARÍ (venue)
+═══════════════════════════════ */
+.arch-section {
+  background: var(--paper); padding: 6rem 2rem;
+  position: relative; overflow: hidden;
+}
+.arch-bg {
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: min(600px,90vw); opacity: 0.06; pointer-events: none;
+}
+
+.venue-arch {
+  max-width: 420px; margin: 2rem auto;
+  position: relative; text-align: center;
+}
+.venue-arch svg { width: 100%; display: block; }
+.venue-arch-content {
+  position: absolute; bottom: 12%; left: 50%; transform: translateX(-50%);
+  width: 75%; text-align: center;
+}
+.venue-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem,3vw,1.35rem); font-weight: 600; color: #1a120a; letter-spacing: 0.04em; margin-bottom: 0.4rem; }
+.venue-addr { font-size: 0.78rem; letter-spacing: 0.12em; color: var(--gold); font-style: italic; }
+.venue-note { font-size: 0.92rem; color: #2a1e12; margin-top: 1.4rem; line-height: 1.95; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+/* ═══════════════════════════════
+   GENERIC REVEAL
+═══════════════════════════════ */
+.reveal { opacity:0; transform:translateY(30px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+.section-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+.s-tag { font-size: 0.56rem; letter-spacing: 0.55em; color: var(--terra); text-transform: uppercase; margin-bottom: 1.2rem; }
+.s-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(2rem,5vw,3rem); color: var(--dark); margin-bottom: 2rem; line-height: 1.2; }
+.s-text { font-size: 1.03rem; line-height: 2.05; color: var(--muted); }
+
+/* ═══════════════════════════════
+   RSVP
+═══════════════════════════════ */
+.rsvp-band { background: var(--dark); padding: 6rem 2rem; position: relative; overflow: hidden; }
+.rsvp-band::before { content:''; position:absolute; inset:0; pointer-events:none; background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(196,96,58,0.08) 0%, transparent 70%); }
+.rsvp-inner { max-width: 580px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+.rsvp-band .s-tag   { color: rgba(196,151,58,0.65); }
+.rsvp-band .s-title { color: var(--paper); }
+.rsvp-band .s-text  { color: rgba(253,246,237,0.55); }
+
+.contacts { display:flex; flex-direction:column; gap:0.75rem; margin:2.5rem 0; align-items:center; }
+.contact-row { display:flex; align-items:center; gap:1rem; padding:1rem 1.8rem; border:1px solid rgba(196,151,58,0.22); width:100%; max-width:400px; text-decoration:none; transition:border-color 0.3s,background 0.3s; }
+.contact-row:hover { border-color:var(--gold); background:rgba(196,151,58,0.07); }
+.c-icon { color:var(--gold); font-size:1rem; width:22px; text-align:center; flex-shrink:0; }
+.c-info { text-align:left; }
+.c-type { font-size:0.5rem; letter-spacing:0.35em; color:rgba(253,246,237,0.3); display:block; margin-bottom:0.15rem; }
+.c-val  { font-size:0.9rem; color:var(--paper); }
+
+.rsvp-form { max-width:440px; margin:2.5rem auto 0; display:flex; flex-direction:column; gap:0.9rem; }
+.fg { display:flex; flex-direction:column; gap:0.4rem; text-align:left; }
+.fg label { font-size:0.52rem; letter-spacing:0.38em; color:rgba(196,151,58,0.7); text-transform:uppercase; }
+.fg input,.fg select,.fg textarea { background:rgba(255,255,255,0.04); border:1px solid rgba(196,151,58,0.22); color:var(--paper); padding:0.85rem 1rem; font-family:'Jost',sans-serif; font-size:0.95rem; outline:none; transition:border-color 0.3s; width:100%; }
+.fg input::placeholder,.fg textarea::placeholder { color:rgba(253,246,237,0.25); }
+.fg input:focus,.fg select:focus,.fg textarea:focus { border-color:var(--gold); }
+.fg select option { background:#1a120a; }
+.fg textarea { resize:vertical; min-height:80px; }
+.rsvp-btn { align-self:center; margin-top:0.8rem; padding:0.95rem 3rem; background:transparent; border:1px solid var(--gold); color:var(--gold); font-family:'Jost',sans-serif; font-size:0.62rem; letter-spacing:0.48em; text-transform:uppercase; cursor:pointer; transition:background 0.3s,color 0.3s; }
+.rsvp-btn:hover { background:var(--gold); color:var(--dark); }
+.rsvp-ok { display:none; margin-top:2rem; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(1.3rem,3vw,1.8rem); color:var(--gold2); line-height:1.8; padding:2rem; border:1px solid rgba(196,151,58,0.3); }
+
+footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padding:2.5rem; text-align:center; color:rgba(253,246,237,0.18); font-size:0.72rem; letter-spacing:0.22em; font-style:italic; }
+
+@media(max-width:600px) { .cd-dot{display:none;} .contact-row{max-width:100%;} }
+</style>
+</head>
+<body>
+
+<!-- LANG BAR -->
+<div id="lang-bar">
+  <button class="lang-btn active" onclick="setLang('es',this)" title="Español">🇪🇸</button>
+  <button class="lang-btn" onclick="setLang('sq',this)" title="Shqip">🇦🇱</button>
+  <button class="lang-btn" onclick="setLang('en',this)" title="English">🇬🇧</button>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<div class="hero">
+
+  <!-- PEONÍAS IZQUIERDA -->
+  <svg class="hero-floral-left" viewBox="0 0 420 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Tallo principal -->
+    <path d="M320 750 C315 650 295 540 265 430 C240 330 205 240 170 155 C145 85 120 35 95 5" stroke="#6b7c5a" stroke-width="2" fill="none"/>
+    <!-- Hojas -->
+    <path d="M265 430 C240 412 210 408 188 394" stroke="#6b7c5a" stroke-width="1.3" fill="none"/>
+    <path d="M188 394 C178 378 182 360 196 354 C208 360 210 378 202 394 Z" fill="#7a8c6a" opacity="0.5"/>
+    <path d="M280 480 C302 462 325 458 340 445" stroke="#6b7c5a" stroke-width="1.3" fill="none"/>
+    <path d="M340 445 C348 430 345 412 332 408 C320 412 318 430 328 445 Z" fill="#7a8c6a" opacity="0.5"/>
+    <path d="M230 330 C208 312 182 308 162 295" stroke="#6b7c5a" stroke-width="1.3" fill="none"/>
+    <path d="M162 295 C150 278 154 260 168 254 C180 260 182 278 175 294 Z" fill="#7a8c6a" opacity="0.5"/>
+    <path d="M248 370 C270 352 295 348 310 336" stroke="#6b7c5a" stroke-width="1.3" fill="none"/>
+    <path d="M310 336 C320 320 316 302 303 298 C290 302 288 320 298 335 Z" fill="#7a8c6a" opacity="0.5"/>
+    <!-- Hoja grande -->
+    <path d="M200 220 C188 195 192 168 210 158 C225 168 228 195 218 220 Q210 226 200 220 Z" fill="#6b7c5a" opacity="0.45"/>
+    <path d="M246 600 C234 575 238 548 256 538 C271 548 274 575 264 600 Q256 606 246 600 Z" fill="#6b7c5a" opacity="0.45"/>
+    <!-- PEONÍA GRANDE (arriba) -->
+    <g transform="translate(95,5)">
+      <!-- Pétalos exteriores -->
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(40)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(80)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(120)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(160)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(200)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(240)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(280)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(320)"/>
+      <!-- Pétalos interiores -->
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(20)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(60)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(100)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(140)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(220)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(260)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(300)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(340)"/>
+      <!-- Centro -->
+      <circle cx="0" cy="0" r="10" fill="#c4973a"/>
+      <circle cx="0" cy="0" r="6" fill="#ddb96a"/>
+      <circle cx="0" cy="0" r="3" fill="#f5ead6"/>
+    </g>
+    <!-- PEONÍA MEDIA -->
+    <g transform="translate(200,228)">
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(45)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(90)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(135)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(225)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(270)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(315)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(22.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(67.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(112.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(157.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(202.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(247.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(292.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(337.5)"/>
+      <circle cx="0" cy="0" r="8" fill="#c4973a"/>
+      <circle cx="0" cy="0" r="4" fill="#ddb96a"/>
+    </g>
+    <!-- GRANADA (fruta) pequeña -->
+    <g transform="translate(270,490)">
+      <ellipse cx="0" cy="0" rx="18" ry="22" fill="#8b2635" opacity="0.85"/>
+      <ellipse cx="0" cy="0" rx="14" ry="18" fill="#b03545" opacity="0.6"/>
+      <!-- Corona -->
+      <path d="M-8,-22 L-6,-30 L-4,-22" stroke="#c4973a" stroke-width="1.5" fill="none"/>
+      <path d="M-2,-23 L0,-32 L2,-23" stroke="#c4973a" stroke-width="1.5" fill="none"/>
+      <path d="M4,-22 L6,-30 L8,-22" stroke="#c4973a" stroke-width="1.5" fill="none"/>
+      <!-- Granos visibles -->
+      <circle cx="-5" cy="-5" r="3" fill="#ddb96a" opacity="0.7"/>
+      <circle cx="5" cy="-8" r="3" fill="#ddb96a" opacity="0.7"/>
+      <circle cx="0" cy="2" r="3" fill="#ddb96a" opacity="0.7"/>
+      <circle cx="-8" cy="4" r="2.5" fill="#ddb96a" opacity="0.7"/>
+      <circle cx="8" cy="4" r="2.5" fill="#ddb96a" opacity="0.7"/>
+      <circle cx="-3" cy="10" r="2.5" fill="#ddb96a" opacity="0.7"/>
+      <circle cx="5" cy="9" r="2.5" fill="#ddb96a" opacity="0.7"/>
+    </g>
+    <!-- Capullo pequeño -->
+    <g transform="translate(162,158)">
+      <path d="M0,12 C-8,4 -10,-8 -4,-16 C2,-8 4,4 0,12 Z" fill="#c4603a" opacity="0.75"/>
+      <path d="M0,12 C8,4 10,-8 4,-16 C-2,-8 -4,4 0,12 Z" fill="#e8895a" opacity="0.75"/>
+      <path d="M0,-16 L0,-26" stroke="#6b7c5a" stroke-width="1.2"/>
+    </g>
+  </svg>
+
+  <!-- PEONÍAS DERECHA (espejada) -->
+  <svg class="hero-floral-right" viewBox="0 0 420 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 750 C105 650 125 540 155 430 C180 330 215 240 250 155 C275 85 300 35 325 5" stroke="#6b7c5a" stroke-width="2" fill="none"/>
+    <path d="M155 430 C180 412 210 408 232 394" stroke="#6b7c5a" stroke-width="1.3" fill="none"/>
+    <path d="M232 394 C242 378 238 360 224 354 C212 360 210 378 218 394 Z" fill="#7a8c6a" opacity="0.5"/>
+    <path d="M140 480 C118 462 95 458 80 445" stroke="#6b7c5a" stroke-width="1.3" fill="none"/>
+    <path d="M80 445 C72 430 75 412 88 408 C100 412 102 430 92 445 Z" fill="#7a8c6a" opacity="0.5"/>
+    <path d="M190 330 C212 312 238 308 258 295" stroke="#6b7c5a" stroke-width="1.3" fill="none"/>
+    <path d="M258 295 C270 278 266 260 252 254 C240 260 238 278 245 294 Z" fill="#7a8c6a" opacity="0.5"/>
+    <path d="M175 375 C153 357 128 353 113 341" stroke="#6b7c5a" stroke-width="1.3" fill="none"/>
+    <path d="M113 341 C103 325 107 307 120 303 C133 307 135 325 125 340 Z" fill="#7a8c6a" opacity="0.5"/>
+    <path d="M220 220 C232 195 228 168 210 158 C195 168 192 195 202 220 Q210 226 220 220 Z" fill="#6b7c5a" opacity="0.45"/>
+    <path d="M174 600 C186 575 182 548 164 538 C149 548 146 575 156 600 Q164 606 174 600 Z" fill="#6b7c5a" opacity="0.45"/>
+    <g transform="translate(325,5)">
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(40)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(80)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(120)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(160)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(200)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(240)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(280)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="28" fill="#c4603a" opacity="0.85" transform="rotate(320)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(20)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(60)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(100)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(140)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(220)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(260)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(300)"/>
+      <ellipse cx="0" cy="-18" rx="10" ry="18" fill="#e8895a" opacity="0.9" transform="rotate(340)"/>
+      <circle cx="0" cy="0" r="10" fill="#c4973a"/>
+      <circle cx="0" cy="0" r="6" fill="#ddb96a"/>
+      <circle cx="0" cy="0" r="3" fill="#f5ead6"/>
+    </g>
+    <g transform="translate(220,228)">
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(45)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(90)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(135)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(225)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(270)"/>
+      <ellipse cx="0" cy="-22" rx="11" ry="22" fill="#8b2635" opacity="0.8" transform="rotate(315)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(22.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(67.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(112.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(157.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(202.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(247.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(292.5)"/>
+      <ellipse cx="0" cy="-14" rx="8" ry="14" fill="#b03545" opacity="0.9" transform="rotate(337.5)"/>
+      <circle cx="0" cy="0" r="8" fill="#c4973a"/>
+      <circle cx="0" cy="0" r="4" fill="#ddb96a"/>
+    </g>
+    <g transform="translate(150,490)">
+      <ellipse cx="0" cy="0" rx="18" ry="22" fill="#8b2635" opacity="0.85"/>
+      <ellipse cx="0" cy="0" rx="14" ry="18" fill="#b03545" opacity="0.6"/>
+      <path d="M-8,-22 L-6,-30 L-4,-22" stroke="#c4973a" stroke-width="1.5" fill="none"/>
+      <path d="M-2,-23 L0,-32 L2,-23" stroke="#c4973a" stroke-width="1.5" fill="none"/>
+      <path d="M4,-22 L6,-30 L8,-22" stroke="#c4973a" stroke-width="1.5" fill="none"/>
+      <circle cx="-5" cy="-5" r="3" fill="#ddb96a" opacity="0.7"/>
+      <circle cx="5" cy="-8" r="3" fill="#ddb96a" opacity="0.7"/>
+      <circle cx="0" cy="2" r="3" fill="#ddb96a" opacity="0.7"/>
+      <circle cx="-8" cy="4" r="2.5" fill="#ddb96a" opacity="0.7"/>
+      <circle cx="8" cy="4" r="2.5" fill="#ddb96a" opacity="0.7"/>
+      <circle cx="-3" cy="10" r="2.5" fill="#ddb96a" opacity="0.7"/>
+      <circle cx="5" cy="9" r="2.5" fill="#ddb96a" opacity="0.7"/>
+    </g>
+    <g transform="translate(258,158)">
+      <path d="M0,12 C-8,4 -10,-8 -4,-16 C2,-8 4,4 0,12 Z" fill="#c4603a" opacity="0.75"/>
+      <path d="M0,12 C8,4 10,-8 4,-16 C-2,-8 -4,4 0,12 Z" fill="#e8895a" opacity="0.75"/>
+      <path d="M0,-16 L0,-26" stroke="#6b7c5a" stroke-width="1.2"/>
+    </g>
+  </svg>
+
+  <!-- VELAS -->
+  <svg class="hero-candles" viewBox="0 0 500 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Vela izquierda alta -->
+    <rect x="95" y="30" width="14" height="70" fill="#f5ead6" stroke="#ddb96a" stroke-width="0.8" rx="1"/>
+    <rect x="96" y="52" width="12" height="48" fill="#e8d8b8" rx="1" opacity="0.5"/>
+    <!-- Mecha -->
+    <line x1="102" y1="30" x2="102" y2="20" stroke="#2a1e12" stroke-width="1.2"/>
+    <!-- Llama -->
+    <ellipse cx="102" cy="14" rx="5" ry="8" fill="#c4973a" opacity="0.9"/>
+    <ellipse cx="102" cy="16" rx="3" ry="5" fill="#f5c842" opacity="0.95"/>
+    <ellipse cx="102" cy="18" rx="1.5" ry="3" fill="#fff8e7"/>
+    <!-- Cera derramada -->
+    <path d="M95 45 C93 48 91 52 93 55 C95 52 95 48 95 45 Z" fill="#f0e0c0" opacity="0.7"/>
+
+    <!-- Vela izquierda baja -->
+    <rect x="135" y="55" width="11" height="45" fill="#f5ead6" stroke="#ddb96a" stroke-width="0.8" rx="1"/>
+    <line x1="140.5" y1="55" x2="140.5" y2="47" stroke="#2a1e12" stroke-width="1.1"/>
+    <ellipse cx="140.5" cy="41" rx="4" ry="6.5" fill="#c4973a" opacity="0.85"/>
+    <ellipse cx="140.5" cy="43" rx="2.5" ry="4" fill="#f5c842" opacity="0.9"/>
+    <ellipse cx="140.5" cy="45" rx="1.2" ry="2.5" fill="#fff8e7"/>
+
+    <!-- Vela central alta -->
+    <rect x="243" y="15" width="16" height="85" fill="#f5ead6" stroke="#ddb96a" stroke-width="0.9" rx="1"/>
+    <rect x="244" y="42" width="14" height="58" fill="#e8d8b8" rx="1" opacity="0.5"/>
+    <line x1="251" y1="15" x2="251" y2="3" stroke="#2a1e12" stroke-width="1.3"/>
+    <ellipse cx="251" cy="-4" rx="6" ry="9" fill="#c4973a" opacity="0.9"/>
+    <ellipse cx="251" cy="-1" rx="3.5" ry="6" fill="#f5c842" opacity="0.95"/>
+    <ellipse cx="251" cy="2" rx="1.8" ry="3.5" fill="#fff8e7"/>
+    <path d="M243 40 C241 44 239 50 241 54 C243 50 243 44 243 40 Z" fill="#f0e0c0" opacity="0.7"/>
+    <path d="M259 38 C261 42 263 48 261 52 C259 48 259 42 259 38 Z" fill="#f0e0c0" opacity="0.7"/>
+
+    <!-- Vela derecha alta -->
+    <rect x="391" y="30" width="14" height="70" fill="#f5ead6" stroke="#ddb96a" stroke-width="0.8" rx="1"/>
+    <rect x="392" y="52" width="12" height="48" fill="#e8d8b8" rx="1" opacity="0.5"/>
+    <line x1="398" y1="30" x2="398" y2="20" stroke="#2a1e12" stroke-width="1.2"/>
+    <ellipse cx="398" cy="14" rx="5" ry="8" fill="#c4973a" opacity="0.9"/>
+    <ellipse cx="398" cy="16" rx="3" ry="5" fill="#f5c842" opacity="0.95"/>
+    <ellipse cx="398" cy="18" rx="1.5" ry="3" fill="#fff8e7"/>
+    <path d="M405 45 C407 48 409 52 407 55 C405 52 405 48 405 45 Z" fill="#f0e0c0" opacity="0.7"/>
+
+    <!-- Vela derecha baja -->
+    <rect x="354" y="55" width="11" height="45" fill="#f5ead6" stroke="#ddb96a" stroke-width="0.8" rx="1"/>
+    <line x1="359.5" y1="55" x2="359.5" y2="47" stroke="#2a1e12" stroke-width="1.1"/>
+    <ellipse cx="359.5" cy="41" rx="4" ry="6.5" fill="#c4973a" opacity="0.85"/>
+    <ellipse cx="359.5" cy="43" rx="2.5" ry="4" fill="#f5c842" opacity="0.9"/>
+    <ellipse cx="359.5" cy="45" rx="1.2" ry="2.5" fill="#fff8e7"/>
+
+    <!-- Plato / base velas -->
+    <ellipse cx="102" cy="100" rx="22" ry="5" fill="#ddb96a" opacity="0.4"/>
+    <ellipse cx="140.5" cy="100" rx="17" ry="4" fill="#ddb96a" opacity="0.4"/>
+    <ellipse cx="251" cy="100" rx="24" ry="5.5" fill="#ddb96a" opacity="0.4"/>
+    <ellipse cx="398" cy="100" rx="22" ry="5" fill="#ddb96a" opacity="0.4"/>
+    <ellipse cx="359.5" cy="100" rx="17" ry="4" fill="#ddb96a" opacity="0.4"/>
+
+    <!-- Granadas decorativas pequeñas -->
+    <g transform="translate(200,75)">
+      <ellipse cx="0" cy="0" rx="10" ry="12" fill="#8b2635" opacity="0.7"/>
+      <path d="M-4,-12 L-3,-17 L-2,-12" stroke="#c4973a" stroke-width="1" fill="none"/>
+      <path d="M0,-13 L0,-19 L0,-13" stroke="#c4973a" stroke-width="1" fill="none"/>
+      <path d="M2,-12 L3,-17 L4,-12" stroke="#c4973a" stroke-width="1" fill="none"/>
+    </g>
+    <g transform="translate(302,75)">
+      <ellipse cx="0" cy="0" rx="10" ry="12" fill="#8b2635" opacity="0.7"/>
+      <path d="M-4,-12 L-3,-17 L-2,-12" stroke="#c4973a" stroke-width="1" fill="none"/>
+      <path d="M0,-13 L0,-19 L0,-13" stroke="#c4973a" stroke-width="1" fill="none"/>
+      <path d="M2,-12 L3,-17 L4,-12" stroke="#c4973a" stroke-width="1" fill="none"/>
+    </g>
+  </svg>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-i18n="hero-tag">Os invitamos a nuestra boda</p>
+    <div class="hero-names">
+      <em>Jose</em>
+      <span class="amp">&amp;</span>
+      <em>Oarda</em>
+    </div>
+    <div class="hero-date-block">
+      <p class="d1" data-i18n="hero-date1">31 de Octubre de 2026</p>
+      <p class="d2" data-i18n="hero-date2">Sábado · Granada</p>
+    </div>
+  </div>
+
+  <div class="scroll-cue" onclick="document.getElementById('countdown').scrollIntoView({behavior:'smooth'})">
+    <span data-i18n="scroll-cue">Descubrir</span>
+    <div class="scroll-line"></div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     BANDA ROMBOS NAZARÍES (oscuro → historia)
+═══════════════════════════════════════════ -->
+<div class="diamond-band">
+  <svg viewBox="0 0 1440 110" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="dbg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1a120a"/>
+        <stop offset="100%" stop-color="#f0e2c8"/>
+      </linearGradient>
+    </defs>
+    <rect width="1440" height="110" fill="url(#dbg)"/>
+    <!-- Fila de rombos nazaríes repetidos -->
+    <g fill="none" stroke="rgba(196,151,58,0.55)" stroke-width="1">
+      <!-- Rombo = 2 triángulos -->
+      <g id="dmnd">
+        <polygon points="0,-18 12,0 0,18 -12,0"/>
+        <polygon points="0,-10 7,0 0,10 -7,0" stroke-width="0.6" opacity="0.5"/>
+        <line x1="0" y1="-18" x2="0" y2="18" stroke-width="0.5" opacity="0.4"/>
+        <line x1="-12" y1="0" x2="12" y2="0" stroke-width="0.5" opacity="0.4"/>
+      </g>
+      <use href="#dmnd" transform="translate(36,55)"/>
+      <use href="#dmnd" transform="translate(108,55)"/>
+      <use href="#dmnd" transform="translate(180,55)"/>
+      <use href="#dmnd" transform="translate(252,55)"/>
+      <use href="#dmnd" transform="translate(324,55)"/>
+      <use href="#dmnd" transform="translate(396,55)"/>
+      <use href="#dmnd" transform="translate(468,55)"/>
+      <use href="#dmnd" transform="translate(540,55)"/>
+      <use href="#dmnd" transform="translate(612,55)"/>
+      <use href="#dmnd" transform="translate(684,55)"/>
+      <use href="#dmnd" transform="translate(756,55)"/>
+      <use href="#dmnd" transform="translate(828,55)"/>
+      <use href="#dmnd" transform="translate(900,55)"/>
+      <use href="#dmnd" transform="translate(972,55)"/>
+      <use href="#dmnd" transform="translate(1044,55)"/>
+      <use href="#dmnd" transform="translate(1116,55)"/>
+      <use href="#dmnd" transform="translate(1188,55)"/>
+      <use href="#dmnd" transform="translate(1260,55)"/>
+      <use href="#dmnd" transform="translate(1332,55)"/>
+      <use href="#dmnd" transform="translate(1404,55)"/>
+      <!-- Fila superior intercalada -->
+      <use href="#dmnd" transform="translate(72,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(144,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(216,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(288,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(360,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(432,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(504,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(576,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(648,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(720,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(792,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(864,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(936,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(1008,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(1080,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(1152,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(1224,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(1296,30)" opacity="0.4"/>
+      <use href="#dmnd" transform="translate(1368,30)" opacity="0.4"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     CUENTA ATRÁS
+═══════════════════════════════════════════ -->
+<div class="cd-wrap" id="countdown">
+  <p class="cd-label" data-i18n="cd-label">Faltan</p>
+  <p class="cd-title" data-i18n="cd-title">Para el gran día</p>
+  <div class="cd-grid">
+    <div class="cd-unit"><span class="cd-num" id="cd-d">---</span><span class="cd-lbl" data-i18n="cd-days">Días</span></div>
+    <span class="cd-dot">·</span>
+    <div class="cd-unit"><span class="cd-num" id="cd-h">--</span><span class="cd-lbl" data-i18n="cd-hours">Horas</span></div>
+    <span class="cd-dot">·</span>
+    <div class="cd-unit"><span class="cd-num" id="cd-m">--</span><span class="cd-lbl" data-i18n="cd-mins">Minutos</span></div>
+    <span class="cd-dot">·</span>
+    <div class="cd-unit"><span class="cd-num" id="cd-s">--</span><span class="cd-lbl" data-i18n="cd-secs">Segundos</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     NUESTRA HISTORIA
+═══════════════════════════════════════════ -->
+<div class="story-band">
+  <!-- Decoración esquinas: granada + flor -->
+  <svg class="story-corner tl" viewBox="0 0 200 280" fill="none">
+    <path d="M150 280 C145 220 128 155 105 95 C88 45 65 10 40 -10" stroke="#6b7c5a" stroke-width="1.5"/>
+    <path d="M105 95 C88 83 68 80 52 70" stroke="#6b7c5a" stroke-width="1" fill="none"/>
+    <ellipse cx="46" cy="66" rx="13" ry="7" fill="#7a8c6a" opacity="0.6" transform="rotate(-35 46 66)"/>
+    <g transform="translate(40,-10)">
+      <ellipse cx="0" cy="-20" rx="10" ry="20" fill="#c4603a" opacity="0.8" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-20" rx="10" ry="20" fill="#c4603a" opacity="0.8" transform="rotate(60)"/>
+      <ellipse cx="0" cy="-20" rx="10" ry="20" fill="#c4603a" opacity="0.8" transform="rotate(120)"/>
+      <ellipse cx="0" cy="-20" rx="10" ry="20" fill="#c4603a" opacity="0.8" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-20" rx="10" ry="20" fill="#c4603a" opacity="0.8" transform="rotate(240)"/>
+      <ellipse cx="0" cy="-20" rx="10" ry="20" fill="#c4603a" opacity="0.8" transform="rotate(300)"/>
+      <ellipse cx="0" cy="-12" rx="7" ry="12" fill="#e8895a" opacity="0.9" transform="rotate(30)"/>
+      <ellipse cx="0" cy="-12" rx="7" ry="12" fill="#e8895a" opacity="0.9" transform="rotate(90)"/>
+      <ellipse cx="0" cy="-12" rx="7" ry="12" fill="#e8895a" opacity="0.9" transform="rotate(150)"/>
+      <ellipse cx="0" cy="-12" rx="7" ry="12" fill="#e8895a" opacity="0.9" transform="rotate(210)"/>
+      <ellipse cx="0" cy="-12" rx="7" ry="12" fill="#e8895a" opacity="0.9" transform="rotate(270)"/>
+      <ellipse cx="0" cy="-12" rx="7" ry="12" fill="#e8895a" opacity="0.9" transform="rotate(330)"/>
+      <circle cx="0" cy="0" r="8" fill="#c4973a"/>
+      <circle cx="0" cy="0" r="4" fill="#ddb96a"/>
+    </g>
+    <g transform="translate(108,115)">
+      <ellipse cx="0" cy="0" rx="14" ry="17" fill="#8b2635" opacity="0.7"/>
+      <path d="M-5,-17 L-4,-23 L-3,-17" stroke="#c4973a" stroke-width="1.2" fill="none"/>
+      <path d="M0,-18 L0,-25 L0,-18" stroke="#c4973a" stroke-width="1.2" fill="none"/>
+      <path d="M3,-17 L4,-23 L5,-17" stroke="#c4973a" stroke-width="1.2" fill="none"/>
+      <circle cx="-3" cy="-3" r="2.5" fill="#ddb96a" opacity="0.6"/>
+      <circle cx="4" cy="-6" r="2.5" fill="#ddb96a" opacity="0.6"/>
+      <circle cx="0" cy="4" r="2.5" fill="#ddb96a" opacity="0.6"/>
+    </g>
+  </svg>
+  <svg class="story-corner br" viewBox="0 0 200 280" fill="none">
+    <path d="M150 280 C145 220 128 155 105 95 C88 45 65 10 40 -10" stroke="#6b7c5a" stroke-width="1.5"/>
+    <g transform="translate(40,-10)">
+      <ellipse cx="0" cy="-20" rx="10" ry="20" fill="#8b2635" opacity="0.8" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-20" rx="10" ry="20" fill="#8b2635" opacity="0.8" transform="rotate(60)"/>
+      <ellipse cx="0" cy="-20" rx="10" ry="20" fill="#8b2635" opacity="0.8" transform="rotate(120)"/>
+      <ellipse cx="0" cy="-20" rx="10" ry="20" fill="#8b2635" opacity="0.8" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-20" rx="10" ry="20" fill="#8b2635" opacity="0.8" transform="rotate(240)"/>
+      <ellipse cx="0" cy="-20" rx="10" ry="20" fill="#8b2635" opacity="0.8" transform="rotate(300)"/>
+      <ellipse cx="0" cy="-12" rx="7" ry="12" fill="#b03545" opacity="0.9" transform="rotate(30)"/>
+      <ellipse cx="0" cy="-12" rx="7" ry="12" fill="#b03545" opacity="0.9" transform="rotate(90)"/>
+      <ellipse cx="0" cy="-12" rx="7" ry="12" fill="#b03545" opacity="0.9" transform="rotate(150)"/>
+      <ellipse cx="0" cy="-12" rx="7" ry="12" fill="#b03545" opacity="0.9" transform="rotate(210)"/>
+      <ellipse cx="0" cy="-12" rx="7" ry="12" fill="#b03545" opacity="0.9" transform="rotate(270)"/>
+      <ellipse cx="0" cy="-12" rx="7" ry="12" fill="#b03545" opacity="0.9" transform="rotate(330)"/>
+      <circle cx="0" cy="0" r="8" fill="#c4973a"/>
+      <circle cx="0" cy="0" r="4" fill="#ddb96a"/>
+    </g>
+  </svg>
+
+  <div class="reveal">
+    <div class="section-inner">
+      <p class="s-tag" data-i18n="story-tag">Nuestra historia</p>
+      <p class="s-title" data-i18n="story-title">Cómo llegamos hasta aquí</p>
+      <blockquote class="story-quote" data-i18n="story-quote">"Granada nos unió, y Granada será testigo de cómo decimos sí para siempre."</blockquote>
+      <p class="s-text" data-i18n="story-text">Hay ciudades que marcan un antes y un después. Para nosotros, esa ciudad es Granada. Entre sus calles, sus miradores y el eco de la Alhambra, nuestra historia comenzó a escribirse.<br><br>Hoy queremos compartir con vosotros el capítulo más bonito: el de convertirnos en familia. Gracias por ser parte de este día tan especial para nosotros.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     BANDA ROMBOS NAZARÍES (separador medio)
+═══════════════════════════════════════════ -->
+<div style="background:var(--paper);overflow:hidden;line-height:0;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="none">
+    <rect width="1440" height="60" fill="#fdf6ed"/>
+    <g fill="none" stroke="rgba(196,96,58,0.35)" stroke-width="0.9">
+      <use href="#dmnd" transform="translate(36,30)"/>
+      <use href="#dmnd" transform="translate(108,30)"/>
+      <use href="#dmnd" transform="translate(180,30)"/>
+      <use href="#dmnd" transform="translate(252,30)"/>
+      <use href="#dmnd" transform="translate(324,30)"/>
+      <use href="#dmnd" transform="translate(396,30)"/>
+      <use href="#dmnd" transform="translate(468,30)"/>
+      <use href="#dmnd" transform="translate(540,30)"/>
+      <use href="#dmnd" transform="translate(612,30)"/>
+      <use href="#dmnd" transform="translate(684,30)"/>
+      <use href="#dmnd" transform="translate(756,30)"/>
+      <use href="#dmnd" transform="translate(828,30)"/>
+      <use href="#dmnd" transform="translate(900,30)"/>
+      <use href="#dmnd" transform="translate(972,30)"/>
+      <use href="#dmnd" transform="translate(1044,30)"/>
+      <use href="#dmnd" transform="translate(1116,30)"/>
+      <use href="#dmnd" transform="translate(1188,30)"/>
+      <use href="#dmnd" transform="translate(1260,30)"/>
+      <use href="#dmnd" transform="translate(1332,30)"/>
+      <use href="#dmnd" transform="translate(1404,30)"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     LUGAR — ARCO NAZARÍ
+═══════════════════════════════════════════ -->
+<div class="arch-section">
+  <!-- Arco de fondo gigante semitransparente -->
+  <svg class="arch-bg" viewBox="0 0 600 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M80 700 L80 320 Q80 60 300 60 Q520 60 520 320 L520 700" stroke="#c4603a" stroke-width="3" fill="none"/>
+    <path d="M120 700 L120 330 Q120 110 300 110 Q480 110 480 330 L480 700" stroke="#c4973a" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <!-- Decoración del arco -->
+    <path d="M80 320 Q80 200 160 140 Q200 160 220 200 Q160 240 160 320" fill="#c4603a" opacity="0.15"/>
+    <path d="M520 320 Q520 200 440 140 Q400 160 380 200 Q440 240 440 320" fill="#c4603a" opacity="0.15"/>
+    <!-- Mocárabes simplificados (base del arco) -->
+    <g stroke="#c4973a" stroke-width="1" fill="none" opacity="0.6">
+      <path d="M130 330 L145 310 L160 330 L175 310 L190 330 L205 310 L220 330"/>
+      <path d="M380 330 L395 310 L410 330 L425 310 L440 330 L455 310 L470 330"/>
+    </g>
+  </svg>
+
+  <div class="reveal">
+    <div class="section-inner">
+      <p class="s-tag" data-i18n="venue-tag">El lugar</p>
+      <p class="s-title" data-i18n="venue-title">Ceremonia &amp; Celebración</p>
+
+      <!-- Arco con contenido dentro -->
+      <div class="venue-arch">
+        <svg viewBox="0 0 380 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Arco principal -->
+          <path d="M40 420 L40 210 Q40 40 190 40 Q340 40 340 210 L340 420" stroke="#c4603a" stroke-width="2.5" fill="rgba(196,96,58,0.04)"/>
+          <!-- Arco interior decorativo -->
+          <path d="M65 420 L65 218 Q65 75 190 75 Q315 75 315 218 L315 420" stroke="#c4973a" stroke-width="1.2" fill="none" opacity="0.5"/>
+          <!-- Claves del arco (lóbulo de herradura) -->
+          <path d="M40 210 Q40 150 80 120 Q105 140 115 170 Q75 190 75 210" fill="#c4603a" opacity="0.12"/>
+          <path d="M340 210 Q340 150 300 120 Q275 140 265 170 Q305 190 305 210" fill="#c4603a" opacity="0.12"/>
+          <!-- Mocárabes base arco -->
+          <g stroke="#c4973a" stroke-width="1" fill="none" opacity="0.7">
+            <path d="M75 216 L88 198 L101 216 L114 198 L127 216 L140 198 L153 216"/>
+            <path d="M227 216 L240 198 L253 216 L266 198 L279 216 L292 198 L305 216"/>
+          </g>
+          <!-- Rombos decorativos en el arco -->
+          <g stroke="rgba(196,151,58,0.5)" stroke-width="0.8" fill="none">
+            <polygon points="190,50 202,68 190,86 178,68"/>
+            <polygon points="190,58 198,68 190,78 182,68" stroke-width="0.5"/>
+            <polygon points="100,140 110,156 100,172 90,156"/>
+            <polygon points="280,140 290,156 280,172 270,156"/>
+          </g>
+          <!-- Flores decorativas en enjutas -->
+          <g transform="translate(100,100)">
+            <circle cx="0" cy="0" r="3" fill="#c4973a" opacity="0.6"/>
+            <circle cx="0" cy="-8" r="3" fill="#c4603a" opacity="0.5"/>
+            <circle cx="8" cy="0" r="3" fill="#c4603a" opacity="0.5"/>
+            <circle cx="0" cy="8" r="3" fill="#c4603a" opacity="0.5"/>
+            <circle cx="-8" cy="0" r="3" fill="#c4603a" opacity="0.5"/>
+          </g>
+          <g transform="translate(280,100)">
+            <circle cx="0" cy="0" r="3" fill="#c4973a" opacity="0.6"/>
+            <circle cx="0" cy="-8" r="3" fill="#c4603a" opacity="0.5"/>
+            <circle cx="8" cy="0" r="3" fill="#c4603a" opacity="0.5"/>
+            <circle cx="0" cy="8" r="3" fill="#c4603a" opacity="0.5"/>
+            <circle cx="-8" cy="0" r="3" fill="#c4603a" opacity="0.5"/>
+          </g>
+        </svg>
+        <div class="venue-arch-content">
+          <p class="venue-name">AC Palacio de Santa Paula</p>
+          <p class="venue-addr">Gran Vía de Colón, 31 · Granada</p>
+        </div>
+      </div>
+
+      <p class="venue-note" data-i18n="venue-note">La ceremonia y el banquete tendrán lugar en el mismo enclave, en el corazón histórico de Granada.</p>
+      <p class="s-text" style="margin-top:1.5rem;" data-i18n="venue-text">Un antiguo convento del siglo XVI convertido en el escenario perfecto para celebrar el amor. El Palacio de Santa Paula, declarado monumento artístico, será el lugar donde compartiremos contigo uno de los días más especiales de nuestra vida.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     BANDA ROMBOS (separador bajo venue)
+═══════════════════════════════════════════ -->
+<div style="background:var(--paper);overflow:hidden;line-height:0;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="none">
+    <rect width="1440" height="60" fill="#fdf6ed"/>
+    <g fill="none" stroke="rgba(139,38,53,0.3)" stroke-width="0.9">
+      <use href="#dmnd" transform="translate(36,30)"/>
+      <use href="#dmnd" transform="translate(108,30)"/>
+      <use href="#dmnd" transform="translate(180,30)"/>
+      <use href="#dmnd" transform="translate(252,30)"/>
+      <use href="#dmnd" transform="translate(324,30)"/>
+      <use href="#dmnd" transform="translate(396,30)"/>
+      <use href="#dmnd" transform="translate(468,30)"/>
+      <use href="#dmnd" transform="translate(540,30)"/>
+      <use href="#dmnd" transform="translate(612,30)"/>
+      <use href="#dmnd" transform="translate(684,30)"/>
+      <use href="#dmnd" transform="translate(756,30)"/>
+      <use href="#dmnd" transform="translate(828,30)"/>
+      <use href="#dmnd" transform="translate(900,30)"/>
+      <use href="#dmnd" transform="translate(972,30)"/>
+      <use href="#dmnd" transform="translate(1044,30)"/>
+      <use href="#dmnd" transform="translate(1116,30)"/>
+      <use href="#dmnd" transform="translate(1188,30)"/>
+      <use href="#dmnd" transform="translate(1260,30)"/>
+      <use href="#dmnd" transform="translate(1332,30)"/>
+      <use href="#dmnd" transform="translate(1404,30)"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     CELEBRACIÓN
+═══════════════════════════════════════════ -->
+<div style="background:var(--warm); padding:6rem 2rem;">
+  <div class="reveal">
+    <div class="section-inner">
+      <p class="s-tag" data-i18n="celeb-tag">La celebración</p>
+      <p class="s-title" data-i18n="celeb-title">Un día para recordar</p>
+      <p class="s-text" data-i18n="celeb-text">Tras la ceremonia, os invitamos a continuar la celebración con nosotros en el banquete.<br><br>Compartid con nosotros este día de otoño en Granada. Os esperamos con mucha ilusión y el corazón lleno de alegría.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     RSVP
+═══════════════════════════════════════════ -->
+<div class="rsvp-band">
+  <div class="rsvp-inner reveal">
+    <p class="s-tag" data-i18n="rsvp-tag">Confirmación de asistencia</p>
+    <p class="s-title" data-i18n="rsvp-title">¿Estarás con nosotros?</p>
+    <p class="s-text" data-i18n="rsvp-intro">Confirma antes del <strong style="color:var(--gold2)">30 de junio de 2026</strong>.<br>A través del formulario o contactando directamente con nosotros.</p>
+    <div class="contacts">
+      <a class="contact-row" href="mailto:jaromero.es@gmail.com">
+        <span class="c-icon">✉</span>
+        <div class="c-info"><span class="c-type" data-i18n="contact-email">Email</span><span class="c-val">jaromero.es@gmail.com</span></div>
+      </a>
+      <a class="contact-row" href="tel:+34689503547">
+        <span class="c-icon">✆</span>
+        <div class="c-info"><span class="c-type" data-i18n="contact-jose">Teléfono · Jose</span><span class="c-val">689 503 547</span></div>
+      </a>
+      <a class="contact-row" href="tel:+34634676268">
+        <span class="c-icon">✆</span>
+        <div class="c-info"><span class="c-type" data-i18n="contact-oarda">Teléfono · Oarda</span><span class="c-val">634 676 268</span></div>
+      </a>
+    </div>
+    <form class="rsvp-form" id="rsvpForm" action="https://formspree.io/f/mqedjlqy" method="POST">
+      <div class="fg">
+        <label data-i18n="form-name">Nombre completo</label>
+        <input type="text" name="nombre" data-i18n-ph="ph-name" placeholder="Nombre y apellidos" required>
+      </div>
+      <div class="fg">
+        <label data-i18n="form-attend">¿Asistirás?</label>
+        <select name="asistencia" required>
+          <option value="" disabled selected data-i18n="form-select">Selecciona una opción</option>
+          <option value="si"  data-i18n="form-yes">Sí, ¡allí estaré!</option>
+          <option value="no"  data-i18n="form-no">Lamentablemente no podré asistir</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label data-i18n="form-guests">Número de acompañantes</label>
+        <select name="acompanantes">
+          <option value="0" data-i18n="form-solo">Solo/a</option>
+          <option value="1" data-i18n="form-plus1">+ 1 acompañante</option>
+          <option value="2" data-i18n="form-plus2">+ 2 acompañantes</option>
+          <option value="3" data-i18n="form-plus3">+ 3 o más</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label data-i18n="form-diet">Alergias o restricciones alimentarias</label>
+        <textarea name="alergias" data-i18n-ph="ph-diet" placeholder="Cuéntanos si tienes alguna necesidad especial..."></textarea>
+      </div>
+      <button type="submit" class="rsvp-btn" data-i18n="form-btn">Confirmar asistencia</button>
+      <p class="rsvp-ok" id="rsvpOk" data-i18n="form-thanks">¡Gracias! Hemos recibido tu confirmación.<br>Nos vemos el 31 de Octubre en Granada 🤍</p>
+    </form>
+  </div>
+</div>
+
+<footer>Jose &amp; Oarda &nbsp;·&nbsp; 31 de Octubre de 2026 &nbsp;·&nbsp; Granada</footer>
+
+<script>
+var T = {
+  es: {
+    'hero-tag':'Os invitamos a nuestra boda','hero-date1':'31 de Octubre de 2026','hero-date2':'Sábado · Granada',
+    'scroll-cue':'Descubrir','cd-label':'Faltan','cd-title':'Para el gran día',
+    'cd-days':'Días','cd-hours':'Horas','cd-mins':'Minutos','cd-secs':'Segundos',
+    'story-tag':'Nuestra historia','story-title':'Cómo llegamos hasta aquí',
+    'story-quote':'"Granada nos unió, y Granada será testigo de cómo decimos sí para siempre."',
+    'story-text':'Hay ciudades que marcan un antes y un después. Para nosotros, esa ciudad es Granada. Entre sus calles, sus miradores y el eco de la Alhambra, nuestra historia comenzó a escribirse.<br><br>Hoy queremos compartir con vosotros el capítulo más bonito: el de convertirnos en familia. Gracias por ser parte de este día tan especial para nosotros.',
+    'venue-tag':'El lugar','venue-title':'Ceremonia &amp; Celebración',
+    'venue-note':'La ceremonia y el banquete tendrán lugar en el mismo enclave, en el corazón histórico de Granada.',
+    'venue-text':'Un antiguo convento del siglo XVI convertido en el escenario perfecto para celebrar el amor. El Palacio de Santa Paula, declarado monumento artístico, será el lugar donde compartiremos contigo uno de los días más especiales de nuestra vida.',
+    'celeb-tag':'La celebración','celeb-title':'Un día para recordar',
+    'celeb-text':'Tras la ceremonia, os invitamos a continuar la celebración con nosotros en el banquete.<br><br>Compartid con nosotros este día de otoño en Granada. Os esperamos con mucha ilusión y el corazón lleno de alegría.',
+    'rsvp-tag':'Confirmación de asistencia','rsvp-title':'¿Estarás con nosotros?',
+    'rsvp-intro':'Confirma antes del <strong style="color:var(--gold2)">30 de junio de 2026</strong>.<br>A través del formulario o contactando directamente con nosotros.',
+    'contact-email':'Email','contact-jose':'Teléfono · Jose','contact-oarda':'Teléfono · Oarda',
+    'form-name':'Nombre completo','form-attend':'¿Asistirás?','form-select':'Selecciona una opción',
+    'form-yes':'Sí, ¡allí estaré!','form-no':'Lamentablemente no podré asistir',
+    'form-guests':'Número de acompañantes','form-solo':'Solo/a','form-plus1':'+ 1 acompañante',
+    'form-plus2':'+ 2 acompañantes','form-plus3':'+ 3 o más',
+    'form-diet':'Alergias o restricciones alimentarias','form-btn':'Confirmar asistencia',
+    'form-thanks':'¡Gracias! Hemos recibido tu confirmación.<br>Nos vemos el 31 de Octubre en Granada 🤍',
+    'ph-name':'Nombre y apellidos','ph-diet':'Cuéntanos si tienes alguna necesidad especial...'
+  },
+  en: {
+    'hero-tag':'You are invited to our wedding','hero-date1':'October 31st, 2026','hero-date2':'Saturday · Granada',
+    'scroll-cue':'Discover','cd-label':'Countdown','cd-title':'To the big day',
+    'cd-days':'Days','cd-hours':'Hours','cd-mins':'Minutes','cd-secs':'Seconds',
+    'story-tag':'Our story','story-title':'How we got here',
+    'story-quote':'"Granada brought us together, and Granada will witness how we say yes forever."',
+    'story-text':'Some cities change everything. For us, that city is Granada. Among its streets, viewpoints and the echo of the Alhambra, our story began to unfold.<br><br>Today we want to share with you the most beautiful chapter: becoming a family. Thank you for being part of this special day.',
+    'venue-tag':'The venue','venue-title':'Ceremony &amp; Celebration',
+    'venue-note':'The ceremony and reception will both take place at the same venue, in the historic heart of Granada.',
+    'venue-text':'A 16th-century convent transformed into the perfect setting to celebrate love. The Palacio de Santa Paula, declared an artistic monument, will be where we share one of the most special days of our lives with you.',
+    'celeb-tag':'The celebration','celeb-title':'A day to remember',
+    'celeb-text':'After the ceremony, we invite you to continue the celebration with us at the reception.<br><br>Join us for this autumn day in Granada. We look forward to celebrating with you.',
+    'rsvp-tag':'RSVP','rsvp-title':'Will you join us?',
+    'rsvp-intro':'Please confirm before <strong style="color:var(--gold2)">June 30th, 2026</strong>.<br>Via the form below or by contacting us directly.',
+    'contact-email':'Email','contact-jose':'Phone · Jose','contact-oarda':'Phone · Oarda',
+    'form-name':'Full name','form-attend':'Will you attend?','form-select':'Select an option',
+    'form-yes':"Yes, I'll be there!",'form-no':"Unfortunately I can't attend",
+    'form-guests':'Number of guests','form-solo':'Just me','form-plus1':'+ 1 guest',
+    'form-plus2':'+ 2 guests','form-plus3':'+ 3 or more',
+    'form-diet':'Allergies or dietary requirements','form-btn':'Confirm attendance',
+    'form-thanks':'Thank you! We have received your confirmation.<br>See you on October 31st in Granada 🤍',
+    'ph-name':'First and last name','ph-diet':'Tell us if you have any special dietary needs...'
+  },
+  sq: {
+    'hero-tag':'Jeni të ftuar në dasmën tonë','hero-date1':'31 Tetor 2026','hero-date2':'E shtunë · Granada',
+    'scroll-cue':'Zbulo','cd-label':'Numërim mbrapsht','cd-title':'Deri në ditën e madhe',
+    'cd-days':'Ditë','cd-hours':'Orë','cd-mins':'Minuta','cd-secs':'Sekonda',
+    'story-tag':'Historia jonë','story-title':'Si arritëm këtu',
+    'story-quote':'"Granada na bashkoi, dhe Granada do të jetë dëshmitare si themi po përgjithmonë."',
+    'story-text':'Disa qytete ndryshojnë gjithçka. Për ne, ai qytet është Granada. Mes rrugëve të saj dhe jehonës së Alhambra, historia jonë filloi të shkruhej.<br><br>Sot duam të ndajmë me ju kapitullin më të bukur: të bëhemi familje. Faleminderit që jeni pjesë e kësaj dite të veçantë.',
+    'venue-tag':'Vendi','venue-title':'Ceremonia &amp; Festimi',
+    'venue-note':'Ceremonia dhe gosti do të zhvillohen në të njëjtin vend, në zemrën historike të Granadës.',
+    'venue-text':'Një manastir i shekullit XVI i shndërruar në skenën perfekte për të festuar dashurinë. Pallati i Santa Paulës do të jetë vendi ku do të ndajmë me ju një nga ditët më të veçanta të jetës sonë.',
+    'celeb-tag':'Festimi','celeb-title':"Një ditë për t'u kujtuar",
+    'celeb-text':'Pas ceremonisë, ju ftojmë të vazhdoni festimin me ne në banket.<br><br>Bashkohuni me ne në këtë ditë vjeshte në Granada. Ju presim me shumë gëzim.',
+    'rsvp-tag':'Konfirmimi i pranisë','rsvp-title':'Do të jesh me ne?',
+    'rsvp-intro':'Ju lutemi konfirmoni para <strong style="color:var(--gold2)">30 Qershor 2026</strong>.<br>Nëpërmjet formularit ose duke na kontaktuar drejtpërdrejt.',
+    'contact-email':'Email','contact-jose':'Telefon · Jose','contact-oarda':'Telefon · Oarda',
+    'form-name':'Emri i plotë','form-attend':'Do të vish?','form-select':'Zgjidh një opsion',
+    'form-yes':'Po, do të jem atje!','form-no':'Fatkeqësisht nuk mund të vij',
+    'form-guests':'Numri i të ftuarve','form-solo':'Vetëm unë','form-plus1':'+ 1 i ftuar',
+    'form-plus2':'+ 2 të ftuar','form-plus3':'+ 3 ose më shumë',
+    'form-diet':'Alergji ose kufizime ushqimore','form-btn':'Konfirmo praninë',
+    'form-thanks':'Faleminderit! Kemi marrë konfirmimin tuaj.<br>Shihemi më 31 Tetor në Granada 🤍',
+    'ph-name':'Emri dhe mbiemri','ph-diet':'Na tregoni nëse keni ndonjë nevojë të veçantë...'
+  }
+};
+
+function setLang(lang, btn) {
+  document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  var d = T[lang];
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k = el.getAttribute('data-i18n');
+    if(d[k] !== undefined) el.innerHTML = d[k];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(function(el){
+    var k = el.getAttribute('data-i18n-ph');
+    if(d[k] !== undefined) el.placeholder = d[k];
+  });
+}
+
+function tick() {
+  var diff = Math.max(new Date('2026-10-31T12:00:00') - new Date(), 0);
+  document.getElementById('cd-d').textContent = String(Math.floor(diff/86400000)).padStart(3,'0');
+  document.getElementById('cd-h').textContent = String(Math.floor(diff%86400000/3600000)).padStart(2,'0');
+  document.getElementById('cd-m').textContent = String(Math.floor(diff%3600000/60000)).padStart(2,'0');
+  document.getElementById('cd-s').textContent = String(Math.floor(diff%60000/1000)).padStart(2,'0');
+}
+tick(); setInterval(tick, 1000);
+
+var obs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.06});
+document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+
+document.getElementById('rsvpForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var form = this;
+  var btn = form.querySelector('.rsvp-btn');
+  btn.disabled = true;
+  fetch('https://formspree.io/f/mqedjlqy', {
+    method:'POST', body: new FormData(form),
+    headers:{'Accept':'application/json'}
+  }).then(function(r){
+    if(r.ok){
+      form.style.display = 'none';
+      document.getElementById('rsvpOk').style.display = 'block';
+    } else {
+      btn.disabled = false;
+    }
+  }).catch(function(){
+    btn.disabled = false;
+  });
+});
+</script>
+</body>
+</html>
