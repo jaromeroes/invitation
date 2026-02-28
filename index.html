@@ -468,13 +468,13 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
         </div>
         <div class="fg">
           <label data-i18n="form-attend">¿Asistirás?</label>
-          <select name="asistencia" required>
+          <select name="asistencia" required onchange="toggleAcompanantes(this.value)">
             <option value="" disabled selected data-i18n="form-select">Selecciona una opción</option>
             <option value="si"  data-i18n="form-yes">Sí, ¡allí estaré!</option>
             <option value="no"  data-i18n="form-no">Lamentablemente no podré asistir</option>
           </select>
         </div>
-        <div class="fg">
+        <div class="fg" id="fg-acompanantes" style="display:none;">
           <label data-i18n="form-guests">Número de acompañantes</label>
           <select name="acompanantes">
             <option value="0" data-i18n="form-solo">Solo/a</option>
@@ -556,7 +556,6 @@ var T = {
   sq: {
     'hero-tag':'Jeni të ftuar në dasmën tonë','hero-date1':'31 Tetor 2026','hero-date2':'E shtunë · Granada',
     'scroll-cue':'Zbulo','cd-label':'Numërim mbrapsht',
-    'cd-label':'Numërim mbrapsht',
     'cd-title':'Deri në ditën e madhe',
     'cd-days':'Ditë','cd-hours':'Orë','cd-mins':'Minuta','cd-secs':'Sekonda',
     'photo-caption':'Granada · Tetor 2026',
@@ -618,6 +617,11 @@ document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
 /* ══════════════════════════════
    RSVP FORM
 ══════════════════════════════ */
+function toggleAcompanantes(val) {
+  var fg = document.getElementById('fg-acompanantes');
+  if (fg) fg.style.display = val === 'si' ? 'flex' : 'none';
+}
+
 document.getElementById('rsvpForm').addEventListener('submit', function(e){
   e.preventDefault();
   var form = this;
@@ -635,8 +639,16 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e){
       var activeBtn = document.querySelector('.lang-btn.active');
       var lang = activeBtn ? (activeBtn.title === 'Español' ? 'es' : activeBtn.title === 'English' ? 'en' : 'sq') : 'es';
       var msgs = {
-        si: { es:'¡Gracias! Hemos recibido tu confirmación.<br>Nos vemos el 31 de Octubre en Granada 🤍', en:'Thank you! We have received your confirmation.<br>See you on October 31st in Granada 🤍', sq:'Faleminderit! Kemi marrë konfirmimin tuaj.<br>Shihemi më 31 Tetor në Granada 🤍' },
-        no: { es:'Gracias por avisarnos. Te echaremos de menos 🤍', en:'Thank you for letting us know. You will be missed 🤍', sq:'Faleminderit që na lajmërove. Do të na mungosh 🤍' }
+        si: {
+          es: '¡Muchas gracias! Nos alegra mucho contar contigo. En los próximos meses te mantendremos informado con todos los detalles. ¡Hasta pronto! 🤍',
+          en: 'Thank you so much! We are so happy you can make it. We will keep you updated with all the details in the coming months. See you soon! 🤍',
+          sq: 'Shumë faleminderit! Jemi të lumtur që do të jeni me ne. Do t\'ju mbajmë të informuar me të gjitha detajet në muajt e ardhshëm. Shihemi shpejt! 🤍'
+        },
+        no: {
+          es: 'Lamentamos que no puedas acompañarnos, pero te agradecemos mucho que nos lo hayas hecho saber. ¡Estarás en nuestros pensamientos ese día! 🤍',
+          en: 'We are sorry you cannot join us, but thank you so much for letting us know. You will be in our thoughts on that special day! 🤍',
+          sq: 'Na vjen keq që nuk mund të jesh me ne, por faleminderit shumë që na lajmërove. Do të jesh në mendimet tona atë ditë të veçantë! 🤍'
+        }
       };
       var type = asistencia === 'si' ? 'si' : 'no';
       ok.innerHTML = msgs[type][lang];
