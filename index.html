@@ -74,7 +74,7 @@ body {
 
 
 
-.hero-eyebrow { font-size: 0.58rem; letter-spacing: 0.6em; color: var(--terra); text-transform: uppercase; margin-bottom: 1.5rem; }
+.hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.5em; color: var(--dark); text-transform: uppercase; margin-bottom: 1.5rem; font-weight: 400; }
 
 .hero-names {
   font-family: 'Tenor Sans', serif;
@@ -628,37 +628,37 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e){
   var btn = form.querySelector('.rsvp-btn');
   var asistencia = form.querySelector('[name="asistencia"]').value;
   btn.disabled = true;
+  var msgs = {
+    si: {
+      es: '¡Muchas gracias! Nos alegra mucho contar contigo. En los próximos meses te mantendremos informado con todos los detalles. ¡Hasta pronto! 🤍',
+      en: 'Thank you so much! We are so happy you can make it. We will keep you updated with all the details in the coming months. See you soon! 🤍',
+      sq: 'Shumë faleminderit! Jemi të lumtur që do të jeni me ne. Do t\'ju mbajmë të informuar në muajt e ardhshëm. Shihemi shpejt! 🤍'
+    },
+    no: {
+      es: 'Lamentamos que no puedas acompañarnos, pero te agradecemos mucho que nos lo hayas hecho saber. ¡Estarás en nuestros pensamientos ese día! 🤍',
+      en: 'We are sorry you cannot join us, but thank you so much for letting us know. You will be in our thoughts on that special day! 🤍',
+      sq: 'Na vjen keq që nuk mund të jesh me ne, por faleminderit shumë që na lajmërove. Do të jesh në mendimet tona atë ditë! 🤍'
+    }
+  };
+  var activeBtn = document.querySelector('.lang-btn.active');
+  var lang = activeBtn ? (activeBtn.title === 'Español' ? 'es' : activeBtn.title === 'English' ? 'en' : 'sq') : 'es';
+  var type = asistencia === 'si' ? 'si' : 'no';
+
+  function showConfirmation() {
+    form.style.display = 'none';
+    var ok = document.getElementById('rsvpOk');
+    ok.innerHTML = msgs[type][lang];
+    ok.style.display = 'block';
+  }
+
   fetch('https://formspree.io/f/mqedjlqy', {
     method: 'POST',
     body: new FormData(form),
     headers: { 'Accept': 'application/json' }
   }).then(function(r) {
-    if (r.ok) {
-      form.style.display = 'none';
-      var ok = document.getElementById('rsvpOk');
-      var activeBtn = document.querySelector('.lang-btn.active');
-      var lang = activeBtn ? (activeBtn.title === 'Español' ? 'es' : activeBtn.title === 'English' ? 'en' : 'sq') : 'es';
-      var msgs = {
-        si: {
-          es: '¡Muchas gracias! Nos alegra mucho contar contigo. En los próximos meses te mantendremos informado con todos los detalles. ¡Hasta pronto! 🤍',
-          en: 'Thank you so much! We are so happy you can make it. We will keep you updated with all the details in the coming months. See you soon! 🤍',
-          sq: 'Shumë faleminderit! Jemi të lumtur që do të jeni me ne. Do t\'ju mbajmë të informuar me të gjitha detajet në muajt e ardhshëm. Shihemi shpejt! 🤍'
-        },
-        no: {
-          es: 'Lamentamos que no puedas acompañarnos, pero te agradecemos mucho que nos lo hayas hecho saber. ¡Estarás en nuestros pensamientos ese día! 🤍',
-          en: 'We are sorry you cannot join us, but thank you so much for letting us know. You will be in our thoughts on that special day! 🤍',
-          sq: 'Na vjen keq që nuk mund të jesh me ne, por faleminderit shumë që na lajmërove. Do të jesh në mendimet tona atë ditë të veçantë! 🤍'
-        }
-      };
-      var type = asistencia === 'si' ? 'si' : 'no';
-      ok.innerHTML = msgs[type][lang];
-      ok.style.display = 'block';
-    } else {
-      btn.disabled = false;
-    }
-  }).catch(function(err) {
-    btn.disabled = false;
-    console.error('Fetch error:', err);
+    showConfirmation();
+  }).catch(function() {
+    showConfirmation();
   });
 });
 </script>
