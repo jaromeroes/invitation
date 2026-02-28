@@ -444,20 +444,6 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
       <p class="s-tag" data-i18n="rsvp-tag">Confirmación de asistencia</p>
       <p class="s-title" data-i18n="rsvp-title">¿Estarás con nosotros?</p>
       <p class="s-text" data-i18n="rsvp-intro">Confirma antes del <strong style="color:var(--gold2)">30 de junio de 2026</strong>.<br>A través del formulario o contactando directamente con nosotros.</p>
-      <div class="contacts">
-        <a class="contact-row" href="mailto:jaromero.es@gmail.com">
-          <span class="c-icon">✉</span>
-          <div class="c-info"><span class="c-type" data-i18n="contact-email">Email</span><span class="c-val">jaromero.es@gmail.com</span></div>
-        </a>
-        <a class="contact-row" href="https://wa.me/34689503547" target="_blank">
-          <span class="c-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.532 5.862L.057 23.428a.5.5 0 0 0 .61.61l5.567-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.864 0-3.618-.5-5.13-1.376l-.36-.214-3.733.99.99-3.734-.214-.36A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></span>
-          <div class="c-info"><span class="c-type" data-i18n="contact-jose">Teléfono · Jose</span><span class="c-val">+34 689 503 547</span></div>
-        </a>
-        <a class="contact-row" href="https://wa.me/34634676268" target="_blank">
-          <span class="c-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.532 5.862L.057 23.428a.5.5 0 0 0 .61.61l5.567-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.864 0-3.618-.5-5.13-1.376l-.36-.214-3.733.99.99-3.734-.214-.36A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></span>
-          <div class="c-info"><span class="c-type" data-i18n="contact-oarda">Teléfono · Oarda</span><span class="c-val">+34 634 676 268</span></div>
-        </a>
-      </div>
       <div class="rsvp-notice">
         <p class="rsvp-notice-text" data-i18n="rsvp-notice">📋 &nbsp;Por ahora solo necesitamos saber si contamos contigo. En los próximos meses os enviaremos una actualización con todos los detalles: horarios, sitios recomendados, qué ver en Granada y mucho más.</p>
       </div>
@@ -490,7 +476,18 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
         <button type="submit" class="rsvp-btn" data-i18n="form-btn">Confirmar asistencia</button>
       </form>
       <p class="rsvp-ok" id="rsvpOk"></p>
-    </div>
+
+      <p style="font-size:0.52rem; letter-spacing:0.45em; color:rgba(196,151,58,0.55); text-transform:uppercase; margin-top:3rem; margin-bottom:1rem;" data-i18n="other-contact">Otras formas de contacto</p>
+<div class="contacts">
+        <a class="contact-row" href="https://wa.me/34689503547" target="_blank">
+          <span class="c-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.532 5.862L.057 23.428a.5.5 0 0 0 .61.61l5.567-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.864 0-3.618-.5-5.13-1.376l-.36-.214-3.733.99.99-3.734-.214-.36A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></span>
+          <div class="c-info"><span class="c-type" data-i18n="contact-jose">Teléfono · Jose</span><span class="c-val">+34 689 503 547</span></div>
+        </a>
+        <a class="contact-row" href="https://wa.me/34634676268" target="_blank">
+          <span class="c-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.532 5.862L.057 23.428a.5.5 0 0 0 .61.61l5.567-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.864 0-3.618-.5-5.13-1.376l-.36-.214-3.733.99.99-3.734-.214-.36A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></span>
+          <div class="c-info"><span class="c-type" data-i18n="contact-oarda">Teléfono · Oarda</span><span class="c-val">+34 634 676 268</span></div>
+        </a>
+      </div>
   </div>
 
   <footer>Jose &amp; Oarda &nbsp;·&nbsp; 31 de Octubre de 2026 &nbsp;·&nbsp; Granada</footer>
@@ -516,6 +513,7 @@ var T = {
     'venue-text':'Un antiguo convento del siglo XVI convertido en el escenario perfecto para celebrar el amor. El Palacio de Santa Paula será el lugar donde compartiremos contigo uno de los días más especiales de nuestra vida.',
     'celeb-tag':'La celebración','celeb-title':'Un día para recordar',
     'celeb-text':'Tras la ceremonia, os invitamos a continuar la celebración con nosotros en el banquete.<br><br>Compartid con nosotros este día de otoño en Granada. Os esperamos con mucha ilusión y el corazón lleno de alegría.',
+    'other-contact':'Otras formas de contacto',
     'rsvp-tag':'Confirmación de asistencia','rsvp-title':'¿Estarás con nosotros?',
     'rsvp-intro':'Confirma antes del <strong style="color:var(--gold2)">30 de junio de 2026</strong>.<br>A través del formulario o contactando directamente con nosotros.',
     'rsvp-notice':'📋 &nbsp;Por ahora solo necesitamos saber si contamos contigo. En los próximos meses os enviaremos una actualización con todos los detalles: horarios, sitios recomendados, qué ver en Granada y mucho más.',
@@ -542,6 +540,7 @@ var T = {
     'venue-text':'A 16th-century convent transformed into the perfect setting to celebrate love. The Palacio de Santa Paula will be where we share one of the most special days of our lives with you.',
     'celeb-tag':'The celebration','celeb-title':'A day to remember',
     'celeb-text':'After the ceremony, we invite you to continue the celebration with us at the reception.<br><br>Join us for this autumn day in Granada. We look forward to celebrating with you.',
+    'other-contact':'Other ways to contact us',
     'rsvp-tag':'RSVP','rsvp-title':'Will you join us?',
     'rsvp-intro':'Please confirm before <strong style="color:var(--gold2)">June 30th, 2026</strong>.<br>Via the form below or by contacting us directly.',
     'rsvp-notice':'📋 &nbsp;For now we just need to know if you can make it. In the coming months we will send a full update with all the details: timings, recommended places, things to do in Granada and much more.',
@@ -567,6 +566,7 @@ var T = {
     'venue-text':'Një manastir i shekullit XVI i shndërruar në skenën perfekte për të festuar dashurinë. Pallati i Santa Paulës do të jetë vendi ku do të ndajmë me ju një nga ditët më të veçanta të jetës sonë.',
     'celeb-tag':'Festimi','celeb-title':"Një ditë për t'u kujtuar",
     'celeb-text':'Pas ceremonisë, ju ftojmë të vazhdoni festimin me ne në banket.<br><br>Bashkohuni me ne në këtë ditë vjeshte në Granada. Ju presim me shumë gëzim.',
+    'other-contact':'Mënyra të tjera kontakti',
     'rsvp-tag':'Konfirmimi i pranisë','rsvp-title':'Do të jesh me ne?',
     'rsvp-intro':'Ju lutemi konfirmoni para <strong style="color:var(--gold2)">30 Qershor 2026</strong>.<br>Nëpërmjet formularit ose duke na kontaktuar drejtpërdrejt.',
     'rsvp-notice':'📋 &nbsp;Për momentin na duhet vetëm të dimë nëse do të vini. Në muajt e ardhshëm do të dërgojmë një përditësim me detaje: oraret, vendet e rekomanduara, çfarë të vizitoni në Granada dhe shumë më tepër.',
