@@ -629,37 +629,40 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
   var asistencia = form.querySelector('[name="asistencia"]').value;
   var activeBtn = document.querySelector('.lang-btn.active');
   var lang = activeBtn ? (activeBtn.title === 'Español' ? 'es' : activeBtn.title === 'English' ? 'en' : 'sq') : 'es';
+  var type = (asistencia === 'si') ? 'si' : 'no';
+
   var msgs = {
     si: {
-      es: '¡Muchas gracias! Nos alegra mucho contar contigo. En los próximos meses te mantendremos informado con todos los detalles. ¡Hasta pronto! 🤍',
+      es: '¡Muchas gracias! Nos alegra mucho contar contigo. En los próximos meses te mantendremos informado. ¡Hasta pronto! 🤍',
       en: 'Thank you so much! We are so happy you can make it. We will keep you updated in the coming months. See you soon! 🤍',
-      sq: 'Shumë faleminderit! Jemi të lumtur që do të jeni me ne. Do ju mbajmë të informuar në muajt e ardhshëm. Shihemi shpejt! 🤍'
+      sq: 'Shumë faleminderit! Jemi të lumtur që do të jeni me ne. Shihemi shpejt! 🤍'
     },
     no: {
       es: 'Lamentamos que no puedas acompañarnos, pero te agradecemos mucho que nos lo hayas hecho saber. ¡Estarás en nuestros pensamientos ese día! 🤍',
       en: 'We are sorry you cannot join us, but thank you for letting us know. You will be in our thoughts on that special day! 🤍',
-      sq: 'Na vjen keq që nuk mund të jesh me ne, por faleminderit që na lajmërove. Do të jesh në mendimet tona atë ditë! 🤍'
+      sq: 'Na vjen keq, por faleminderit që na lajmërove. Do të jesh në mendimet tona atë ditë! 🤍'
     }
   };
-  var type = (asistencia === 'si') ? 'si' : 'no';
+
+  function showMsg() {
+    form.style.display = 'none';
+    var ok = document.getElementById('rsvpOk');
+    ok.innerHTML = msgs[type][lang];
+    ok.style.display = 'block';
+  }
+
   btn.disabled = true;
 
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://formspree.io/f/mqedjlqy');
-  xhr.setRequestHeader('Accept', 'application/json');
-  xhr.onload = function() {
-    form.style.display = 'none';
-    var ok = document.getElementById('rsvpOk');
-    ok.innerHTML = msgs[type][lang];
-    ok.style.display = 'block';
-  };
-  xhr.onerror = function() {
-    form.style.display = 'none';
-    var ok = document.getElementById('rsvpOk');
-    ok.innerHTML = msgs[type][lang];
-    ok.style.display = 'block';
-  };
-  xhr.send(new FormData(form));
+  try {
+    var formData = new FormData(form);
+    fetch('https://formspree.io/f/mqedjlqy', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(function() { showMsg(); }).catch(function() { showMsg(); });
+  } catch(err) {
+    showMsg();
+  }
 });
 </script>
 </body>
