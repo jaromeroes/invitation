@@ -169,7 +169,114 @@ body {
 
 footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padding:2.5rem; text-align:center; color:rgba(253,246,237,0.18); font-size:0.72rem; letter-spacing:0.22em; font-style:italic; }
 
-@media(max-width:600px) { .cd-dot{display:none;} .contact-row{max-width:100%;} }
+/* ══════════════════════════════
+   TBD / PLACEHOLDERS
+══════════════════════════════ */
+.tbd { color: var(--garnet); font-style: italic; border-bottom: 1px dashed rgba(139,38,53,0.45); padding: 0 0.15em; }
+
+/* ══════════════════════════════
+   VENUE CALLOUT (one location)
+══════════════════════════════ */
+.venue-callout { max-width: 540px; margin: 2.4rem auto 0; padding: 1.4rem 1.6rem; border: 1px solid rgba(196,151,58,0.35); background: rgba(196,151,58,0.06); display: flex; align-items: flex-start; gap: 1rem; text-align: left; }
+.venue-callout-icon { color: var(--gold); font-size: 1.4rem; line-height: 1; flex-shrink: 0; }
+.venue-callout-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; line-height: 1.6; color: var(--dark); margin: 0; }
+
+/* ══════════════════════════════
+   DETAILS / TIMELINE
+══════════════════════════════ */
+.details-band { background: var(--warm); padding: 6rem 2rem; position: relative; overflow: hidden; }
+.timeline { max-width: 520px; margin: 3rem auto 0; position: relative; padding-left: 0.4rem; }
+.timeline::before { content:''; position:absolute; top:1rem; bottom:1rem; left:1.5rem; width:1px; background:linear-gradient(to bottom, transparent, var(--gold), transparent); }
+.tl-item { display: flex; gap: 1.4rem; padding: 1rem 0; align-items: flex-start; text-align: left; position: relative; }
+.tl-dot { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--gold); margin-left: 1.2rem; margin-top: 0.55rem; flex-shrink: 0; box-shadow: 0 0 0 4px var(--warm); position: relative; z-index: 1; }
+.tl-content { flex: 1; }
+.tl-time { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; letter-spacing: 0.2em; color: var(--terra); font-style: italic; }
+.tl-label { font-family: 'Tenor Sans', serif; font-style: italic; font-size: 1.15rem; color: var(--dark); margin-top: 0.1rem; }
+.tl-desc { font-size: 0.86rem; color: var(--muted); line-height: 1.65; margin-top: 0.25rem; }
+.day-note { max-width: 520px; margin: 2.5rem auto 0; font-size: 0.88rem; line-height: 1.85; color: var(--muted); text-align: center; font-style: italic; }
+
+/* ══════════════════════════════
+   FRIDAY MEET & GREET
+══════════════════════════════ */
+.friday-band { background: var(--paper); padding: 6rem 2rem; position: relative; overflow: hidden; }
+.friday-card { max-width: 560px; margin: 2.5rem auto 0; border: 1px solid rgba(139,38,53,0.2); padding: 2rem 1.8rem; background: rgba(253,246,237,0.4); text-align: left; }
+.friday-meta { display: flex; flex-wrap: wrap; gap: 1.6rem 2.2rem; margin-top: 1.4rem; padding-top: 1.4rem; border-top: 1px dashed rgba(139,38,53,0.2); }
+.friday-meta-item { flex: 1; min-width: 120px; }
+.friday-meta-label { font-size: 0.5rem; letter-spacing: 0.45em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.4rem; }
+.friday-meta-value { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--dark); font-style: italic; }
+
+/* ══════════════════════════════
+   AFTER-PARTY HALLOWEEN
+══════════════════════════════ */
+.after-band { background: linear-gradient(180deg, var(--dark) 0%, #2a1410 100%); padding: 6rem 2rem; position: relative; overflow: hidden; color: var(--paper); }
+.after-band::before { content:'🎃'; position:absolute; top:2rem; right:2rem; font-size:3rem; opacity:0.18; transform: rotate(-12deg); }
+.after-band::after { content:'🦇'; position:absolute; bottom:2.5rem; left:2rem; font-size:2rem; opacity:0.2; transform: rotate(15deg); }
+.after-band .s-tag { color: rgba(232,137,90,0.75); }
+.after-band .s-title { color: var(--paper); }
+.after-band .s-text { color: rgba(253,246,237,0.6); }
+.after-card { max-width: 480px; margin: 2.5rem auto 0; border: 1px solid rgba(232,137,90,0.4); padding: 1.8rem 1.6rem; text-align: left; background: rgba(196,96,58,0.07); position: relative; z-index: 1; }
+.after-card-title { font-family: 'Tenor Sans', serif; font-style: italic; font-size: 1.3rem; color: var(--terra2); margin-bottom: 0.3rem; }
+.after-card-addr { font-size: 0.78rem; color: rgba(253,246,237,0.55); font-style: italic; letter-spacing: 0.12em; }
+.after-card-text { font-size: 0.92rem; line-height: 1.8; color: rgba(253,246,237,0.78); margin-top: 1rem; }
+.after-badge { display: inline-block; margin-top: 1.2rem; padding: 0.4rem 0.9rem; border: 1px solid rgba(232,137,90,0.4); font-size: 0.55rem; letter-spacing: 0.45em; color: var(--terra2); text-transform: uppercase; }
+
+/* ══════════════════════════════
+   GRANADA RECS
+══════════════════════════════ */
+.granada-band { background: var(--warm); padding: 6rem 2rem; position: relative; overflow: hidden; }
+.granada-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem; max-width: 880px; margin: 3rem auto 0; text-align: left; }
+.granada-cat { background: rgba(253,246,237,0.55); border: 1px solid rgba(139,38,53,0.15); padding: 1.8rem 1.6rem; }
+.granada-cat-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 0.6rem; color: var(--terra); }
+.granada-cat-sub { font-size: 0.5rem; letter-spacing: 0.45em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.3rem; }
+.granada-cat-title { font-family: 'Tenor Sans', serif; font-style: italic; font-size: 1.3rem; color: var(--garnet); margin-bottom: 1.1rem; }
+.granada-list { list-style: none; padding: 0; margin: 0; }
+.granada-list li { font-size: 0.88rem; line-height: 1.6; color: var(--text); padding: 0.55rem 0; border-bottom: 1px dashed rgba(139,38,53,0.12); }
+.granada-list li:last-child { border-bottom: none; }
+.granada-list strong { color: var(--dark); font-weight: 400; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; display: block; margin-bottom: 0.1rem; }
+@media(max-width:640px) { .granada-grid { grid-template-columns: 1fr; } }
+
+/* ══════════════════════════════
+   HOTELS
+══════════════════════════════ */
+.hotels-band { background: var(--paper); padding: 6rem 2rem; position: relative; overflow: hidden; }
+.hotels-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; max-width: 880px; margin: 3rem auto 0; }
+.hotel-card { border: 1px solid rgba(196,151,58,0.28); padding: 1.5rem 1.4rem; text-align: left; background: rgba(196,151,58,0.04); transition: background 0.3s, border-color 0.3s; display: flex; flex-direction: column; }
+.hotel-card:hover { background: rgba(196,151,58,0.08); border-color: var(--gold); }
+.hotel-meta { font-size: 0.5rem; letter-spacing: 0.4em; color: var(--terra); text-transform: uppercase; margin-bottom: 0.7rem; }
+.hotel-name { font-family: 'Tenor Sans', serif; font-style: italic; font-size: 1.15rem; color: var(--dark); margin-bottom: 0.35rem; }
+.hotel-desc { font-size: 0.84rem; line-height: 1.55; color: var(--muted); flex: 1; }
+.hotel-link { display: inline-block; margin-top: 1rem; font-size: 0.5rem; letter-spacing: 0.35em; color: var(--gold); text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 0.2rem; align-self: flex-start; }
+.hotel-link:hover { color: var(--garnet); border-color: var(--garnet); }
+.hotels-note { max-width: 600px; margin: 2.2rem auto 0; font-size: 0.85rem; line-height: 1.8; color: var(--muted); text-align: center; font-style: italic; }
+
+/* ══════════════════════════════
+   TRANSPORT
+══════════════════════════════ */
+.transport-band { background: var(--warm); padding: 6rem 2rem; position: relative; overflow: hidden; }
+.transport-list { max-width: 620px; margin: 3rem auto 0; text-align: left; }
+.transport-item { padding: 1.3rem 0; border-bottom: 1px solid rgba(139,38,53,0.15); display: flex; gap: 1.4rem; align-items: flex-start; }
+.transport-item:last-child { border-bottom: none; }
+.transport-icon { font-size: 1.4rem; color: var(--terra); flex-shrink: 0; line-height: 1; padding-top: 0.2rem; width: 1.8rem; text-align: center; }
+.transport-label { font-family: 'Tenor Sans', serif; font-style: italic; font-size: 1.1rem; color: var(--dark); }
+.transport-desc { font-size: 0.88rem; line-height: 1.7; color: var(--muted); margin-top: 0.3rem; }
+
+/* ══════════════════════════════
+   GIFT
+══════════════════════════════ */
+.gift-band { background: var(--dark); padding: 6rem 2rem; position: relative; overflow: hidden; }
+.gift-band::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 60% 50% at 50% 40%, rgba(196,151,58,0.07) 0%, transparent 70%); }
+.gift-band .s-tag { color: rgba(196,151,58,0.65); }
+.gift-band .s-title { color: var(--paper); }
+.gift-band .s-text { color: rgba(253,246,237,0.55); }
+.gift-quote { font-family: 'Tenor Sans', serif; font-style: italic; font-size: clamp(1.1rem,2.2vw,1.4rem); color: rgba(253,246,237,0.85); line-height: 1.85; max-width: 560px; margin: 0 auto 2.5rem; padding: 0 1rem; position: relative; z-index: 1; }
+.iban-box { max-width: 480px; margin: 2rem auto 0; border: 1px solid rgba(196,151,58,0.35); padding: 1.8rem 1.6rem; text-align: center; background: rgba(196,151,58,0.05); position: relative; z-index: 1; }
+.iban-label { font-size: 0.5rem; letter-spacing: 0.45em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.8rem; }
+.iban-value { font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem,1.9vw,1.2rem); color: var(--paper); letter-spacing: 0.18em; word-break: break-all; }
+.iban-holder { font-size: 0.78rem; color: rgba(253,246,237,0.5); margin-top: 0.9rem; font-style: italic; letter-spacing: 0.08em; }
+.iban-copy { display: inline-block; margin-top: 1.2rem; padding: 0.5rem 1.4rem; background: transparent; border: 1px solid rgba(196,151,58,0.5); color: var(--gold); font-family: 'Jost', sans-serif; font-size: 0.55rem; letter-spacing: 0.4em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s; }
+.iban-copy:hover { background: var(--gold); color: var(--dark); }
+
+@media(max-width:600px) { .cd-dot{display:none;} .contact-row{max-width:100%;} .timeline::before{left:0.9rem;} .tl-dot{margin-left:0.6rem;} }
 </style>
 </head>
 <body>
@@ -392,7 +499,10 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
             </svg>
           </a>
         </div>
-        <p class="venue-note" data-i18n="venue-note"La ceremonia y el banquete tendrán lugar en el mismo enclave, en el corazón histórico de Granada.</p>
+        <div class="venue-callout">
+          <span class="venue-callout-icon">✦</span>
+          <p class="venue-callout-text" data-i18n="venue-callout">Un único lugar para todo el día: la ceremonia y el banquete se celebran en el mismo enclave. No tendréis que desplazaros entre dos sitios.</p>
+        </div>
         <p class="s-text" style="margin-top:1.5rem;" data-i18n="venue-text">Un antiguo convento del siglo XVI convertido en el escenario perfecto para celebrar el amor. El Palacio de Santa Paula será el lugar donde compartiremos contigo uno de los días más especiales de nuestra vida.</p>
       </div>
     </div>
@@ -427,13 +537,249 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
     </svg>
   </div>
 
-  <!-- CELEBRACIÓN -->
-  <div style="background:var(--warm);padding:6rem 2rem;">
+  <!-- DETALLES DEL DÍA -->
+  <div class="details-band">
     <div class="reveal">
       <div class="section-inner">
-        <p class="s-tag" data-i18n="celeb-tag">La celebración</p>
-        <p class="s-title" data-i18n="celeb-title">Un día para recordar</p>
-        <p class="s-text" data-i18n="celeb-text">Tras la ceremonia, os invitamos a continuar la celebración con nosotros en el banquete.<br><br>Compartid con nosotros este día de otoño en Granada. Os esperamos con mucha ilusión y el corazón lleno de alegría.</p>
+        <p class="s-tag" data-i18n="details-tag">El sábado · 31 de octubre</p>
+        <p class="s-title" data-i18n="details-title">Cómo será el día</p>
+        <p class="s-text" data-i18n="details-intro">Os esperamos a todos en el Palacio de Santa Paula. Ceremonia y celebración en el mismo lugar — solo tenéis que llegar y dejaros llevar.</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <span class="tl-dot"></span>
+            <div class="tl-content">
+              <p class="tl-time">12:00h</p>
+              <p class="tl-label" data-i18n="tl-label-1">Recepción</p>
+              <p class="tl-desc" data-i18n="tl-desc-1">Llegada de los invitados al Palacio de Santa Paula.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot"></span>
+            <div class="tl-content">
+              <p class="tl-time"><span class="tbd" data-i18n="tl-time-2">[POR CONFIRMAR]</span></p>
+              <p class="tl-label" data-i18n="tl-label-2">Ceremonia</p>
+              <p class="tl-desc" data-i18n="tl-desc-2">El momento del sí. Os pedimos estar acomodados unos minutos antes.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot"></span>
+            <div class="tl-content">
+              <p class="tl-time"><span class="tbd" data-i18n="tl-time-3">[POR CONFIRMAR]</span></p>
+              <p class="tl-label" data-i18n="tl-label-3">Cóctel de bienvenida</p>
+              <p class="tl-desc" data-i18n="tl-desc-3">Aperitivo en los patios del palacio mientras hacemos las fotos.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot"></span>
+            <div class="tl-content">
+              <p class="tl-time"><span class="tbd" data-i18n="tl-time-4">[POR CONFIRMAR]</span></p>
+              <p class="tl-label" data-i18n="tl-label-4">Banquete</p>
+              <p class="tl-desc" data-i18n="tl-desc-4">Cena de celebración bajo las bóvedas del antiguo convento.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot"></span>
+            <div class="tl-content">
+              <p class="tl-time"><span class="tbd" data-i18n="tl-time-5">[POR CONFIRMAR]</span></p>
+              <p class="tl-label" data-i18n="tl-label-5">Baile y barra libre</p>
+              <p class="tl-desc" data-i18n="tl-desc-5">A bailar hasta que el cuerpo aguante.</p>
+            </div>
+          </div>
+        </div>
+        <p class="day-note" data-i18n="day-note">El after-party de Halloween sigue justo después en el Albaicín — no hace falta cambiarse, seguimos la fiesta tal cual.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIERNES MEET & GREET -->
+  <div class="friday-band">
+    <div class="reveal">
+      <div class="section-inner">
+        <p class="s-tag" data-i18n="friday-tag">Viernes 30 de octubre</p>
+        <p class="s-title" data-i18n="friday-title">Bienvenidos a Granada</p>
+        <p class="s-text" data-i18n="friday-intro">Queremos que lleguéis con tiempo y que nos conozcamos todos antes del gran día. Os invitamos a una velada relajada para tomar algo, presentar a quien no se conoce y empezar a celebrar juntos.</p>
+        <div class="friday-card">
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--dark);line-height:1.7;" data-i18n="friday-body">Sin protocolo, sin estricto. Una manera de empezar el fin de semana entre los nuestros y de poner cara a quien todavía no conozcáis.</p>
+          <div class="friday-meta">
+            <div class="friday-meta-item">
+              <p class="friday-meta-label" data-i18n="friday-when-label">Cuándo</p>
+              <p class="friday-meta-value"><span class="tbd" data-i18n="friday-when">Viernes 30 · [POR CONFIRMAR hora]</span></p>
+            </div>
+            <div class="friday-meta-item">
+              <p class="friday-meta-label" data-i18n="friday-where-label">Dónde</p>
+              <p class="friday-meta-value"><span class="tbd" data-i18n="friday-where">[POR CONFIRMAR lugar]</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AFTER-PARTY HALLOWEEN -->
+  <div class="after-band">
+    <div class="reveal">
+      <div class="section-inner">
+        <p class="s-tag" data-i18n="after-tag">Después del banquete</p>
+        <p class="s-title" data-i18n="after-title">After-party de Halloween</p>
+        <p class="s-text" data-i18n="after-intro">El 31 de octubre es Halloween, así que seguimos la fiesta como toca. Hemos reservado zonas VIP para los que queráis estirar la noche con nosotros.</p>
+        <div class="after-card">
+          <p class="after-card-title"><span class="tbd" data-i18n="after-venue">[POR CONFIRMAR — local en Albaicín / Aliatar]</span></p>
+          <p class="after-card-addr"><span class="tbd" data-i18n="after-addr">Dirección · [POR CONFIRMAR]</span></p>
+          <p class="after-card-text" data-i18n="after-body">Llegamos directamente desde el Palacio de Santa Paula, sin pausas. No hace falta cambiarse: pasamos de la boda al after sin parar. Zonas reservadas exclusivamente para los invitados.</p>
+          <p class="after-badge" data-i18n="after-badge">Zonas VIP reservadas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRANADA RECOMENDACIONES -->
+  <div class="granada-band">
+    <div class="reveal">
+      <div class="section-inner">
+        <p class="s-tag" data-i18n="granada-tag">Para quienes vienen de fuera</p>
+        <p class="s-title" data-i18n="granada-title">Aprovechad Granada</p>
+        <p class="s-text" data-i18n="granada-intro">Si venís desde lejos, merece la pena quedarse unos días más. Aquí van nuestras recomendaciones, las de los que vivimos aquí y la queremos.</p>
+        <div class="granada-grid">
+          <div class="granada-cat">
+            <div class="granada-cat-icon">✦</div>
+            <p class="granada-cat-sub" data-i18n="granada-c1-sub">Imprescindibles</p>
+            <p class="granada-cat-title" data-i18n="granada-c1-title">Qué ver</p>
+            <ul class="granada-list">
+              <li data-i18n="granada-c1-i1"><strong>Alhambra y Generalife</strong>Reservad entradas con semanas de antelación. El conjunto monumental más visitado de España no es casualidad.</li>
+              <li data-i18n="granada-c1-i2"><strong>Mirador de San Nicolás</strong>La postal de la ciudad: la Alhambra con Sierra Nevada al fondo. Mejor al atardecer.</li>
+              <li data-i18n="granada-c1-i3"><strong>Catedral y Capilla Real</strong>El descanso de los Reyes Católicos, en pleno centro.</li>
+              <li data-i18n="granada-c1-i4"><strong>Monasterio de la Cartuja</strong>Barroco granadino en su versión más exuberante.</li>
+            </ul>
+          </div>
+          <div class="granada-cat">
+            <div class="granada-cat-icon">❦</div>
+            <p class="granada-cat-sub" data-i18n="granada-c2-sub">Comer y tapear</p>
+            <p class="granada-cat-title" data-i18n="granada-c2-title">Tapas y mesa</p>
+            <ul class="granada-list">
+              <li data-i18n="granada-c2-i1"><strong>Calle Navas</strong>La zona de tapas por antonomasia. Pedid una caña y os llega la tapa gratis — sí, en Granada todavía pasa.</li>
+              <li data-i18n="granada-c2-i2"><strong>Bodegas Castañeda</strong>Clásico imprescindible, en pleno centro. Cocina granadina sin postureo.</li>
+              <li data-i18n="granada-c2-i3"><strong>Los Diamantes</strong>Pescaíto frito y ambiente local. El de Plaza Nueva es el original.</li>
+              <li data-i18n="granada-c2-i4"><strong>Damasqueros</strong>Para una cena más cuidada: fusión andaluza de autor.</li>
+            </ul>
+          </div>
+          <div class="granada-cat">
+            <div class="granada-cat-icon">⌘</div>
+            <p class="granada-cat-sub" data-i18n="granada-c3-sub">Pasear sin prisa</p>
+            <p class="granada-cat-title" data-i18n="granada-c3-title">Barrios</p>
+            <ul class="granada-list">
+              <li data-i18n="granada-c3-i1"><strong>Albaicín</strong>Calles empedradas, casas blancas, miradores. Subid sin GPS y dejaos perder.</li>
+              <li data-i18n="granada-c3-i2"><strong>Sacromonte</strong>El barrio gitano y las cuevas. Un espectáculo de flamenco aquí es otra historia.</li>
+              <li data-i18n="granada-c3-i3"><strong>Realejo</strong>Antigua judería. Mucho arte urbano (mirad las paredes) y bares menos turísticos.</li>
+              <li data-i18n="granada-c3-i4"><strong>Carrera del Darro</strong>La calle más bonita de Granada, paralela al río bajo la Alhambra.</li>
+            </ul>
+          </div>
+          <div class="granada-cat">
+            <div class="granada-cat-icon">✧</div>
+            <p class="granada-cat-sub" data-i18n="granada-c4-sub">Si tenéis un día extra</p>
+            <p class="granada-cat-title" data-i18n="granada-c4-title">Escapadas y planes</p>
+            <ul class="granada-list">
+              <li data-i18n="granada-c4-i1"><strong>Sierra Nevada</strong>En 45 minutos en coche estáis en la montaña. En octubre suelen caer las primeras nieves.</li>
+              <li data-i18n="granada-c4-i2"><strong>Las Alpujarras</strong>Pueblos blancos colgados de la ladera sur. Para perderse un día.</li>
+              <li data-i18n="granada-c4-i3"><strong>Hammam Al Ándalus</strong>Baños árabes en pleno centro. Reservad con antelación.</li>
+              <li data-i18n="granada-c4-i4"><strong>Flamenco en cuevas</strong>En Sacromonte. Los Tarantos o Venta El Gallo son los clásicos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALOJAMIENTO -->
+  <div class="hotels-band">
+    <div class="reveal">
+      <div class="section-inner">
+        <p class="s-tag" data-i18n="hotels-tag">Dónde dormir</p>
+        <p class="s-title" data-i18n="hotels-title">Alojamiento</p>
+        <p class="s-text" data-i18n="hotels-intro">Estas son nuestras sugerencias cerca del Palacio de Santa Paula. Todas a distancia caminable del venue.</p>
+        <div class="hotels-grid">
+          <div class="hotel-card">
+            <p class="hotel-meta" data-i18n="hotel1-meta">Mismo edificio</p>
+            <p class="hotel-name">AC Palacio de Santa Paula</p>
+            <p class="hotel-desc" data-i18n="hotel1-desc">La opción más cómoda: dormir en el mismo lugar de la boda. Hotel de 5 estrellas en un antiguo convento del siglo XVI.</p>
+            <a class="hotel-link" href="https://www.marriott.com/hotels/travel/grxsp-ac-hotel-palacio-de-santa-paula-autograph-collection/" target="_blank" rel="noopener" data-i18n="hotel-link">Reservar</a>
+          </div>
+          <div class="hotel-card">
+            <p class="hotel-meta" data-i18n="hotel2-meta">5 min andando</p>
+            <p class="hotel-name">Hospes Palacio de los Patos</p>
+            <p class="hotel-desc" data-i18n="hotel2-desc">Palacete del siglo XIX restaurado. Spa, piscina y servicio muy cuidado. En la calle Solarillo de Gracia.</p>
+            <a class="hotel-link" href="https://www.hospes.com/granada-palacio-patos" target="_blank" rel="noopener" data-i18n="hotel-link">Reservar</a>
+          </div>
+          <div class="hotel-card">
+            <p class="hotel-meta" data-i18n="hotel3-meta">7 min andando</p>
+            <p class="hotel-name">Hotel Casa 1800 Granada</p>
+            <p class="hotel-desc" data-i18n="hotel3-desc">Boutique encantador en la Carrera del Darro, a los pies de la Alhambra. Pequeño y muy bien valorado.</p>
+            <a class="hotel-link" href="https://www.hotelcasa1800granada.com/" target="_blank" rel="noopener" data-i18n="hotel-link">Reservar</a>
+          </div>
+          <div class="hotel-card">
+            <p class="hotel-meta" data-i18n="hotel4-meta">10 min andando</p>
+            <p class="hotel-name">Hotel Palacio de los Navas</p>
+            <p class="hotel-desc" data-i18n="hotel4-desc">Casa-palacio del siglo XVI en pleno centro, en plena zona de tapas. Más económico y con mucho carácter.</p>
+            <a class="hotel-link" href="https://www.hotelpalaciodelosnavas.com/" target="_blank" rel="noopener" data-i18n="hotel-link">Reservar</a>
+          </div>
+        </div>
+        <p class="hotels-note" data-i18n="hotels-note">El centro de Granada es pequeño y fácil de recorrer a pie. Cualquier hotel del entorno de Gran Vía, Catedral o Plaza Nueva os deja a 10 minutos del venue.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRANSPORTE -->
+  <div class="transport-band">
+    <div class="reveal">
+      <div class="section-inner">
+        <p class="s-tag" data-i18n="transport-tag">Cómo llegar</p>
+        <p class="s-title" data-i18n="transport-title">Llegar y moverse</p>
+        <div class="transport-list">
+          <div class="transport-item">
+            <span class="transport-icon">✈</span>
+            <div>
+              <p class="transport-label" data-i18n="transport-plane-label">En avión</p>
+              <p class="transport-desc" data-i18n="transport-plane-desc">Aeropuerto Federico García Lorca (GRX), a 20 minutos en taxi del centro. También Málaga (1h 30min en coche o autobús), con más conexiones internacionales.</p>
+            </div>
+          </div>
+          <div class="transport-item">
+            <span class="transport-icon">⊟</span>
+            <div>
+              <p class="transport-label" data-i18n="transport-train-label">En tren</p>
+              <p class="transport-desc" data-i18n="transport-train-desc">AVE directo desde Madrid (3h 20min) y Barcelona (6h 30min). La estación está a 15 minutos andando del centro.</p>
+            </div>
+          </div>
+          <div class="transport-item">
+            <span class="transport-icon">⌂</span>
+            <div>
+              <p class="transport-label" data-i18n="transport-car-label">En coche</p>
+              <p class="transport-desc" data-i18n="transport-car-desc">Granada está bien conectada por la A-44 desde Málaga y la A-92 desde Sevilla. Aviso: el centro tiene zonas peatonales y aparcar puede ser un reto — mejor parking público o aparcar en el hotel.</p>
+            </div>
+          </div>
+          <div class="transport-item">
+            <span class="transport-icon">↗</span>
+            <div>
+              <p class="transport-label" data-i18n="transport-local-label">Una vez aquí</p>
+              <p class="transport-desc" data-i18n="transport-local-desc">El casco histórico se recorre a pie. Para subir al Albaicín o al Sacromonte hay micro-buses (líneas C1, C2, C3) y taxis baratos. Cabify y FreeNow funcionan bien.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGALO -->
+  <div class="gift-band">
+    <div class="reveal">
+      <div class="section-inner">
+        <p class="s-tag" data-i18n="gift-tag">Un detalle</p>
+        <p class="s-title" data-i18n="gift-title">Si queréis regalarnos algo</p>
+        <p class="gift-quote" data-i18n="gift-quote">"Vuestra presencia es ya el mejor de los regalos. Pero si queréis contribuir a nuestra luna de miel y a empezar juntos esta nueva etapa, lo recibiremos con muchísima ilusión."</p>
+        <div class="iban-box">
+          <p class="iban-label" data-i18n="iban-label">Cuenta bancaria · IBAN</p>
+          <p class="iban-value" id="ibanValue"><span class="tbd" data-i18n="iban-value">[POR CONFIRMAR]</span></p>
+          <p class="iban-holder" data-i18n="iban-holder">A nombre de Jose Romero &amp; Oarda</p>
+          <button class="iban-copy" type="button" onclick="copyIban(this)" data-i18n="iban-copy">Copiar IBAN</button>
+        </div>
       </div>
     </div>
   </div>
@@ -501,7 +847,6 @@ var T = {
   es: {
     'hero-tag':'Os invitamos a nuestra boda','hero-date1':'31 de Octubre de 2026','hero-date2':'Sábado · 12:00h · Granada',
     'scroll-cue':'Descubrir','cd-label':'Faltan',
-    'cd-label':'Faltan',
     'cd-title':'Para el gran día',
     'cd-days':'Días','cd-hours':'Horas','cd-mins':'Minutos','cd-secs':'Segundos',
     'photo-caption':'Granada · Octubre 2026',
@@ -509,14 +854,73 @@ var T = {
     'story-quote':'"Granada nos unió, y Granada será testigo de cómo decimos sí para siempre."',
     'story-text':'Hay ciudades que marcan un antes y un después. Para nosotros, esa ciudad es Granada. Entre sus calles, sus miradores y el eco de la Alhambra, nuestra historia comenzó a escribirse.<br><br>Hoy queremos compartir con vosotros el capítulo más bonito: el de convertirnos en familia. Gracias por ser parte de este día tan especial para nosotros.',
     'venue-tag':'El lugar','venue-title':'Ceremonia &amp; Celebración',
-    'venue-note':'La ceremonia y el banquete tendrán lugar en el mismo enclave, en el corazón histórico de Granada.',
+    'venue-callout':'Un único lugar para todo el día: la ceremonia y el banquete se celebran en el mismo enclave. No tendréis que desplazaros entre dos sitios.',
     'venue-text':'Un antiguo convento del siglo XVI convertido en el escenario perfecto para celebrar el amor. El Palacio de Santa Paula será el lugar donde compartiremos contigo uno de los días más especiales de nuestra vida.',
-    'celeb-tag':'La celebración','celeb-title':'Un día para recordar',
-    'celeb-text':'Tras la ceremonia, os invitamos a continuar la celebración con nosotros en el banquete.<br><br>Compartid con nosotros este día de otoño en Granada. Os esperamos con mucha ilusión y el corazón lleno de alegría.',
+    'details-tag':'El sábado · 31 de octubre','details-title':'Cómo será el día',
+    'details-intro':'Os esperamos a todos en el Palacio de Santa Paula. Ceremonia y celebración en el mismo lugar — solo tenéis que llegar y dejaros llevar.',
+    'tl-label-1':'Recepción','tl-desc-1':'Llegada de los invitados al Palacio de Santa Paula.',
+    'tl-time-2':'[POR CONFIRMAR]','tl-label-2':'Ceremonia','tl-desc-2':'El momento del sí. Os pedimos estar acomodados unos minutos antes.',
+    'tl-time-3':'[POR CONFIRMAR]','tl-label-3':'Cóctel de bienvenida','tl-desc-3':'Aperitivo en los patios del palacio mientras hacemos las fotos.',
+    'tl-time-4':'[POR CONFIRMAR]','tl-label-4':'Banquete','tl-desc-4':'Cena de celebración bajo las bóvedas del antiguo convento.',
+    'tl-time-5':'[POR CONFIRMAR]','tl-label-5':'Baile y barra libre','tl-desc-5':'A bailar hasta que el cuerpo aguante.',
+    'day-note':'El after-party de Halloween sigue justo después en el Albaicín — no hace falta cambiarse, seguimos la fiesta tal cual.',
+    'friday-tag':'Viernes 30 de octubre','friday-title':'Bienvenidos a Granada',
+    'friday-intro':'Queremos que lleguéis con tiempo y que nos conozcamos todos antes del gran día. Os invitamos a una velada relajada para tomar algo, presentar a quien no se conoce y empezar a celebrar juntos.',
+    'friday-body':'Sin protocolo, sin estricto. Una manera de empezar el fin de semana entre los nuestros y de poner cara a quien todavía no conozcáis.',
+    'friday-when-label':'Cuándo','friday-when':'Viernes 30 · [POR CONFIRMAR hora]',
+    'friday-where-label':'Dónde','friday-where':'[POR CONFIRMAR lugar]',
+    'after-tag':'Después del banquete','after-title':'After-party de Halloween',
+    'after-intro':'El 31 de octubre es Halloween, así que seguimos la fiesta como toca. Hemos reservado zonas VIP para los que queráis estirar la noche con nosotros.',
+    'after-venue':'[POR CONFIRMAR — local en Albaicín / Aliatar]',
+    'after-addr':'Dirección · [POR CONFIRMAR]',
+    'after-body':'Llegamos directamente desde el Palacio de Santa Paula, sin pausas. No hace falta cambiarse: pasamos de la boda al after sin parar. Zonas reservadas exclusivamente para los invitados.',
+    'after-badge':'Zonas VIP reservadas',
+    'granada-tag':'Para quienes vienen de fuera','granada-title':'Aprovechad Granada',
+    'granada-intro':'Si venís desde lejos, merece la pena quedarse unos días más. Aquí van nuestras recomendaciones, las de los que vivimos aquí y la queremos.',
+    'granada-c1-sub':'Imprescindibles','granada-c1-title':'Qué ver',
+    'granada-c1-i1':'<strong>Alhambra y Generalife</strong>Reservad entradas con semanas de antelación. El conjunto monumental más visitado de España no es casualidad.',
+    'granada-c1-i2':'<strong>Mirador de San Nicolás</strong>La postal de la ciudad: la Alhambra con Sierra Nevada al fondo. Mejor al atardecer.',
+    'granada-c1-i3':'<strong>Catedral y Capilla Real</strong>El descanso de los Reyes Católicos, en pleno centro.',
+    'granada-c1-i4':'<strong>Monasterio de la Cartuja</strong>Barroco granadino en su versión más exuberante.',
+    'granada-c2-sub':'Comer y tapear','granada-c2-title':'Tapas y mesa',
+    'granada-c2-i1':'<strong>Calle Navas</strong>La zona de tapas por antonomasia. Pedid una caña y os llega la tapa gratis — sí, en Granada todavía pasa.',
+    'granada-c2-i2':'<strong>Bodegas Castañeda</strong>Clásico imprescindible, en pleno centro. Cocina granadina sin postureo.',
+    'granada-c2-i3':'<strong>Los Diamantes</strong>Pescaíto frito y ambiente local. El de Plaza Nueva es el original.',
+    'granada-c2-i4':'<strong>Damasqueros</strong>Para una cena más cuidada: fusión andaluza de autor.',
+    'granada-c3-sub':'Pasear sin prisa','granada-c3-title':'Barrios',
+    'granada-c3-i1':'<strong>Albaicín</strong>Calles empedradas, casas blancas, miradores. Subid sin GPS y dejaos perder.',
+    'granada-c3-i2':'<strong>Sacromonte</strong>El barrio gitano y las cuevas. Un espectáculo de flamenco aquí es otra historia.',
+    'granada-c3-i3':'<strong>Realejo</strong>Antigua judería. Mucho arte urbano (mirad las paredes) y bares menos turísticos.',
+    'granada-c3-i4':'<strong>Carrera del Darro</strong>La calle más bonita de Granada, paralela al río bajo la Alhambra.',
+    'granada-c4-sub':'Si tenéis un día extra','granada-c4-title':'Escapadas y planes',
+    'granada-c4-i1':'<strong>Sierra Nevada</strong>En 45 minutos en coche estáis en la montaña. En octubre suelen caer las primeras nieves.',
+    'granada-c4-i2':'<strong>Las Alpujarras</strong>Pueblos blancos colgados de la ladera sur. Para perderse un día.',
+    'granada-c4-i3':'<strong>Hammam Al Ándalus</strong>Baños árabes en pleno centro. Reservad con antelación.',
+    'granada-c4-i4':'<strong>Flamenco en cuevas</strong>En Sacromonte. Los Tarantos o Venta El Gallo son los clásicos.',
+    'hotels-tag':'Dónde dormir','hotels-title':'Alojamiento',
+    'hotels-intro':'Estas son nuestras sugerencias cerca del Palacio de Santa Paula. Todas a distancia caminable del venue.',
+    'hotel1-meta':'Mismo edificio','hotel1-desc':'La opción más cómoda: dormir en el mismo lugar de la boda. Hotel de 5 estrellas en un antiguo convento del siglo XVI.',
+    'hotel2-meta':'5 min andando','hotel2-desc':'Palacete del siglo XIX restaurado. Spa, piscina y servicio muy cuidado. En la calle Solarillo de Gracia.',
+    'hotel3-meta':'7 min andando','hotel3-desc':'Boutique encantador en la Carrera del Darro, a los pies de la Alhambra. Pequeño y muy bien valorado.',
+    'hotel4-meta':'10 min andando','hotel4-desc':'Casa-palacio del siglo XVI en pleno centro, en plena zona de tapas. Más económico y con mucho carácter.',
+    'hotel-link':'Reservar',
+    'hotels-note':'El centro de Granada es pequeño y fácil de recorrer a pie. Cualquier hotel del entorno de Gran Vía, Catedral o Plaza Nueva os deja a 10 minutos del venue.',
+    'transport-tag':'Cómo llegar','transport-title':'Llegar y moverse',
+    'transport-plane-label':'En avión',
+    'transport-plane-desc':'Aeropuerto Federico García Lorca (GRX), a 20 minutos en taxi del centro. También Málaga (1h 30min en coche o autobús), con más conexiones internacionales.',
+    'transport-train-label':'En tren',
+    'transport-train-desc':'AVE directo desde Madrid (3h 20min) y Barcelona (6h 30min). La estación está a 15 minutos andando del centro.',
+    'transport-car-label':'En coche',
+    'transport-car-desc':'Granada está bien conectada por la A-44 desde Málaga y la A-92 desde Sevilla. Aviso: el centro tiene zonas peatonales y aparcar puede ser un reto — mejor parking público o aparcar en el hotel.',
+    'transport-local-label':'Una vez aquí',
+    'transport-local-desc':'El casco histórico se recorre a pie. Para subir al Albaicín o al Sacromonte hay micro-buses (líneas C1, C2, C3) y taxis baratos. Cabify y FreeNow funcionan bien.',
+    'gift-tag':'Un detalle','gift-title':'Si queréis regalarnos algo',
+    'gift-quote':'"Vuestra presencia es ya el mejor de los regalos. Pero si queréis contribuir a nuestra luna de miel y a empezar juntos esta nueva etapa, lo recibiremos con muchísima ilusión."',
+    'iban-label':'Cuenta bancaria · IBAN','iban-value':'[POR CONFIRMAR]','iban-holder':'A nombre de Jose Romero &amp; Oarda','iban-copy':'Copiar IBAN','iban-copied':'¡Copiado!',
     'other-contact':'Otras formas de contacto',
     'rsvp-tag':'Confirmación de asistencia','rsvp-title':'¿Estarás con nosotros?',
     'rsvp-intro':'Confirma antes del <strong style="color:var(--gold2)">30 de junio de 2026</strong>.<br>A través del formulario o contactando directamente con nosotros.',
-    'rsvp-notice':'📋 &nbsp;Por ahora solo necesitamos saber si contamos contigo. En los próximos meses os enviaremos una actualización con todos los detalles: horarios, sitios recomendados, qué ver en Granada y mucho más.',
+    'rsvp-notice':'📋 &nbsp;Por ahora solo necesitamos saber si contamos contigo. Los detalles finales (horarios exactos, after-party, IBAN y demás) los iremos actualizando aquí mismo en los próximos meses.',
     'contact-email':'Email','contact-jose':'Teléfono · Jose','contact-oarda':'Teléfono · Oarda',
     'form-name':'Nombre completo','form-attend':'¿Asistirás?','form-select':'Selecciona una opción',
     'form-yes':'Sí, ¡allí estaré!','form-no':'Lamentablemente no podré asistir',
@@ -528,7 +932,6 @@ var T = {
   en: {
     'hero-tag':'You are invited to our wedding','hero-date1':'October 31st, 2026','hero-date2':'Saturday · 12:00 PM · Granada',
     'scroll-cue':'Discover','cd-label':'Countdown',
-    'cd-label':'Countdown',
     'cd-title':'To the big day',
     'cd-days':'Days','cd-hours':'Hours','cd-mins':'Minutes','cd-secs':'Seconds',
     'photo-caption':'Granada · October 2026',
@@ -536,14 +939,73 @@ var T = {
     'story-quote':'"Granada brought us together, and Granada will witness how we say yes forever."',
     'story-text':'Some cities change everything. For us, that city is Granada. Among its streets, viewpoints and the echo of the Alhambra, our story began to unfold.<br><br>Today we want to share with you the most beautiful chapter: becoming a family. Thank you for being part of this special day.',
     'venue-tag':'The venue','venue-title':'Ceremony &amp; Celebration',
-    'venue-note':'The ceremony and reception will both take place at the same venue, in the historic heart of Granada.',
+    'venue-callout':'One place for the whole day: the ceremony and the reception both take place at the same venue. You won\'t have to travel between two locations.',
     'venue-text':'A 16th-century convent transformed into the perfect setting to celebrate love. The Palacio de Santa Paula will be where we share one of the most special days of our lives with you.',
-    'celeb-tag':'The celebration','celeb-title':'A day to remember',
-    'celeb-text':'After the ceremony, we invite you to continue the celebration with us at the reception.<br><br>Join us for this autumn day in Granada. We look forward to celebrating with you.',
+    'details-tag':'Saturday · October 31st','details-title':'How the day will unfold',
+    'details-intro':'We\'ll be waiting for you all at the Palacio de Santa Paula. Ceremony and celebration at the same venue — just arrive and let yourselves go with the flow.',
+    'tl-label-1':'Reception','tl-desc-1':'Guests arrive at the Palacio de Santa Paula.',
+    'tl-time-2':'[TO BE CONFIRMED]','tl-label-2':'Ceremony','tl-desc-2':'The moment of yes. Please be seated a few minutes early.',
+    'tl-time-3':'[TO BE CONFIRMED]','tl-label-3':'Welcome cocktail','tl-desc-3':'Aperitif in the palace courtyards while we take the photos.',
+    'tl-time-4':'[TO BE CONFIRMED]','tl-label-4':'Dinner','tl-desc-4':'Celebration dinner under the vaults of the old convent.',
+    'tl-time-5':'[TO BE CONFIRMED]','tl-label-5':'Dancing & open bar','tl-desc-5':'Dancing until the body can take no more.',
+    'day-note':'The Halloween after-party kicks off straight after in the Albaicín — no need to change clothes, the party just keeps going.',
+    'friday-tag':'Friday October 30th','friday-title':'Welcome to Granada',
+    'friday-intro':'We\'d love you to arrive in time so we can all meet before the big day. We\'re inviting everyone to a relaxed evening to have a drink, introduce those who don\'t know each other and start celebrating together.',
+    'friday-body':'No protocol, no strictness. A way to kick off the weekend with our people and put a face to those you haven\'t met yet.',
+    'friday-when-label':'When','friday-when':'Friday 30th · [TIME TO BE CONFIRMED]',
+    'friday-where-label':'Where','friday-where':'[VENUE TO BE CONFIRMED]',
+    'after-tag':'After dinner','after-title':'Halloween after-party',
+    'after-intro':'October 31st is Halloween, so we keep the party going as it should be. We\'ve reserved VIP areas for those of you who want to stretch the night out with us.',
+    'after-venue':'[TO BE CONFIRMED — venue in Albaicín / Aliatar]',
+    'after-addr':'Address · [TO BE CONFIRMED]',
+    'after-body':'We head over directly from the Palacio de Santa Paula, no breaks in between. No need to change clothes: we move from the wedding to the after-party without stopping. Areas reserved exclusively for wedding guests.',
+    'after-badge':'VIP areas reserved',
+    'granada-tag':'For those travelling in','granada-title':'Make the most of Granada',
+    'granada-intro':'If you\'re coming from far away, it\'s worth staying a few extra days. Here are our recommendations, from those of us who live here and love it.',
+    'granada-c1-sub':'The essentials','granada-c1-title':'What to see',
+    'granada-c1-i1':'<strong>Alhambra & Generalife</strong>Book tickets weeks in advance. The most visited monument in Spain isn\'t that by chance.',
+    'granada-c1-i2':'<strong>Mirador de San Nicolás</strong>The city\'s postcard view: the Alhambra with Sierra Nevada behind it. Best at sunset.',
+    'granada-c1-i3':'<strong>Cathedral & Royal Chapel</strong>The resting place of the Catholic Monarchs, right in the centre.',
+    'granada-c1-i4':'<strong>Monasterio de la Cartuja</strong>Granadan baroque at its most exuberant.',
+    'granada-c2-sub':'Eat and tapear','granada-c2-title':'Tapas & dining',
+    'granada-c2-i1':'<strong>Calle Navas</strong>The tapas street par excellence. Order a beer and a tapa comes free — yes, that still happens in Granada.',
+    'granada-c2-i2':'<strong>Bodegas Castañeda</strong>An unmissable classic, right in the centre. Granadan cooking with no pretension.',
+    'granada-c2-i3':'<strong>Los Diamantes</strong>Fried fish and local vibes. The Plaza Nueva one is the original.',
+    'granada-c2-i4':'<strong>Damasqueros</strong>For a more refined dinner: Andalusian fusion at its finest.',
+    'granada-c3-sub':'Wander slowly','granada-c3-title':'Neighbourhoods',
+    'granada-c3-i1':'<strong>Albaicín</strong>Cobbled streets, white houses, viewpoints. Go up without GPS and let yourselves get lost.',
+    'granada-c3-i2':'<strong>Sacromonte</strong>The old Roma quarter and its caves. A flamenco show here is a whole different thing.',
+    'granada-c3-i3':'<strong>Realejo</strong>The old Jewish quarter. Lots of street art (look at the walls) and less touristy bars.',
+    'granada-c3-i4':'<strong>Carrera del Darro</strong>The prettiest street in Granada, running along the river beneath the Alhambra.',
+    'granada-c4-sub':'If you have an extra day','granada-c4-title':'Day trips & plans',
+    'granada-c4-i1':'<strong>Sierra Nevada</strong>45 minutes by car and you\'re in the mountains. October usually brings the first snow.',
+    'granada-c4-i2':'<strong>Las Alpujarras</strong>White villages hanging from the southern slope. To lose yourselves for a day.',
+    'granada-c4-i3':'<strong>Hammam Al Ándalus</strong>Arab baths in the centre. Book ahead.',
+    'granada-c4-i4':'<strong>Flamenco in caves</strong>In Sacromonte. Los Tarantos or Venta El Gallo are the classics.',
+    'hotels-tag':'Where to stay','hotels-title':'Accommodation',
+    'hotels-intro':'These are our suggestions near the Palacio de Santa Paula. All within walking distance of the venue.',
+    'hotel1-meta':'Same building','hotel1-desc':'The most convenient option: sleep in the same place as the wedding. A 5-star hotel in a 16th-century convent.',
+    'hotel2-meta':'5 min walk','hotel2-desc':'Restored 19th-century palace. Spa, pool and very attentive service. On calle Solarillo de Gracia.',
+    'hotel3-meta':'7 min walk','hotel3-desc':'Charming boutique on Carrera del Darro, at the foot of the Alhambra. Small and highly rated.',
+    'hotel4-meta':'10 min walk','hotel4-desc':'16th-century town-palace in the heart of the city, right in the tapas zone. More affordable, lots of character.',
+    'hotel-link':'Book',
+    'hotels-note':'The centre of Granada is small and easy to walk. Any hotel around Gran Vía, the Cathedral or Plaza Nueva is 10 minutes from the venue.',
+    'transport-tag':'How to get here','transport-title':'Arriving & getting around',
+    'transport-plane-label':'By plane',
+    'transport-plane-desc':'Federico García Lorca Airport (GRX), 20 minutes by taxi from the centre. Also Málaga (1h 30min by car or bus), with more international connections.',
+    'transport-train-label':'By train',
+    'transport-train-desc':'Direct AVE from Madrid (3h 20min) and Barcelona (6h 30min). The station is 15 minutes\' walk from the centre.',
+    'transport-car-label':'By car',
+    'transport-car-desc':'Granada is well connected via the A-44 from Málaga and the A-92 from Sevilla. Heads up: the centre has pedestrian zones and parking can be a challenge — better to use a public car park or park at the hotel.',
+    'transport-local-label':'Once you\'re here',
+    'transport-local-desc':'The old town is walkable. To go up to the Albaicín or Sacromonte there are mini-buses (lines C1, C2, C3) and cheap taxis. Cabify and FreeNow work well.',
+    'gift-tag':'A little something','gift-title':'If you\'d like to gift us something',
+    'gift-quote':'"Your presence is already the greatest gift. But if you\'d like to contribute to our honeymoon and to the start of this new chapter together, we\'ll receive it with so much joy."',
+    'iban-label':'Bank account · IBAN','iban-value':'[TO BE CONFIRMED]','iban-holder':'In the name of Jose Romero &amp; Oarda','iban-copy':'Copy IBAN','iban-copied':'Copied!',
     'other-contact':'Other ways to contact us',
     'rsvp-tag':'RSVP','rsvp-title':'Will you join us?',
     'rsvp-intro':'Please confirm before <strong style="color:var(--gold2)">June 30th, 2026</strong>.<br>Via the form below or by contacting us directly.',
-    'rsvp-notice':'📋 &nbsp;For now we just need to know if you can make it. In the coming months we will send a full update with all the details: timings, recommended places, things to do in Granada and much more.',
+    'rsvp-notice':'📋 &nbsp;For now we just need to know if you can make it. We\'ll update the final details (exact timings, after-party, IBAN and so on) right here over the coming months.',
     'contact-email':'Email','contact-jose':'Phone · Jose','contact-oarda':'Phone · Oarda',
     'form-name':'Full name','form-attend':'Will you attend?','form-select':'Select an option',
     'form-yes':"Yes, I'll be there!",'form-no':"Unfortunately I can't attend",
@@ -562,14 +1024,73 @@ var T = {
     'story-quote':'"Granada na bashkoi, dhe Granada do të jetë dëshmitare si themi po përgjithmonë."',
     'story-text':'Disa qytete ndryshojnë gjithçka. Për ne, ai qytet është Granada. Mes rrugëve të saj dhe jehonës së Alhambra, historia jonë filloi të shkruhej.<br><br>Sot duam të ndajmë me ju kapitullin më të bukur: të bëhemi familje. Faleminderit që jeni pjesë e kësaj dite të veçantë.',
     'venue-tag':'Vendi','venue-title':'Ceremonia &amp; Festimi',
-    'venue-note':'Ceremonia dhe gosti do të zhvillohen në të njëjtin vend, në zemrën historike të Granadës.',
+    'venue-callout':'Një vend i vetëm për gjithë ditën: ceremonia dhe banketi do të zhvillohen në të njëjtin enklave. Nuk do t\'ju duhet të lëvizni nga njëri vend në tjetrin.',
     'venue-text':'Një manastir i shekullit XVI i shndërruar në skenën perfekte për të festuar dashurinë. Pallati i Santa Paulës do të jetë vendi ku do të ndajmë me ju një nga ditët më të veçanta të jetës sonë.',
-    'celeb-tag':'Festimi','celeb-title':"Një ditë për t'u kujtuar",
-    'celeb-text':'Pas ceremonisë, ju ftojmë të vazhdoni festimin me ne në banket.<br><br>Bashkohuni me ne në këtë ditë vjeshte në Granada. Ju presim me shumë gëzim.',
+    'details-tag':'E shtunë · 31 Tetor','details-title':'Si do të jetë dita',
+    'details-intro':'Ju presim të gjithëve në Pallatin e Santa Paulës. Ceremonia dhe festimi në të njëjtin vend — vetëm duhet të mbërrini dhe të lini veten të rrjedhë.',
+    'tl-label-1':'Pritja','tl-desc-1':'Mbërritja e të ftuarve në Pallatin e Santa Paulës.',
+    'tl-time-2':'[PËR T\'U KONFIRMUAR]','tl-label-2':'Ceremonia','tl-desc-2':'Momenti i po-së. Ju lutemi të jeni të ulur disa minuta më parë.',
+    'tl-time-3':'[PËR T\'U KONFIRMUAR]','tl-label-3':'Koktej mirëseardhjeje','tl-desc-3':'Aperitiv në oborret e pallatit ndërsa ne bëjmë fotot.',
+    'tl-time-4':'[PËR T\'U KONFIRMUAR]','tl-label-4':'Banketi','tl-desc-4':'Darka festive nën qemerët e manastirit të vjetër.',
+    'tl-time-5':'[PËR T\'U KONFIRMUAR]','tl-label-5':'Vallëzim dhe bar i hapur','tl-desc-5':'Të vallëzojmë sa të mund.',
+    'day-note':'After-party-ja e Halloween vazhdon menjëherë pas në Albaicín — nuk duhet të ndërroheni, festa vazhdon ashtu siç është.',
+    'friday-tag':'E premte 30 Tetor','friday-title':'Mirë se erdhët në Granada',
+    'friday-intro':'Duam që të mbërrini me kohë dhe të njihemi të gjithë para ditës së madhe. Ju ftojmë në një mbrëmje të qetë për të pirë diçka, për të njohur ata që nuk i njihni dhe për të filluar të festojmë së bashku.',
+    'friday-body':'Pa protokoll, pa rreptësi. Një mënyrë për të nisur fundjavën mes të dashurve dhe për të vënë një fytyrë me ata që ende nuk i njihni.',
+    'friday-when-label':'Kur','friday-when':'E premte 30 · [ORA PËR T\'U KONFIRMUAR]',
+    'friday-where-label':'Ku','friday-where':'[VENDI PËR T\'U KONFIRMUAR]',
+    'after-tag':'Pas banketit','after-title':'After-party Halloween',
+    'after-intro':'31 Tetori është Halloween, ndaj festën e vazhdojmë siç i takon. Kemi rezervuar zona VIP për ata që duan ta zgjasin natën me ne.',
+    'after-venue':'[PËR T\'U KONFIRMUAR — lokal në Albaicín / Aliatar]',
+    'after-addr':'Adresa · [PËR T\'U KONFIRMUAR]',
+    'after-body':'Shkojmë drejtpërdrejt nga Pallati i Santa Paulës, pa pushim. Nuk duhet të ndërroheni: nga dasma në after-party pa ndalim. Zonat janë rezervuar ekskluzivisht për të ftuarit.',
+    'after-badge':'Zona VIP të rezervuara',
+    'granada-tag':'Për ata që vijnë nga larg','granada-title':'Shijoni Granadën',
+    'granada-intro':'Nëse vini nga larg, ia vlen të qëndroni ndonjë ditë më shumë. Këto janë rekomandimet tona, të atyre që jetojmë këtu dhe e duam.',
+    'granada-c1-sub':'Të domosdoshmet','granada-c1-title':'Çfarë të shihni',
+    'granada-c1-i1':'<strong>Alhambra dhe Generalife</strong>Rezervoni biletat javë para. Monumenti më i vizituar i Spanjës nuk është rastësi.',
+    'granada-c1-i2':'<strong>Mirador de San Nicolás</strong>Kartolina e qytetit: Alhambra me Sierra Nevada-n në sfond. Më mirë në perëndim të diellit.',
+    'granada-c1-i3':'<strong>Katedralja dhe Kapela Mbretërore</strong>Vendi i prehjes së Mbretërve Katolikë, në qendër.',
+    'granada-c1-i4':'<strong>Monasterio de la Cartuja</strong>Baroku granadin në versionin më të bujshëm.',
+    'granada-c2-sub':'Të hash dhe të bësh tapas','granada-c2-title':'Tapas dhe darka',
+    'granada-c2-i1':'<strong>Calle Navas</strong>Rruga e tapas-eve par excellence. Porositni një birrë dhe tapa-ja vjen falas — po, në Granada ende ndodh.',
+    'granada-c2-i2':'<strong>Bodegas Castañeda</strong>Klasik i pashmangshëm, në qendër. Gatim granadin pa shtirje.',
+    'granada-c2-i3':'<strong>Los Diamantes</strong>Peshk i skuqur dhe atmosferë lokale. Ai i Plaza Nueva është origjinali.',
+    'granada-c2-i4':'<strong>Damasqueros</strong>Për një darkë më të kujdesshme: fuzion andaluzian autori.',
+    'granada-c3-sub':'Të ecësh ngadalë','granada-c3-title':'Lagje',
+    'granada-c3-i1':'<strong>Albaicín</strong>Rrugë me kalldrëm, shtëpi të bardha, pamje. Ngjituni pa GPS dhe lini veten të humbasë.',
+    'granada-c3-i2':'<strong>Sacromonte</strong>Lagjja rome dhe shpellat. Një shfaqje flamenco këtu është një histori tjetër.',
+    'granada-c3-i3':'<strong>Realejo</strong>Lagjja e vjetër hebreje. Shumë art urban (shikoni muret) dhe bare më pak turistikë.',
+    'granada-c3-i4':'<strong>Carrera del Darro</strong>Rruga më e bukur e Granadës, paralel me lumin nën Alhambra.',
+    'granada-c4-sub':'Nëse keni një ditë shtesë','granada-c4-title':'Eskapada dhe plane',
+    'granada-c4-i1':'<strong>Sierra Nevada</strong>45 minuta me makinë dhe jeni në male. Tetori sjell zakonisht borët e para.',
+    'granada-c4-i2':'<strong>Las Alpujarras</strong>Fshatra të bardha të varura në shpatin jugor. Për të humbur një ditë.',
+    'granada-c4-i3':'<strong>Hammam Al Ándalus</strong>Banja arabe në qendër. Rezervoni paraprakisht.',
+    'granada-c4-i4':'<strong>Flamenco në shpella</strong>Në Sacromonte. Los Tarantos ose Venta El Gallo janë klasikët.',
+    'hotels-tag':'Ku të flini','hotels-title':'Akomodimi',
+    'hotels-intro':'Këto janë sugjerimet tona afër Pallatit të Santa Paulës. Të gjitha brenda distance të ecur nga vendi i dasmës.',
+    'hotel1-meta':'I njëjti ndërtim','hotel1-desc':'Opsioni më i rehatshëm: të flini në të njëjtin vend si dasma. Hotel 5-yjësh në një manastir të shekullit XVI.',
+    'hotel2-meta':'5 min në këmbë','hotel2-desc':'Pallat i shekullit XIX i restauruar. Spa, pishinë dhe shërbim shumë i kujdesshëm. Në rrugën Solarillo de Gracia.',
+    'hotel3-meta':'7 min në këmbë','hotel3-desc':'Butik simpatik në Carrera del Darro, te këmba e Alhambra-s. I vogël dhe shumë i vlerësuar.',
+    'hotel4-meta':'10 min në këmbë','hotel4-desc':'Shtëpi-pallat e shekullit XVI në qendër, në zonën e tapas. Më ekonomik dhe me karakter.',
+    'hotel-link':'Rezervo',
+    'hotels-note':'Qendra e Granadës është e vogël dhe e lehtë për t\'u ecur. Çdo hotel rreth Gran Vía-s, Katedrales ose Plaza Nueva-s është 10 minuta nga vendi i dasmës.',
+    'transport-tag':'Si të mbërrini','transport-title':'Mbërritja dhe lëvizja',
+    'transport-plane-label':'Me avion',
+    'transport-plane-desc':'Aeroporti Federico García Lorca (GRX), 20 minuta me taksi nga qendra. Edhe Málaga (1h 30min me makinë ose autobus), me më shumë lidhje ndërkombëtare.',
+    'transport-train-label':'Me tren',
+    'transport-train-desc':'AVE direkt nga Madridi (3h 20min) dhe Barcelona (6h 30min). Stacioni është 15 minuta në këmbë nga qendra.',
+    'transport-car-label':'Me makinë',
+    'transport-car-desc':'Granada është mirë e lidhur përmes A-44 nga Málaga dhe A-92 nga Sevilla. Kujdes: qendra ka zona këmbësorësh dhe parkimi mund të jetë sfidë — më mirë parking publik ose në hotel.',
+    'transport-local-label':'Kur të jeni këtu',
+    'transport-local-desc':'Qendra historike ecet në këmbë. Për të ngjitur në Albaicín ose Sacromonte ka mini-autobusë (linjat C1, C2, C3) dhe taksi të lirë. Cabify dhe FreeNow funksionojnë mirë.',
+    'gift-tag':'Një detaj','gift-title':'Nëse doni të na bëni një dhuratë',
+    'gift-quote':'"Prania juaj është tashmë dhurata më e bukur. Por nëse doni të kontribuoni në muajin tonë të mjaltit dhe në fillimin e kësaj etape të re bashkë, do ta presim me shumë gëzim."',
+    'iban-label':'Llogaria bankare · IBAN','iban-value':'[PËR T\'U KONFIRMUAR]','iban-holder':'Në emër të Jose Romero &amp; Oarda','iban-copy':'Kopjo IBAN','iban-copied':'U kopjua!',
     'other-contact':'Mënyra të tjera kontakti',
     'rsvp-tag':'Konfirmimi i pranisë','rsvp-title':'Do të jesh me ne?',
     'rsvp-intro':'Ju lutemi konfirmoni para <strong style="color:var(--gold2)">30 Qershor 2026</strong>.<br>Nëpërmjet formularit ose duke na kontaktuar drejtpërdrejt.',
-    'rsvp-notice':'📋 &nbsp;Për momentin na duhet vetëm të dimë nëse do të vini. Në muajt e ardhshëm do të dërgojmë një përditësim me detaje: oraret, vendet e rekomanduara, çfarë të vizitoni në Granada dhe shumë më tepër.',
+    'rsvp-notice':'📋 &nbsp;Për momentin na duhet vetëm të dimë nëse do të vini. Detajet finale (oraret e sakta, after-party, IBAN dhe të tjera) do t\'i përditësojmë këtu në muajt e ardhshëm.',
     'contact-email':'Email','contact-jose':'Telefon · Jose','contact-oarda':'Telefon · Oarda',
     'form-name':'Emri i plotë','form-attend':'Do të vish?','form-select':'Zgjidh një opsion',
     'form-yes':'Po, do të jem atje!','form-no':'Fatkeqësisht nuk mund të vij',
@@ -613,6 +1134,26 @@ var obs = new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
 }, {threshold:0.06});
 document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+
+/* ══════════════════════════════
+   COPY IBAN
+══════════════════════════════ */
+function copyIban(btn) {
+  var iban = (document.getElementById('ibanValue').innerText || '').trim();
+  var langTitle = (document.querySelector('.lang-btn.active') || {}).title;
+  var lang = langTitle === 'English' ? 'en' : (langTitle === 'Shqip' ? 'sq' : 'es');
+  var copiedLabel = (T[lang] && T[lang]['iban-copied']) || '¡Copiado!';
+  var original = btn.innerText;
+  var flash = function() {
+    btn.innerText = copiedLabel;
+    setTimeout(function() { btn.innerText = original; }, 1800);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(iban).then(flash).catch(flash);
+  } else {
+    flash();
+  }
+}
 
 /* ══════════════════════════════
    RSVP FORM
