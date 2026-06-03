@@ -135,7 +135,7 @@ body {
 .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.9s ease,transform 0.9s ease; }
 .reveal.visible { opacity:1; transform:translateY(0); }
 .section-inner { max-width:700px; margin:0 auto; text-align:center; }
-.s-tag { font-size:0.56rem; letter-spacing:0.55em; color:var(--terra); text-transform:uppercase; margin-bottom:1.2rem; }
+.s-tag { font-size:0.78rem; letter-spacing:0.38em; color:var(--terra); text-transform:uppercase; margin-bottom:1.2rem; font-weight:500; }
 .s-title { font-family:'Tenor Sans',serif; font-style:italic; font-size:clamp(2rem,5vw,3.2rem); color:var(--dark); margin-bottom:2rem; line-height:1.2; }
 .s-text { font-size:1.03rem; line-height:2.05; color:var(--muted); }
 
@@ -239,14 +239,6 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
    HOTELS
 ══════════════════════════════ */
 .hotels-band { background: var(--paper); padding: 6rem 2rem; position: relative; overflow: hidden; }
-.hotels-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; max-width: 880px; margin: 3rem auto 0; }
-.hotel-card { border: 1px solid rgba(196,151,58,0.28); padding: 1.5rem 1.4rem; text-align: left; background: rgba(196,151,58,0.04); transition: background 0.3s, border-color 0.3s; display: flex; flex-direction: column; }
-.hotel-card:hover { background: rgba(196,151,58,0.08); border-color: var(--gold); }
-.hotel-meta { font-size: 0.5rem; letter-spacing: 0.4em; color: var(--terra); text-transform: uppercase; margin-bottom: 0.7rem; }
-.hotel-name { font-family: 'Tenor Sans', serif; font-style: italic; font-size: 1.15rem; color: var(--dark); margin-bottom: 0.35rem; }
-.hotel-desc { font-size: 0.84rem; line-height: 1.55; color: var(--muted); flex: 1; }
-.hotel-link { display: inline-block; margin-top: 1rem; font-size: 0.5rem; letter-spacing: 0.35em; color: var(--gold); text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 0.2rem; align-self: flex-start; }
-.hotel-link:hover { color: var(--garnet); border-color: var(--garnet); }
 .hotels-note { max-width: 600px; margin: 2.2rem auto 0; font-size: 0.85rem; line-height: 1.8; color: var(--muted); text-align: center; font-style: italic; }
 
 /* ══════════════════════════════
@@ -548,7 +540,7 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
           <div class="tl-item">
             <span class="tl-dot"></span>
             <div class="tl-content">
-              <p class="tl-time">12:00h</p>
+              <p class="tl-time">12:30h</p>
               <p class="tl-label" data-i18n="tl-label-1">Recepción</p>
               <p class="tl-desc" data-i18n="tl-desc-1">Llegada de los invitados al Palacio de Santa Paula.</p>
             </div>
@@ -556,7 +548,7 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
           <div class="tl-item">
             <span class="tl-dot"></span>
             <div class="tl-content">
-              <p class="tl-time"><span class="tbd" data-i18n="tl-time-2">[POR CONFIRMAR]</span></p>
+              <p class="tl-time">13:00h</p>
               <p class="tl-label" data-i18n="tl-label-2">Ceremonia</p>
               <p class="tl-desc" data-i18n="tl-desc-2">El momento del sí. Os pedimos estar acomodados unos minutos antes.</p>
             </div>
@@ -564,29 +556,21 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
           <div class="tl-item">
             <span class="tl-dot"></span>
             <div class="tl-content">
-              <p class="tl-time"><span class="tbd" data-i18n="tl-time-3">[POR CONFIRMAR]</span></p>
-              <p class="tl-label" data-i18n="tl-label-3">Cóctel de bienvenida</p>
-              <p class="tl-desc" data-i18n="tl-desc-3">Aperitivo en los patios del palacio mientras hacemos las fotos.</p>
+              <p class="tl-time">14:30 – 23:30h</p>
+              <p class="tl-label" data-i18n="tl-label-3">Banquete y celebración</p>
+              <p class="tl-desc" data-i18n="tl-desc-3">Cóctel de bienvenida en los patios mientras hacemos las fotos, banquete bajo las bóvedas del antiguo convento y, después, baile y barra libre hasta bien entrada la noche.</p>
             </div>
           </div>
           <div class="tl-item">
             <span class="tl-dot"></span>
             <div class="tl-content">
-              <p class="tl-time"><span class="tbd" data-i18n="tl-time-4">[POR CONFIRMAR]</span></p>
-              <p class="tl-label" data-i18n="tl-label-4">Banquete</p>
-              <p class="tl-desc" data-i18n="tl-desc-4">Cena de celebración bajo las bóvedas del antiguo convento.</p>
-            </div>
-          </div>
-          <div class="tl-item">
-            <span class="tl-dot"></span>
-            <div class="tl-content">
-              <p class="tl-time"><span class="tbd" data-i18n="tl-time-5">[POR CONFIRMAR]</span></p>
-              <p class="tl-label" data-i18n="tl-label-5">Baile y barra libre</p>
-              <p class="tl-desc" data-i18n="tl-desc-5">A bailar hasta que el cuerpo aguante.</p>
+              <p class="tl-time">00:00h</p>
+              <p class="tl-label" data-i18n="tl-label-4">After-party</p>
+              <p class="tl-desc" data-i18n="tl-desc-4">Seguimos la fiesta en un reservado de la Discoteca Aliatar, en pleno Granada y a unos metros de la Alhambra.</p>
             </div>
           </div>
         </div>
-        <p class="day-note" data-i18n="day-note">El after-party de Halloween sigue justo después en el Albaicín — no hace falta cambiarse, seguimos la fiesta tal cual.</p>
+        <p class="day-note" data-i18n="day-note">El after-party de Halloween sigue justo después en la Discoteca Aliatar — no hace falta cambiarse, seguimos la fiesta tal cual.</p>
       </div>
     </div>
   </div>
@@ -623,8 +607,8 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
         <p class="s-title" data-i18n="after-title">After-party de Halloween</p>
         <p class="s-text" data-i18n="after-intro">El 31 de octubre es Halloween, así que seguimos la fiesta como toca. Hemos reservado zonas VIP para los que queráis estirar la noche con nosotros.</p>
         <div class="after-card">
-          <p class="after-card-title"><span class="tbd" data-i18n="after-venue">[POR CONFIRMAR — local en Albaicín / Aliatar]</span></p>
-          <p class="after-card-addr"><span class="tbd" data-i18n="after-addr">Dirección · [POR CONFIRMAR]</span></p>
+          <p class="after-card-title" data-i18n="after-venue">Discoteca Aliatar</p>
+          <p class="after-card-addr" data-i18n="after-addr">Granada · a unos metros de la Alhambra</p>
           <p class="after-card-text" data-i18n="after-body">Llegamos directamente desde el Palacio de Santa Paula, sin pausas. No hace falta cambiarse: pasamos de la boda al after sin parar. Zonas reservadas exclusivamente para los invitados.</p>
           <p class="after-badge" data-i18n="after-badge">Zonas VIP reservadas</p>
         </div>
@@ -658,8 +642,8 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
             <ul class="granada-list">
               <li data-i18n="granada-c2-i1"><strong>Calle Navas</strong>La zona de tapas por antonomasia. Pedid una caña y os llega la tapa gratis — sí, en Granada todavía pasa.</li>
               <li data-i18n="granada-c2-i2"><strong>Bodegas Castañeda</strong>Clásico imprescindible, en pleno centro. Cocina granadina sin postureo.</li>
-              <li data-i18n="granada-c2-i3"><strong>Los Diamantes</strong>Pescaíto frito y ambiente local. El de Plaza Nueva es el original.</li>
-              <li data-i18n="granada-c2-i4"><strong>Damasqueros</strong>Para una cena más cuidada: fusión andaluza de autor.</li>
+              <li data-i18n="granada-c2-i3"><strong>La Botillería</strong>Tapas más actuales y una carta de vinos como pocas, en el Realejo. Para sentarse con calma.</li>
+              <li data-i18n="granada-c2-i4"><strong>Taberna la Tana</strong>Pequeño templo del vino junto al Realejo. Tapa rica, bien servida y siempre llena.</li>
             </ul>
           </div>
           <div class="granada-cat">
@@ -678,10 +662,10 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
             <p class="granada-cat-sub" data-i18n="granada-c4-sub">Si tenéis un día extra</p>
             <p class="granada-cat-title" data-i18n="granada-c4-title">Escapadas y planes</p>
             <ul class="granada-list">
-              <li data-i18n="granada-c4-i1"><strong>Sierra Nevada</strong>En 45 minutos en coche estáis en la montaña. En octubre suelen caer las primeras nieves.</li>
-              <li data-i18n="granada-c4-i2"><strong>Las Alpujarras</strong>Pueblos blancos colgados de la ladera sur. Para perderse un día.</li>
-              <li data-i18n="granada-c4-i3"><strong>Hammam Al Ándalus</strong>Baños árabes en pleno centro. Reservad con antelación.</li>
-              <li data-i18n="granada-c4-i4"><strong>Flamenco en cuevas</strong>En Sacromonte. Los Tarantos o Venta El Gallo son los clásicos.</li>
+              <li data-i18n="granada-c4-i1"><strong>Alhambra de noche</strong>La visita nocturna a los Palacios Nazaríes es otra cosa: sin multitudes y con la Alhambra iluminada. Se reserva aparte.</li>
+              <li data-i18n="granada-c4-i2"><strong>Free tour por el centro</strong>Una vuelta guiada por la Catedral, el Realejo y el Albaicín para situaros el primer día. Los hay a diario.</li>
+              <li data-i18n="granada-c4-i3"><strong>Teterías de la Calderería</strong>La calle de las teterías, entre el centro y el Albaicín: té moruno, especias y aire andalusí.</li>
+              <li data-i18n="granada-c4-i4"><strong>Sierra Nevada y la costa</strong>A 45 minutos en coche tenéis o la nieve de Sierra Nevada o las playas de la Costa Tropical. Vosotros elegís.</li>
             </ul>
           </div>
         </div>
@@ -695,34 +679,8 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
       <div class="section-inner">
         <p class="s-tag" data-i18n="hotels-tag">Dónde dormir</p>
         <p class="s-title" data-i18n="hotels-title">Alojamiento</p>
-        <p class="s-text" data-i18n="hotels-intro">Estas son nuestras sugerencias cerca del Palacio de Santa Paula. Todas a distancia caminable del venue.</p>
-        <div class="hotels-grid">
-          <div class="hotel-card">
-            <p class="hotel-meta" data-i18n="hotel1-meta">Mismo edificio</p>
-            <p class="hotel-name">AC Palacio de Santa Paula</p>
-            <p class="hotel-desc" data-i18n="hotel1-desc">La opción más cómoda: dormir en el mismo lugar de la boda. Hotel de 5 estrellas en un antiguo convento del siglo XVI.</p>
-            <a class="hotel-link" href="https://www.marriott.com/hotels/travel/grxsp-ac-hotel-palacio-de-santa-paula-autograph-collection/" target="_blank" rel="noopener" data-i18n="hotel-link">Reservar</a>
-          </div>
-          <div class="hotel-card">
-            <p class="hotel-meta" data-i18n="hotel2-meta">5 min andando</p>
-            <p class="hotel-name">Hospes Palacio de los Patos</p>
-            <p class="hotel-desc" data-i18n="hotel2-desc">Palacete del siglo XIX restaurado. Spa, piscina y servicio muy cuidado. En la calle Solarillo de Gracia.</p>
-            <a class="hotel-link" href="https://www.hospes.com/granada-palacio-patos" target="_blank" rel="noopener" data-i18n="hotel-link">Reservar</a>
-          </div>
-          <div class="hotel-card">
-            <p class="hotel-meta" data-i18n="hotel3-meta">7 min andando</p>
-            <p class="hotel-name">Hotel Casa 1800 Granada</p>
-            <p class="hotel-desc" data-i18n="hotel3-desc">Boutique encantador en la Carrera del Darro, a los pies de la Alhambra. Pequeño y muy bien valorado.</p>
-            <a class="hotel-link" href="https://www.hotelcasa1800granada.com/" target="_blank" rel="noopener" data-i18n="hotel-link">Reservar</a>
-          </div>
-          <div class="hotel-card">
-            <p class="hotel-meta" data-i18n="hotel4-meta">10 min andando</p>
-            <p class="hotel-name">Hotel Palacio de los Navas</p>
-            <p class="hotel-desc" data-i18n="hotel4-desc">Casa-palacio del siglo XVI en pleno centro, en plena zona de tapas. Más económico y con mucho carácter.</p>
-            <a class="hotel-link" href="https://www.hotelpalaciodelosnavas.com/" target="_blank" rel="noopener" data-i18n="hotel-link">Reservar</a>
-          </div>
-        </div>
-        <p class="hotels-note" data-i18n="hotels-note">El centro de Granada es pequeño y fácil de recorrer a pie. Cualquier hotel del entorno de Gran Vía, Catedral o Plaza Nueva os deja a 10 minutos del venue.</p>
+        <p class="s-text" data-i18n="hotels-intro">Granada tiene alojamiento para todos los gustos y bolsillos, y casi todo queda a un paseo del Palacio de Santa Paula. Desde hoteles con encanto en pleno centro hasta opciones más sencillas a diez minutos andando.</p>
+        <p class="hotels-note" data-i18n="hotels-note">¿No sabéis por dónde empezar o tenéis dudas con la reserva? Escribidnos sin compromiso y os echamos una mano para encontrar el sitio que mejor os encaje.</p>
       </div>
     </div>
   </div>
@@ -773,10 +731,10 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
       <div class="section-inner">
         <p class="s-tag" data-i18n="gift-tag">Un detalle</p>
         <p class="s-title" data-i18n="gift-title">Si queréis regalarnos algo</p>
-        <p class="gift-quote" data-i18n="gift-quote">"Vuestra presencia es ya el mejor de los regalos. Pero si queréis contribuir a nuestra luna de miel y a empezar juntos esta nueva etapa, lo recibiremos con muchísima ilusión."</p>
+        <p class="gift-quote" data-i18n="gift-quote">"Vuestra presencia es ya el mejor de los regalos. Pero si queréis contribuir a nuestra luna de miel y a empezar juntos esta nueva etapa, lo recibiremos con muchísima ilusión. Y si nos lo permitís, nada como un sobre en mano el mismo día, a la antigua usanza."</p>
         <div class="iban-box">
-          <p class="iban-label" data-i18n="iban-label">Cuenta bancaria · IBAN</p>
-          <p class="iban-value" id="ibanValue"><span class="tbd" data-i18n="iban-value">[POR CONFIRMAR]</span></p>
+          <p class="iban-label" data-i18n="iban-label">IBAN · Unicaja Banco</p>
+          <p class="iban-value" id="ibanValue" data-i18n="iban-value">ES34 2103 0182 1100 3002 7257</p>
           <p class="iban-holder" data-i18n="iban-holder">A nombre de Jose Romero &amp; Oarda</p>
           <button class="iban-copy" type="button" onclick="copyIban(this)" data-i18n="iban-copy">Copiar IBAN</button>
         </div>
@@ -859,11 +817,10 @@ var T = {
     'details-tag':'El sábado · 31 de octubre','details-title':'Cómo será el día',
     'details-intro':'Os esperamos a todos en el Palacio de Santa Paula. Ceremonia y celebración en el mismo lugar — solo tenéis que llegar y dejaros llevar.',
     'tl-label-1':'Recepción','tl-desc-1':'Llegada de los invitados al Palacio de Santa Paula.',
-    'tl-time-2':'[POR CONFIRMAR]','tl-label-2':'Ceremonia','tl-desc-2':'El momento del sí. Os pedimos estar acomodados unos minutos antes.',
-    'tl-time-3':'[POR CONFIRMAR]','tl-label-3':'Cóctel de bienvenida','tl-desc-3':'Aperitivo en los patios del palacio mientras hacemos las fotos.',
-    'tl-time-4':'[POR CONFIRMAR]','tl-label-4':'Banquete','tl-desc-4':'Cena de celebración bajo las bóvedas del antiguo convento.',
-    'tl-time-5':'[POR CONFIRMAR]','tl-label-5':'Baile y barra libre','tl-desc-5':'A bailar hasta que el cuerpo aguante.',
-    'day-note':'El after-party de Halloween sigue justo después en el Albaicín — no hace falta cambiarse, seguimos la fiesta tal cual.',
+    'tl-label-2':'Ceremonia','tl-desc-2':'El momento del sí. Os pedimos estar acomodados unos minutos antes.',
+    'tl-label-3':'Banquete y celebración','tl-desc-3':'Cóctel de bienvenida en los patios mientras hacemos las fotos, banquete bajo las bóvedas del antiguo convento y, después, baile y barra libre hasta bien entrada la noche.',
+    'tl-label-4':'After-party','tl-desc-4':'Seguimos la fiesta en un reservado de la Discoteca Aliatar, en pleno Granada y a unos metros de la Alhambra.',
+    'day-note':'El after-party de Halloween sigue justo después en la Discoteca Aliatar — no hace falta cambiarse, seguimos la fiesta tal cual.',
     'friday-tag':'Viernes 30 de octubre','friday-title':'Bienvenidos a Granada',
     'friday-intro':'Queremos que lleguéis con tiempo y que nos conozcamos todos antes del gran día. Os invitamos a una velada relajada para tomar algo, presentar a quien no se conoce y empezar a celebrar juntos.',
     'friday-body':'Sin protocolo, sin estricto. Una manera de empezar el fin de semana entre los nuestros y de poner cara a quien todavía no conozcáis.',
@@ -871,8 +828,8 @@ var T = {
     'friday-where-label':'Dónde','friday-where':'[POR CONFIRMAR lugar]',
     'after-tag':'Después del banquete','after-title':'After-party de Halloween',
     'after-intro':'El 31 de octubre es Halloween, así que seguimos la fiesta como toca. Hemos reservado zonas VIP para los que queráis estirar la noche con nosotros.',
-    'after-venue':'[POR CONFIRMAR — local en Albaicín / Aliatar]',
-    'after-addr':'Dirección · [POR CONFIRMAR]',
+    'after-venue':'Discoteca Aliatar',
+    'after-addr':'Granada · a unos metros de la Alhambra',
     'after-body':'Llegamos directamente desde el Palacio de Santa Paula, sin pausas. No hace falta cambiarse: pasamos de la boda al after sin parar. Zonas reservadas exclusivamente para los invitados.',
     'after-badge':'Zonas VIP reservadas',
     'granada-tag':'Para quienes vienen de fuera','granada-title':'Aprovechad Granada',
@@ -885,26 +842,21 @@ var T = {
     'granada-c2-sub':'Comer y tapear','granada-c2-title':'Tapas y mesa',
     'granada-c2-i1':'<strong>Calle Navas</strong>La zona de tapas por antonomasia. Pedid una caña y os llega la tapa gratis — sí, en Granada todavía pasa.',
     'granada-c2-i2':'<strong>Bodegas Castañeda</strong>Clásico imprescindible, en pleno centro. Cocina granadina sin postureo.',
-    'granada-c2-i3':'<strong>Los Diamantes</strong>Pescaíto frito y ambiente local. El de Plaza Nueva es el original.',
-    'granada-c2-i4':'<strong>Damasqueros</strong>Para una cena más cuidada: fusión andaluza de autor.',
+    'granada-c2-i3':'<strong>La Botillería</strong>Tapas más actuales y una carta de vinos como pocas, en el Realejo. Para sentarse con calma.',
+    'granada-c2-i4':'<strong>Taberna la Tana</strong>Pequeño templo del vino junto al Realejo. Tapa rica, bien servida y siempre llena.',
     'granada-c3-sub':'Pasear sin prisa','granada-c3-title':'Barrios',
     'granada-c3-i1':'<strong>Albaicín</strong>Calles empedradas, casas blancas, miradores. Subid sin GPS y dejaos perder.',
     'granada-c3-i2':'<strong>Sacromonte</strong>El barrio gitano y las cuevas. Un espectáculo de flamenco aquí es otra historia.',
     'granada-c3-i3':'<strong>Realejo</strong>Antigua judería. Mucho arte urbano (mirad las paredes) y bares menos turísticos.',
     'granada-c3-i4':'<strong>Carrera del Darro</strong>La calle más bonita de Granada, paralela al río bajo la Alhambra.',
     'granada-c4-sub':'Si tenéis un día extra','granada-c4-title':'Escapadas y planes',
-    'granada-c4-i1':'<strong>Sierra Nevada</strong>En 45 minutos en coche estáis en la montaña. En octubre suelen caer las primeras nieves.',
-    'granada-c4-i2':'<strong>Las Alpujarras</strong>Pueblos blancos colgados de la ladera sur. Para perderse un día.',
-    'granada-c4-i3':'<strong>Hammam Al Ándalus</strong>Baños árabes en pleno centro. Reservad con antelación.',
-    'granada-c4-i4':'<strong>Flamenco en cuevas</strong>En Sacromonte. Los Tarantos o Venta El Gallo son los clásicos.',
+    'granada-c4-i1':'<strong>Alhambra de noche</strong>La visita nocturna a los Palacios Nazaríes es otra cosa: sin multitudes y con la Alhambra iluminada. Se reserva aparte.',
+    'granada-c4-i2':'<strong>Free tour por el centro</strong>Una vuelta guiada por la Catedral, el Realejo y el Albaicín para situaros el primer día. Los hay a diario.',
+    'granada-c4-i3':'<strong>Teterías de la Calderería</strong>La calle de las teterías, entre el centro y el Albaicín: té moruno, especias y aire andalusí.',
+    'granada-c4-i4':'<strong>Sierra Nevada y la costa</strong>A 45 minutos en coche tenéis o la nieve de Sierra Nevada o las playas de la Costa Tropical. Vosotros elegís.',
     'hotels-tag':'Dónde dormir','hotels-title':'Alojamiento',
-    'hotels-intro':'Estas son nuestras sugerencias cerca del Palacio de Santa Paula. Todas a distancia caminable del venue.',
-    'hotel1-meta':'Mismo edificio','hotel1-desc':'La opción más cómoda: dormir en el mismo lugar de la boda. Hotel de 5 estrellas en un antiguo convento del siglo XVI.',
-    'hotel2-meta':'5 min andando','hotel2-desc':'Palacete del siglo XIX restaurado. Spa, piscina y servicio muy cuidado. En la calle Solarillo de Gracia.',
-    'hotel3-meta':'7 min andando','hotel3-desc':'Boutique encantador en la Carrera del Darro, a los pies de la Alhambra. Pequeño y muy bien valorado.',
-    'hotel4-meta':'10 min andando','hotel4-desc':'Casa-palacio del siglo XVI en pleno centro, en plena zona de tapas. Más económico y con mucho carácter.',
-    'hotel-link':'Reservar',
-    'hotels-note':'El centro de Granada es pequeño y fácil de recorrer a pie. Cualquier hotel del entorno de Gran Vía, Catedral o Plaza Nueva os deja a 10 minutos del venue.',
+    'hotels-intro':'Granada tiene alojamiento para todos los gustos y bolsillos, y casi todo queda a un paseo del Palacio de Santa Paula. Desde hoteles con encanto en pleno centro hasta opciones más sencillas a diez minutos andando.',
+    'hotels-note':'¿No sabéis por dónde empezar o tenéis dudas con la reserva? Escribidnos sin compromiso y os echamos una mano para encontrar el sitio que mejor os encaje.',
     'transport-tag':'Cómo llegar','transport-title':'Llegar y moverse',
     'transport-plane-label':'En avión',
     'transport-plane-desc':'Aeropuerto Federico García Lorca (GRX), a 20 minutos en taxi del centro. También Málaga (1h 30min en coche o autobús), con más conexiones internacionales.',
@@ -915,8 +867,8 @@ var T = {
     'transport-local-label':'Una vez aquí',
     'transport-local-desc':'El casco histórico se recorre a pie. Para subir al Albaicín o al Sacromonte hay micro-buses (líneas C1, C2, C3) y taxis baratos. Cabify y FreeNow funcionan bien.',
     'gift-tag':'Un detalle','gift-title':'Si queréis regalarnos algo',
-    'gift-quote':'"Vuestra presencia es ya el mejor de los regalos. Pero si queréis contribuir a nuestra luna de miel y a empezar juntos esta nueva etapa, lo recibiremos con muchísima ilusión."',
-    'iban-label':'Cuenta bancaria · IBAN','iban-value':'[POR CONFIRMAR]','iban-holder':'A nombre de Jose Romero &amp; Oarda','iban-copy':'Copiar IBAN','iban-copied':'¡Copiado!',
+    'gift-quote':'"Vuestra presencia es ya el mejor de los regalos. Pero si queréis contribuir a nuestra luna de miel y a empezar juntos esta nueva etapa, lo recibiremos con muchísima ilusión. Y si nos lo permitís, nada como un sobre en mano el mismo día, a la antigua usanza."',
+    'iban-label':'IBAN · Unicaja Banco','iban-value':'ES34 2103 0182 1100 3002 7257','iban-holder':'A nombre de Jose Romero &amp; Oarda','iban-copy':'Copiar IBAN','iban-copied':'¡Copiado!',
     'other-contact':'Otras formas de contacto',
     'rsvp-tag':'Confirmación de asistencia','rsvp-title':'¿Estarás con nosotros?',
     'rsvp-intro':'Confirma antes del <strong style="color:var(--gold2)">30 de junio de 2026</strong>.<br>A través del formulario o contactando directamente con nosotros.',
@@ -944,11 +896,10 @@ var T = {
     'details-tag':'Saturday · October 31st','details-title':'How the day will unfold',
     'details-intro':'We\'ll be waiting for you all at the Palacio de Santa Paula. Ceremony and celebration at the same venue — just arrive and let yourselves go with the flow.',
     'tl-label-1':'Reception','tl-desc-1':'Guests arrive at the Palacio de Santa Paula.',
-    'tl-time-2':'[TO BE CONFIRMED]','tl-label-2':'Ceremony','tl-desc-2':'The moment of yes. Please be seated a few minutes early.',
-    'tl-time-3':'[TO BE CONFIRMED]','tl-label-3':'Welcome cocktail','tl-desc-3':'Aperitif in the palace courtyards while we take the photos.',
-    'tl-time-4':'[TO BE CONFIRMED]','tl-label-4':'Dinner','tl-desc-4':'Celebration dinner under the vaults of the old convent.',
-    'tl-time-5':'[TO BE CONFIRMED]','tl-label-5':'Dancing & open bar','tl-desc-5':'Dancing until the body can take no more.',
-    'day-note':'The Halloween after-party kicks off straight after in the Albaicín — no need to change clothes, the party just keeps going.',
+    'tl-label-2':'Ceremony','tl-desc-2':'The moment of yes. Please be seated a few minutes early.',
+    'tl-label-3':'Dinner & celebration','tl-desc-3':'Welcome cocktail in the courtyards while we take the photos, dinner under the vaults of the old convent and, afterwards, dancing and open bar well into the night.',
+    'tl-label-4':'After-party','tl-desc-4':'We carry the party on in a private area of Discoteca Aliatar, right in Granada and just steps from the Alhambra.',
+    'day-note':'The Halloween after-party kicks off straight after at Discoteca Aliatar — no need to change clothes, the party just keeps going.',
     'friday-tag':'Friday October 30th','friday-title':'Welcome to Granada',
     'friday-intro':'We\'d love you to arrive in time so we can all meet before the big day. We\'re inviting everyone to a relaxed evening to have a drink, introduce those who don\'t know each other and start celebrating together.',
     'friday-body':'No protocol, no strictness. A way to kick off the weekend with our people and put a face to those you haven\'t met yet.',
@@ -956,8 +907,8 @@ var T = {
     'friday-where-label':'Where','friday-where':'[VENUE TO BE CONFIRMED]',
     'after-tag':'After dinner','after-title':'Halloween after-party',
     'after-intro':'October 31st is Halloween, so we keep the party going as it should be. We\'ve reserved VIP areas for those of you who want to stretch the night out with us.',
-    'after-venue':'[TO BE CONFIRMED — venue in Albaicín / Aliatar]',
-    'after-addr':'Address · [TO BE CONFIRMED]',
+    'after-venue':'Discoteca Aliatar',
+    'after-addr':'Granada · just steps from the Alhambra',
     'after-body':'We head over directly from the Palacio de Santa Paula, no breaks in between. No need to change clothes: we move from the wedding to the after-party without stopping. Areas reserved exclusively for wedding guests.',
     'after-badge':'VIP areas reserved',
     'granada-tag':'For those travelling in','granada-title':'Make the most of Granada',
@@ -970,26 +921,21 @@ var T = {
     'granada-c2-sub':'Eat and tapear','granada-c2-title':'Tapas & dining',
     'granada-c2-i1':'<strong>Calle Navas</strong>The tapas street par excellence. Order a beer and a tapa comes free — yes, that still happens in Granada.',
     'granada-c2-i2':'<strong>Bodegas Castañeda</strong>An unmissable classic, right in the centre. Granadan cooking with no pretension.',
-    'granada-c2-i3':'<strong>Los Diamantes</strong>Fried fish and local vibes. The Plaza Nueva one is the original.',
-    'granada-c2-i4':'<strong>Damasqueros</strong>For a more refined dinner: Andalusian fusion at its finest.',
+    'granada-c2-i3':'<strong>La Botillería</strong>More modern tapas and a wine list like few others, in the Realejo. To sit down and take your time.',
+    'granada-c2-i4':'<strong>Taberna la Tana</strong>A tiny wine temple by the Realejo. Great tapas, well served, always packed.',
     'granada-c3-sub':'Wander slowly','granada-c3-title':'Neighbourhoods',
     'granada-c3-i1':'<strong>Albaicín</strong>Cobbled streets, white houses, viewpoints. Go up without GPS and let yourselves get lost.',
     'granada-c3-i2':'<strong>Sacromonte</strong>The old Roma quarter and its caves. A flamenco show here is a whole different thing.',
     'granada-c3-i3':'<strong>Realejo</strong>The old Jewish quarter. Lots of street art (look at the walls) and less touristy bars.',
     'granada-c3-i4':'<strong>Carrera del Darro</strong>The prettiest street in Granada, running along the river beneath the Alhambra.',
     'granada-c4-sub':'If you have an extra day','granada-c4-title':'Day trips & plans',
-    'granada-c4-i1':'<strong>Sierra Nevada</strong>45 minutes by car and you\'re in the mountains. October usually brings the first snow.',
-    'granada-c4-i2':'<strong>Las Alpujarras</strong>White villages hanging from the southern slope. To lose yourselves for a day.',
-    'granada-c4-i3':'<strong>Hammam Al Ándalus</strong>Arab baths in the centre. Book ahead.',
-    'granada-c4-i4':'<strong>Flamenco in caves</strong>In Sacromonte. Los Tarantos or Venta El Gallo are the classics.',
+    'granada-c4-i1':'<strong>The Alhambra by night</strong>The night visit to the Nasrid Palaces is something else: no crowds and the Alhambra lit up. Booked separately.',
+    'granada-c4-i2':'<strong>Free walking tour</strong>A guided loop around the Cathedral, the Realejo and the Albaicín to get your bearings on day one. Daily departures.',
+    'granada-c4-i3':'<strong>Calderería tea houses</strong>The street of the teterías, between the centre and the Albaicín: Moorish tea, spices and Andalusí air.',
+    'granada-c4-i4':'<strong>Sierra Nevada & the coast</strong>45 minutes by car and it\'s either the snow of Sierra Nevada or the beaches of the Costa Tropical. Your call.',
     'hotels-tag':'Where to stay','hotels-title':'Accommodation',
-    'hotels-intro':'These are our suggestions near the Palacio de Santa Paula. All within walking distance of the venue.',
-    'hotel1-meta':'Same building','hotel1-desc':'The most convenient option: sleep in the same place as the wedding. A 5-star hotel in a 16th-century convent.',
-    'hotel2-meta':'5 min walk','hotel2-desc':'Restored 19th-century palace. Spa, pool and very attentive service. On calle Solarillo de Gracia.',
-    'hotel3-meta':'7 min walk','hotel3-desc':'Charming boutique on Carrera del Darro, at the foot of the Alhambra. Small and highly rated.',
-    'hotel4-meta':'10 min walk','hotel4-desc':'16th-century town-palace in the heart of the city, right in the tapas zone. More affordable, lots of character.',
-    'hotel-link':'Book',
-    'hotels-note':'The centre of Granada is small and easy to walk. Any hotel around Gran Vía, the Cathedral or Plaza Nueva is 10 minutes from the venue.',
+    'hotels-intro':'Granada has somewhere to stay for every taste and budget, and almost everything is a short walk from the Palacio de Santa Paula. From charming hotels right in the centre to simpler options ten minutes away on foot.',
+    'hotels-note':'Not sure where to start, or have questions about booking? Drop us a line, no strings attached, and we\'ll help you find the place that suits you best.',
     'transport-tag':'How to get here','transport-title':'Arriving & getting around',
     'transport-plane-label':'By plane',
     'transport-plane-desc':'Federico García Lorca Airport (GRX), 20 minutes by taxi from the centre. Also Málaga (1h 30min by car or bus), with more international connections.',
@@ -1000,8 +946,8 @@ var T = {
     'transport-local-label':'Once you\'re here',
     'transport-local-desc':'The old town is walkable. To go up to the Albaicín or Sacromonte there are mini-buses (lines C1, C2, C3) and cheap taxis. Cabify and FreeNow work well.',
     'gift-tag':'A little something','gift-title':'If you\'d like to gift us something',
-    'gift-quote':'"Your presence is already the greatest gift. But if you\'d like to contribute to our honeymoon and to the start of this new chapter together, we\'ll receive it with so much joy."',
-    'iban-label':'Bank account · IBAN','iban-value':'[TO BE CONFIRMED]','iban-holder':'In the name of Jose Romero &amp; Oarda','iban-copy':'Copy IBAN','iban-copied':'Copied!',
+    'gift-quote':'"Your presence is already the greatest gift. But if you\'d like to contribute to our honeymoon and to the start of this new chapter together, we\'ll receive it with so much joy. And if you\'ll allow us, there\'s nothing like an envelope handed over in person on the day."',
+    'iban-label':'IBAN · Unicaja Banco','iban-value':'ES34 2103 0182 1100 3002 7257','iban-holder':'In the name of Jose Romero &amp; Oarda','iban-copy':'Copy IBAN','iban-copied':'Copied!',
     'other-contact':'Other ways to contact us',
     'rsvp-tag':'RSVP','rsvp-title':'Will you join us?',
     'rsvp-intro':'Please confirm before <strong style="color:var(--gold2)">June 30th, 2026</strong>.<br>Via the form below or by contacting us directly.',
@@ -1029,11 +975,10 @@ var T = {
     'details-tag':'E shtunë · 31 Tetor','details-title':'Si do të jetë dita',
     'details-intro':'Ju presim të gjithëve në Pallatin e Santa Paulës. Ceremonia dhe festimi në të njëjtin vend — vetëm duhet të mbërrini dhe të lini veten të rrjedhë.',
     'tl-label-1':'Pritja','tl-desc-1':'Mbërritja e të ftuarve në Pallatin e Santa Paulës.',
-    'tl-time-2':'[PËR T\'U KONFIRMUAR]','tl-label-2':'Ceremonia','tl-desc-2':'Momenti i po-së. Ju lutemi të jeni të ulur disa minuta më parë.',
-    'tl-time-3':'[PËR T\'U KONFIRMUAR]','tl-label-3':'Koktej mirëseardhjeje','tl-desc-3':'Aperitiv në oborret e pallatit ndërsa ne bëjmë fotot.',
-    'tl-time-4':'[PËR T\'U KONFIRMUAR]','tl-label-4':'Banketi','tl-desc-4':'Darka festive nën qemerët e manastirit të vjetër.',
-    'tl-time-5':'[PËR T\'U KONFIRMUAR]','tl-label-5':'Vallëzim dhe bar i hapur','tl-desc-5':'Të vallëzojmë sa të mund.',
-    'day-note':'After-party-ja e Halloween vazhdon menjëherë pas në Albaicín — nuk duhet të ndërroheni, festa vazhdon ashtu siç është.',
+    'tl-label-2':'Ceremonia','tl-desc-2':'Momenti i po-së. Ju lutemi të jeni të ulur disa minuta më parë.',
+    'tl-label-3':'Banket dhe festë','tl-desc-3':'Koktej mirëseardhjeje në oborre ndërsa bëjmë fotot, banket nën qemerët e manastirit të vjetër dhe, më pas, vallëzim me bar të hapur deri natën vonë.',
+    'tl-label-4':'After-party','tl-desc-4':'Vazhdojmë festën në një zonë të rezervuar të Discoteca Aliatar, në qendër të Granadës dhe vetëm disa hapa nga Alhambra.',
+    'day-note':'After-party-ja e Halloween vazhdon menjëherë pas në Discoteca Aliatar — nuk duhet të ndërroheni, festa vazhdon ashtu siç është.',
     'friday-tag':'E premte 30 Tetor','friday-title':'Mirë se erdhët në Granada',
     'friday-intro':'Duam që të mbërrini me kohë dhe të njihemi të gjithë para ditës së madhe. Ju ftojmë në një mbrëmje të qetë për të pirë diçka, për të njohur ata që nuk i njihni dhe për të filluar të festojmë së bashku.',
     'friday-body':'Pa protokoll, pa rreptësi. Një mënyrë për të nisur fundjavën mes të dashurve dhe për të vënë një fytyrë me ata që ende nuk i njihni.',
@@ -1041,8 +986,8 @@ var T = {
     'friday-where-label':'Ku','friday-where':'[VENDI PËR T\'U KONFIRMUAR]',
     'after-tag':'Pas banketit','after-title':'After-party Halloween',
     'after-intro':'31 Tetori është Halloween, ndaj festën e vazhdojmë siç i takon. Kemi rezervuar zona VIP për ata që duan ta zgjasin natën me ne.',
-    'after-venue':'[PËR T\'U KONFIRMUAR — lokal në Albaicín / Aliatar]',
-    'after-addr':'Adresa · [PËR T\'U KONFIRMUAR]',
+    'after-venue':'Discoteca Aliatar',
+    'after-addr':'Granada · disa hapa nga Alhambra',
     'after-body':'Shkojmë drejtpërdrejt nga Pallati i Santa Paulës, pa pushim. Nuk duhet të ndërroheni: nga dasma në after-party pa ndalim. Zonat janë rezervuar ekskluzivisht për të ftuarit.',
     'after-badge':'Zona VIP të rezervuara',
     'granada-tag':'Për ata që vijnë nga larg','granada-title':'Shijoni Granadën',
@@ -1055,26 +1000,21 @@ var T = {
     'granada-c2-sub':'Të hash dhe të bësh tapas','granada-c2-title':'Tapas dhe darka',
     'granada-c2-i1':'<strong>Calle Navas</strong>Rruga e tapas-eve par excellence. Porositni një birrë dhe tapa-ja vjen falas — po, në Granada ende ndodh.',
     'granada-c2-i2':'<strong>Bodegas Castañeda</strong>Klasik i pashmangshëm, në qendër. Gatim granadin pa shtirje.',
-    'granada-c2-i3':'<strong>Los Diamantes</strong>Peshk i skuqur dhe atmosferë lokale. Ai i Plaza Nueva është origjinali.',
-    'granada-c2-i4':'<strong>Damasqueros</strong>Për një darkë më të kujdesshme: fuzion andaluzian autori.',
+    'granada-c2-i3':'<strong>La Botillería</strong>Tapas më moderne dhe një kartë verërash si pak të tjera, në Realejo. Për t\'u ulur me qetësi.',
+    'granada-c2-i4':'<strong>Taberna la Tana</strong>Një tempull i vogël i verës pranë Realejo-s. Tapas të shijshme, mirë të shërbyera dhe gjithmonë plot.',
     'granada-c3-sub':'Të ecësh ngadalë','granada-c3-title':'Lagje',
     'granada-c3-i1':'<strong>Albaicín</strong>Rrugë me kalldrëm, shtëpi të bardha, pamje. Ngjituni pa GPS dhe lini veten të humbasë.',
     'granada-c3-i2':'<strong>Sacromonte</strong>Lagjja rome dhe shpellat. Një shfaqje flamenco këtu është një histori tjetër.',
     'granada-c3-i3':'<strong>Realejo</strong>Lagjja e vjetër hebreje. Shumë art urban (shikoni muret) dhe bare më pak turistikë.',
     'granada-c3-i4':'<strong>Carrera del Darro</strong>Rruga më e bukur e Granadës, paralel me lumin nën Alhambra.',
     'granada-c4-sub':'Nëse keni një ditë shtesë','granada-c4-title':'Eskapada dhe plane',
-    'granada-c4-i1':'<strong>Sierra Nevada</strong>45 minuta me makinë dhe jeni në male. Tetori sjell zakonisht borët e para.',
-    'granada-c4-i2':'<strong>Las Alpujarras</strong>Fshatra të bardha të varura në shpatin jugor. Për të humbur një ditë.',
-    'granada-c4-i3':'<strong>Hammam Al Ándalus</strong>Banja arabe në qendër. Rezervoni paraprakisht.',
-    'granada-c4-i4':'<strong>Flamenco në shpella</strong>Në Sacromonte. Los Tarantos ose Venta El Gallo janë klasikët.',
+    'granada-c4-i1':'<strong>Alhambra natën</strong>Vizita e natës në Pallatet Nasride është diçka tjetër: pa turma dhe me Alhambra-n të ndriçuar. Rezervohet veçmas.',
+    'granada-c4-i2':'<strong>Free tour në qendër</strong>Një shëtitje me guidë rreth Katedrales, Realejo-s dhe Albaicín-it për t\'u orientuar ditën e parë. Çdo ditë.',
+    'granada-c4-i3':'<strong>Çajtoret e Calderería-s</strong>Rruga e çajtoreve, mes qendrës dhe Albaicín-it: çaj maurë, erëza dhe ajër andaluzian.',
+    'granada-c4-i4':'<strong>Sierra Nevada dhe bregdeti</strong>45 minuta me makinë dhe keni ose borën e Sierra Nevada-s ose plazhet e Costa Tropical. Ju zgjidhni.',
     'hotels-tag':'Ku të flini','hotels-title':'Akomodimi',
-    'hotels-intro':'Këto janë sugjerimet tona afër Pallatit të Santa Paulës. Të gjitha brenda distance të ecur nga vendi i dasmës.',
-    'hotel1-meta':'I njëjti ndërtim','hotel1-desc':'Opsioni më i rehatshëm: të flini në të njëjtin vend si dasma. Hotel 5-yjësh në një manastir të shekullit XVI.',
-    'hotel2-meta':'5 min në këmbë','hotel2-desc':'Pallat i shekullit XIX i restauruar. Spa, pishinë dhe shërbim shumë i kujdesshëm. Në rrugën Solarillo de Gracia.',
-    'hotel3-meta':'7 min në këmbë','hotel3-desc':'Butik simpatik në Carrera del Darro, te këmba e Alhambra-s. I vogël dhe shumë i vlerësuar.',
-    'hotel4-meta':'10 min në këmbë','hotel4-desc':'Shtëpi-pallat e shekullit XVI në qendër, në zonën e tapas. Më ekonomik dhe me karakter.',
-    'hotel-link':'Rezervo',
-    'hotels-note':'Qendra e Granadës është e vogël dhe e lehtë për t\'u ecur. Çdo hotel rreth Gran Vía-s, Katedrales ose Plaza Nueva-s është 10 minuta nga vendi i dasmës.',
+    'hotels-intro':'Granada ka akomodim për çdo shije dhe buxhet, dhe pothuajse gjithçka është një shëtitje e shkurtër nga Pallati i Santa Paulës. Nga hotele simpatikë në qendër deri te opsione më të thjeshta dhjetë minuta në këmbë.',
+    'hotels-note':'Nuk dini nga të filloni ose keni pyetje për rezervimin? Na shkruani pa asnjë detyrim dhe ju ndihmojmë të gjeni vendin që ju përshtatet më mirë.',
     'transport-tag':'Si të mbërrini','transport-title':'Mbërritja dhe lëvizja',
     'transport-plane-label':'Me avion',
     'transport-plane-desc':'Aeroporti Federico García Lorca (GRX), 20 minuta me taksi nga qendra. Edhe Málaga (1h 30min me makinë ose autobus), me më shumë lidhje ndërkombëtare.',
@@ -1085,8 +1025,8 @@ var T = {
     'transport-local-label':'Kur të jeni këtu',
     'transport-local-desc':'Qendra historike ecet në këmbë. Për të ngjitur në Albaicín ose Sacromonte ka mini-autobusë (linjat C1, C2, C3) dhe taksi të lirë. Cabify dhe FreeNow funksionojnë mirë.',
     'gift-tag':'Një detaj','gift-title':'Nëse doni të na bëni një dhuratë',
-    'gift-quote':'"Prania juaj është tashmë dhurata më e bukur. Por nëse doni të kontribuoni në muajin tonë të mjaltit dhe në fillimin e kësaj etape të re bashkë, do ta presim me shumë gëzim."',
-    'iban-label':'Llogaria bankare · IBAN','iban-value':'[PËR T\'U KONFIRMUAR]','iban-holder':'Në emër të Jose Romero &amp; Oarda','iban-copy':'Kopjo IBAN','iban-copied':'U kopjua!',
+    'gift-quote':'"Prania juaj është tashmë dhurata më e bukur. Por nëse doni të kontribuoni në muajin tonë të mjaltit dhe në fillimin e kësaj etape të re bashkë, do ta presim me shumë gëzim. Dhe, nëse na lejoni, asgjë si një zarf dorazi po atë ditë."',
+    'iban-label':'IBAN · Unicaja Banco','iban-value':'ES34 2103 0182 1100 3002 7257','iban-holder':'Në emër të Jose Romero &amp; Oarda','iban-copy':'Kopjo IBAN','iban-copied':'U kopjua!',
     'other-contact':'Mënyra të tjera kontakti',
     'rsvp-tag':'Konfirmimi i pranisë','rsvp-title':'Do të jesh me ne?',
     'rsvp-intro':'Ju lutemi konfirmoni para <strong style="color:var(--gold2)">30 Qershor 2026</strong>.<br>Nëpërmjet formularit ose duke na kontaktuar drejtpërdrejt.',
@@ -1139,7 +1079,7 @@ document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
    COPY IBAN
 ══════════════════════════════ */
 function copyIban(btn) {
-  var iban = (document.getElementById('ibanValue').innerText || '').trim();
+  var iban = (document.getElementById('ibanValue').innerText || '').replace(/\s+/g, '');
   var langTitle = (document.querySelector('.lang-btn.active') || {}).title;
   var lang = langTitle === 'English' ? 'en' : (langTitle === 'Shqip' ? 'sq' : 'es');
   var copiedLabel = (T[lang] && T[lang]['iban-copied']) || '¡Copiado!';
