@@ -591,11 +591,11 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
           <div class="friday-meta">
             <div class="friday-meta-item">
               <p class="friday-meta-label" data-i18n="friday-when-label">Cuándo</p>
-              <p class="friday-meta-value"><span class="tbd" data-i18n="friday-when">Viernes 30 · [POR CONFIRMAR hora]</span></p>
+              <p class="friday-meta-value"><span data-i18n="friday-when">Viernes 30 de octubre · a partir de las 20:00h</span></p>
             </div>
             <div class="friday-meta-item">
               <p class="friday-meta-label" data-i18n="friday-where-label">Dónde</p>
-              <p class="friday-meta-value"><span class="tbd" data-i18n="friday-where">[POR CONFIRMAR lugar]</span></p>
+              <p class="friday-meta-value"><span data-i18n="friday-where">Os confirmaremos el lugar muy pronto</span></p>
             </div>
           </div>
         </div>
@@ -686,6 +686,10 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
             </ul>
           </div>
         </div>
+        <div class="venue-callout" style="max-width:880px;margin:2.4rem auto 0;">
+          <span class="venue-callout-icon">🎟️</span>
+          <p class="venue-callout-text" data-i18n="granada-tickets"><strong>Entradas para la Alhambra.</strong> Se compran en la web oficial del Patronato y vuelan: las mejores fechas se agotan con semanas de antelación. Si queréis visitarla, reservad cuanto antes en <a href="https://tickets.alhambra-patronato.es/" target="_blank" rel="noopener" style="color:var(--terra);border-bottom:1px solid rgba(196,96,58,0.4);">tickets.alhambra-patronato.es</a>.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -748,7 +752,7 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
       <div class="section-inner">
         <p class="s-tag" data-i18n="gift-tag">Un detalle</p>
         <p class="s-title" data-i18n="gift-title">Si queréis regalarnos algo</p>
-        <p class="gift-quote" data-i18n="gift-quote">"Vuestra presencia es ya el mejor de los regalos. Pero si queréis contribuir a nuestra luna de miel y a empezar juntos esta nueva etapa, lo recibiremos con muchísima ilusión. Y si nos lo permitís, nada como un sobre en mano el mismo día, a la antigua usanza."</p>
+        <p class="gift-quote" data-i18n="gift-quote">"Vuestra presencia es ya el mejor de los regalos. Pero si queréis contribuir a nuestra luna de miel y a empezar juntos esta nueva etapa, lo recibiremos con muchísima ilusión."</p>
         <div class="iban-box">
           <p class="iban-label" data-i18n="iban-label">IBAN · Unicaja Banco</p>
           <p class="iban-value" id="ibanValue" data-i18n="iban-value">ES34 2103 0182 1100 3002 7257</p>
@@ -841,8 +845,8 @@ var T = {
     'friday-tag':'Viernes 30 de octubre','friday-title':'Bienvenidos a Granada',
     'friday-intro':'Queremos que lleguéis con tiempo y que nos conozcamos todos antes del gran día. Os invitamos a una velada relajada para tomar algo, presentar a quien no se conoce y empezar a celebrar juntos.',
     'friday-body':'Sin protocolo, sin estricto. Una manera de empezar el fin de semana entre los nuestros y de poner cara a quien todavía no conozcáis.',
-    'friday-when-label':'Cuándo','friday-when':'Viernes 30 · [POR CONFIRMAR hora]',
-    'friday-where-label':'Dónde','friday-where':'[POR CONFIRMAR lugar]',
+    'friday-when-label':'Cuándo','friday-when':'Viernes 30 de octubre · a partir de las 20:00h',
+    'friday-where-label':'Dónde','friday-where':'Os confirmaremos el lugar muy pronto',
     'after-tag':'Después del banquete','after-title':'After-party de Halloween',
     'after-intro':'El 31 de octubre es Halloween, así que seguimos la fiesta como toca. Hemos reservado zonas VIP para los que queráis estirar la noche con nosotros.',
     'after-venue':'Discoteca Aliatar',
@@ -851,6 +855,7 @@ var T = {
     'after-badge':'Zonas VIP reservadas','after-map':'Cómo llegar',
     'granada-tag':'Para quienes vienen de fuera','granada-title':'Aprovechad Granada',
     'granada-intro':'Si venís desde lejos, merece la pena quedarse unos días más. Aquí van nuestras recomendaciones, las de los que vivimos aquí y la queremos.',
+    'granada-tickets':'<strong>Entradas para la Alhambra.</strong> Se compran en la web oficial del Patronato y vuelan: las mejores fechas se agotan con semanas de antelación. Si queréis visitarla, reservad cuanto antes en <a href="https://tickets.alhambra-patronato.es/" target="_blank" rel="noopener" style="color:var(--terra);border-bottom:1px solid rgba(196,96,58,0.4);">tickets.alhambra-patronato.es</a>.',
     'granada-c1-sub':'Imprescindibles','granada-c1-title':'Qué ver',
     'granada-c1-i1':'<strong>Alhambra y Generalife</strong>Reservad entradas con semanas de antelación. El conjunto monumental más visitado de España no es casualidad.',
     'granada-c1-i2':'<strong>Mirador de San Nicolás</strong>La postal de la ciudad: la Alhambra con Sierra Nevada al fondo. Mejor al atardecer.',
@@ -884,7 +889,7 @@ var T = {
     'transport-local-label':'Una vez aquí',
     'transport-local-desc':'El casco histórico se recorre a pie. Para subir al Albaicín o al Sacromonte hay micro-buses (líneas C1, C2, C3) y taxis baratos. Cabify y FreeNow funcionan bien.',
     'gift-tag':'Un detalle','gift-title':'Si queréis regalarnos algo',
-    'gift-quote':'"Vuestra presencia es ya el mejor de los regalos. Pero si queréis contribuir a nuestra luna de miel y a empezar juntos esta nueva etapa, lo recibiremos con muchísima ilusión. Y si nos lo permitís, nada como un sobre en mano el mismo día, a la antigua usanza."',
+    'gift-quote':'"Vuestra presencia es ya el mejor de los regalos. Pero si queréis contribuir a nuestra luna de miel y a empezar juntos esta nueva etapa, lo recibiremos con muchísima ilusión."',
     'iban-label':'IBAN · Unicaja Banco','iban-value':'ES34 2103 0182 1100 3002 7257','iban-holder':'A nombre de Jose Romero &amp; Oarda','iban-copy':'Copiar IBAN','iban-copied':'¡Copiado!',
     'other-contact':'Otras formas de contacto',
     'rsvp-tag':'Confirmación de asistencia','rsvp-title':'¿Estarás con nosotros?',
@@ -920,8 +925,8 @@ var T = {
     'friday-tag':'Friday October 30th','friday-title':'Welcome to Granada',
     'friday-intro':'We\'d love you to arrive in time so we can all meet before the big day. We\'re inviting everyone to a relaxed evening to have a drink, introduce those who don\'t know each other and start celebrating together.',
     'friday-body':'No protocol, no strictness. A way to kick off the weekend with our people and put a face to those you haven\'t met yet.',
-    'friday-when-label':'When','friday-when':'Friday 30th · [TIME TO BE CONFIRMED]',
-    'friday-where-label':'Where','friday-where':'[VENUE TO BE CONFIRMED]',
+    'friday-when-label':'When','friday-when':'Friday, October 30th · from 8:00 PM',
+    'friday-where-label':'Where','friday-where':'We will confirm the venue very soon',
     'after-tag':'After dinner','after-title':'Halloween after-party',
     'after-intro':'October 31st is Halloween, so we keep the party going as it should be. We\'ve reserved VIP areas for those of you who want to stretch the night out with us.',
     'after-venue':'Discoteca Aliatar',
@@ -930,6 +935,7 @@ var T = {
     'after-badge':'VIP areas reserved','after-map':'How to get there',
     'granada-tag':'For those travelling in','granada-title':'Make the most of Granada',
     'granada-intro':'If you\'re coming from far away, it\'s worth staying a few extra days. Here are our recommendations, from those of us who live here and love it.',
+    'granada-tickets':'<strong>Alhambra tickets.</strong> They are sold on the official Patronato website and go fast: the best dates sell out weeks ahead. If you want to visit, book as early as you can at <a href="https://tickets.alhambra-patronato.es/" target="_blank" rel="noopener" style="color:var(--terra);border-bottom:1px solid rgba(196,96,58,0.4);">tickets.alhambra-patronato.es</a>.',
     'granada-c1-sub':'The essentials','granada-c1-title':'What to see',
     'granada-c1-i1':'<strong>Alhambra & Generalife</strong>Book tickets weeks in advance. The most visited monument in Spain isn\'t that by chance.',
     'granada-c1-i2':'<strong>Mirador de San Nicolás</strong>The city\'s postcard view: the Alhambra with Sierra Nevada behind it. Best at sunset.',
@@ -963,7 +969,7 @@ var T = {
     'transport-local-label':'Once you\'re here',
     'transport-local-desc':'The old town is walkable. To go up to the Albaicín or Sacromonte there are mini-buses (lines C1, C2, C3) and cheap taxis. Cabify and FreeNow work well.',
     'gift-tag':'A little something','gift-title':'If you\'d like to gift us something',
-    'gift-quote':'"Your presence is already the greatest gift. But if you\'d like to contribute to our honeymoon and to the start of this new chapter together, we\'ll receive it with so much joy. And if you\'ll allow us, there\'s nothing like an envelope handed over in person on the day."',
+    'gift-quote':'"Your presence is already the greatest gift. But if you would like to contribute to our honeymoon and to the start of this new chapter together, we will receive it with so much joy."',
     'iban-label':'IBAN · Unicaja Banco','iban-value':'ES34 2103 0182 1100 3002 7257','iban-holder':'In the name of Jose Romero &amp; Oarda','iban-copy':'Copy IBAN','iban-copied':'Copied!',
     'other-contact':'Other ways to contact us',
     'rsvp-tag':'RSVP','rsvp-title':'Will you join us?',
@@ -999,8 +1005,8 @@ var T = {
     'friday-tag':'E premte 30 Tetor','friday-title':'Mirë se erdhët në Granada',
     'friday-intro':'Duam që të mbërrini me kohë dhe të njihemi të gjithë para ditës së madhe. Ju ftojmë në një mbrëmje të qetë për të pirë diçka, për të njohur ata që nuk i njihni dhe për të filluar të festojmë së bashku.',
     'friday-body':'Pa protokoll, pa rreptësi. Një mënyrë për të nisur fundjavën mes të dashurve dhe për të vënë një fytyrë me ata që ende nuk i njihni.',
-    'friday-when-label':'Kur','friday-when':'E premte 30 · [ORA PËR T\'U KONFIRMUAR]',
-    'friday-where-label':'Ku','friday-where':'[VENDI PËR T\'U KONFIRMUAR]',
+    'friday-when-label':'Kur','friday-when':'E premte, 30 Tetor · nga ora 20:00',
+    'friday-where-label':'Ku','friday-where':'Vendin do t\'jua konfirmojmë shumë shpejt',
     'after-tag':'Pas banketit','after-title':'After-party Halloween',
     'after-intro':'31 Tetori është Halloween, ndaj festën e vazhdojmë siç i takon. Kemi rezervuar zona VIP për ata që duan ta zgjasin natën me ne.',
     'after-venue':'Discoteca Aliatar',
@@ -1009,6 +1015,7 @@ var T = {
     'after-badge':'Zona VIP të rezervuara','after-map':'Si të arrini',
     'granada-tag':'Për ata që vijnë nga larg','granada-title':'Shijoni Granadën',
     'granada-intro':'Nëse vini nga larg, ia vlen të qëndroni ndonjë ditë më shumë. Këto janë rekomandimet tona, të atyre që jetojmë këtu dhe e duam.',
+    'granada-tickets':'<strong>Biletat për Alhambra.</strong> Blihen në faqen zyrtare të Patronato-s dhe mbarojnë shpejt: datat më të mira shiten javë përpara. Nëse doni ta vizitoni, rezervoni sa më herët në <a href="https://tickets.alhambra-patronato.es/" target="_blank" rel="noopener" style="color:var(--terra);border-bottom:1px solid rgba(196,96,58,0.4);">tickets.alhambra-patronato.es</a>.',
     'granada-c1-sub':'Të domosdoshmet','granada-c1-title':'Çfarë të shihni',
     'granada-c1-i1':'<strong>Alhambra dhe Generalife</strong>Rezervoni biletat javë para. Monumenti më i vizituar i Spanjës nuk është rastësi.',
     'granada-c1-i2':'<strong>Mirador de San Nicolás</strong>Kartolina e qytetit: Alhambra me Sierra Nevada-n në sfond. Më mirë në perëndim të diellit.',
@@ -1042,7 +1049,7 @@ var T = {
     'transport-local-label':'Kur të jeni këtu',
     'transport-local-desc':'Qendra historike ecet në këmbë. Për të ngjitur në Albaicín ose Sacromonte ka mini-autobusë (linjat C1, C2, C3) dhe taksi të lirë. Cabify dhe FreeNow funksionojnë mirë.',
     'gift-tag':'Një detaj','gift-title':'Nëse doni të na bëni një dhuratë',
-    'gift-quote':'"Prania juaj është tashmë dhurata më e bukur. Por nëse doni të kontribuoni në muajin tonë të mjaltit dhe në fillimin e kësaj etape të re bashkë, do ta presim me shumë gëzim. Dhe, nëse na lejoni, asgjë si një zarf dorazi po atë ditë."',
+    'gift-quote':'"Prania juaj është tashmë dhurata më e bukur. Por nëse doni të kontribuoni në muajin tonë të mjaltit dhe në fillimin e kësaj etape të re bashkë, do ta presim me shumë gëzim."',
     'iban-label':'IBAN · Unicaja Banco','iban-value':'ES34 2103 0182 1100 3002 7257','iban-holder':'Në emër të Jose Romero &amp; Oarda','iban-copy':'Kopjo IBAN','iban-copied':'U kopjua!',
     'other-contact':'Mënyra të tjera kontakti',
     'rsvp-tag':'Konfirmimi i pranisë','rsvp-title':'Do të jesh me ne?',
