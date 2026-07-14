@@ -293,7 +293,7 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
   <div class="hero">
 
     <div style="position:relative;z-index:2;text-align:center;">
-      <p class="hero-eyebrow" data-i18n="hero-tag">Os invitamos a nuestra boda</p>
+      <p class="hero-eyebrow" data-i18n="hero-tag">Ya queda menos</p>
       <div class="hero-names">
         Jose<span class="amp">&amp;</span>Oarda
       </div>
@@ -759,51 +759,18 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
           <p class="iban-holder" data-i18n="iban-holder">A nombre de Jose Romero &amp; Oarda</p>
           <button class="iban-copy" type="button" onclick="copyIban(this)" data-i18n="iban-copy">Copiar IBAN</button>
         </div>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--gold2);margin-top:1.6rem;" data-i18n="gift-cash">Aunque si os es más cómodo en efectivo, mejor ;)</p>
       </div>
     </div>
   </div>
 
-  <!-- RSVP -->
+  <!-- CONTACTO / DUDAS -->
   <div class="rsvp-band">
     <div class="rsvp-inner reveal">
-      <p class="s-tag" data-i18n="rsvp-tag">Confirmación de asistencia</p>
-      <p class="s-title" data-i18n="rsvp-title">¿Estarás con nosotros?</p>
-      <p class="s-text" data-i18n="rsvp-intro">Confirma antes del <strong style="color:var(--gold2)">15 de julio de 2026</strong>.<br>A través del formulario o contactando directamente con nosotros.</p>
-      <div class="rsvp-notice">
-        <p class="rsvp-notice-text" data-i18n="rsvp-notice">📋 &nbsp;Por ahora solo necesitamos saber si contamos contigo. En los próximos meses os enviaremos una actualización con todos los detalles: horarios, sitios recomendados, qué ver en Granada y mucho más.</p>
-      </div>
-      <form class="rsvp-form" id="rsvpForm">
-        <div class="fg">
-          <label data-i18n="form-name">Nombre completo</label>
-          <input type="text" name="nombre" data-i18n-ph="ph-name" placeholder="Nombre y apellidos" required>
-        </div>
-        <div class="fg">
-          <label data-i18n="form-attend">¿Asistirás?</label>
-          <select name="asistencia" required onchange="toggleAcompanantes(this.value)">
-            <option value="" disabled selected data-i18n="form-select">Selecciona una opción</option>
-            <option value="si"  data-i18n="form-yes">Sí, ¡allí estaré!</option>
-            <option value="no"  data-i18n="form-no">Lamentablemente no podré asistir</option>
-          </select>
-        </div>
-        <div class="fg" id="fg-acompanantes" style="display:none;">
-          <label data-i18n="form-guests">Número de acompañantes</label>
-          <select name="acompanantes">
-            <option value="0" data-i18n="form-solo">Solo/a</option>
-            <option value="1" data-i18n="form-plus1">+ 1 acompañante</option>
-            <option value="2" data-i18n="form-plus2">+ 2 acompañantes</option>
-            <option value="3" data-i18n="form-plus3">+ 3 o más</option>
-          </select>
-        </div>
-        <div class="fg">
-          <label data-i18n="form-diet">Alergias o restricciones alimentarias</label>
-          <textarea name="alergias" data-i18n-ph="ph-diet" placeholder="Cuéntanos si tienes alguna necesidad especial..."></textarea>
-        </div>
-        <button type="submit" class="rsvp-btn" data-i18n="form-btn">Confirmar asistencia</button>
-      </form>
-      <p class="rsvp-ok" id="rsvpOk"></p>
-
-      <p style="font-size:0.52rem; letter-spacing:0.45em; color:rgba(196,151,58,0.55); text-transform:uppercase; margin-top:3rem; margin-bottom:1rem;" data-i18n="other-contact">Otras formas de contacto</p>
-<div class="contacts">
+      <p class="s-tag" data-i18n="help-tag">¿Alguna duda?</p>
+      <p class="s-title" data-i18n="help-title">Estamos a un mensaje</p>
+      <p class="s-text" data-i18n="help-text">Para cualquier cosa —una duda, un cambio de última hora o simplemente saludar— escribidnos directamente. Os respondemos encantados.</p>
+      <div class="contacts" style="margin-top:2.5rem;">
         <a class="contact-row" href="https://wa.me/34689503547" target="_blank">
           <span class="c-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.532 5.862L.057 23.428a.5.5 0 0 0 .61.61l5.567-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.864 0-3.618-.5-5.13-1.376l-.36-.214-3.733.99.99-3.734-.214-.36A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></span>
           <div class="c-info"><span class="c-type" data-i18n="contact-jose">Teléfono · Jose</span><span class="c-val">+34 689 503 547</span></div>
@@ -824,7 +791,9 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
 ══════════════════════════════ */
 var T = {
   es: {
-    'hero-tag':'Os invitamos a nuestra boda','hero-date1':'31 de Octubre de 2026','hero-date2':'Sábado · 12:00h · Granada',
+    'hero-tag':'Ya queda menos','hero-date1':'31 de Octubre de 2026','hero-date2':'Sábado · 12:00h · Granada',
+    'help-tag':'¿Alguna duda?','help-title':'Estamos a un mensaje',
+    'help-text':'Para cualquier cosa —una duda, un cambio de última hora o simplemente saludar— escribidnos directamente. Os respondemos encantados.',
     'scroll-cue':'Descubrir','cd-label':'Faltan',
     'cd-title':'Para el gran día',
     'cd-days':'Días','cd-hours':'Horas','cd-mins':'Minutos','cd-secs':'Segundos',
@@ -890,6 +859,7 @@ var T = {
     'transport-local-desc':'El casco histórico se recorre a pie. Para subir al Albaicín o al Sacromonte hay micro-buses (líneas C1, C2, C3) y taxis baratos. Cabify y FreeNow funcionan bien.',
     'gift-tag':'Un detalle','gift-title':'Si queréis regalarnos algo',
     'gift-quote':'"Vuestra presencia es ya el mejor de los regalos. Pero si queréis contribuir a nuestra luna de miel y a empezar juntos esta nueva etapa, lo recibiremos con muchísima ilusión."',
+    'gift-cash':'Aunque si os es más cómodo en efectivo, mejor ;)',
     'iban-label':'IBAN · Unicaja Banco','iban-value':'ES34 2103 0182 1100 3002 7257','iban-holder':'A nombre de Jose Romero &amp; Oarda','iban-copy':'Copiar IBAN','iban-copied':'¡Copiado!',
     'other-contact':'Otras formas de contacto',
     'rsvp-tag':'Confirmación de asistencia','rsvp-title':'¿Estarás con nosotros?',
@@ -904,7 +874,9 @@ var T = {
     'ph-name':'Nombre y apellidos','ph-diet':'Cuéntanos si tienes alguna necesidad especial...'
   },
   en: {
-    'hero-tag':'You are invited to our wedding','hero-date1':'October 31st, 2026','hero-date2':'Saturday · 12:00 PM · Granada',
+    'hero-tag':'Not long to go now','hero-date1':'October 31st, 2026','hero-date2':'Saturday · 12:00 PM · Granada',
+    'help-tag':'Any questions?','help-title':'We are just a message away',
+    'help-text':'For anything at all —a question, a last-minute change or just to say hi— message us directly. We will be happy to help.',
     'scroll-cue':'Discover','cd-label':'Countdown',
     'cd-title':'To the big day',
     'cd-days':'Days','cd-hours':'Hours','cd-mins':'Minutes','cd-secs':'Seconds',
@@ -970,6 +942,7 @@ var T = {
     'transport-local-desc':'The old town is walkable. To go up to the Albaicín or Sacromonte there are mini-buses (lines C1, C2, C3) and cheap taxis. Cabify and FreeNow work well.',
     'gift-tag':'A little something','gift-title':'If you\'d like to gift us something',
     'gift-quote':'"Your presence is already the greatest gift. But if you would like to contribute to our honeymoon and to the start of this new chapter together, we will receive it with so much joy."',
+    'gift-cash':'Although if cash is easier for you, even better ;)',
     'iban-label':'IBAN · Unicaja Banco','iban-value':'ES34 2103 0182 1100 3002 7257','iban-holder':'In the name of Jose Romero &amp; Oarda','iban-copy':'Copy IBAN','iban-copied':'Copied!',
     'other-contact':'Other ways to contact us',
     'rsvp-tag':'RSVP','rsvp-title':'Will you join us?',
@@ -984,7 +957,9 @@ var T = {
     'ph-name':'First and last name','ph-diet':'Tell us if you have any special dietary needs...'
   },
   sq: {
-    'hero-tag':'Jeni të ftuar në dasmën tonë','hero-date1':'31 Tetor 2026','hero-date2':'E shtunë · 12:00 · Granada',
+    'hero-tag':'Gjithnjë e më afër','hero-date1':'31 Tetor 2026','hero-date2':'E shtunë · 12:00 · Granada',
+    'help-tag':'Keni ndonjë pyetje?','help-title':'Jemi vetëm një mesazh larg',
+    'help-text':'Për çfarëdo gjëje —një pyetje, një ndryshim të minutës së fundit ose thjesht për të përshëndetur— na shkruani drejtpërdrejt. Do t\'ju përgjigjemi me kënaqësi.',
     'scroll-cue':'Zbulo','cd-label':'Numërim mbrapsht',
     'cd-title':'Deri në ditën e madhe',
     'cd-days':'Ditë','cd-hours':'Orë','cd-mins':'Minuta','cd-secs':'Sekonda',
@@ -1050,6 +1025,7 @@ var T = {
     'transport-local-desc':'Qendra historike ecet në këmbë. Për të ngjitur në Albaicín ose Sacromonte ka mini-autobusë (linjat C1, C2, C3) dhe taksi të lirë. Cabify dhe FreeNow funksionojnë mirë.',
     'gift-tag':'Një detaj','gift-title':'Nëse doni të na bëni një dhuratë',
     'gift-quote':'"Prania juaj është tashmë dhurata më e bukur. Por nëse doni të kontribuoni në muajin tonë të mjaltit dhe në fillimin e kësaj etape të re bashkë, do ta presim me shumë gëzim."',
+    'gift-cash':'Edhe pse nëse është më e lehtë me para në dorë, akoma më mirë ;)',
     'iban-label':'IBAN · Unicaja Banco','iban-value':'ES34 2103 0182 1100 3002 7257','iban-holder':'Në emër të Jose Romero &amp; Oarda','iban-copy':'Kopjo IBAN','iban-copied':'U kopjua!',
     'other-contact':'Mënyra të tjera kontakti',
     'rsvp-tag':'Konfirmimi i pranisë','rsvp-title':'Do të jesh me ne?',
@@ -1119,56 +1095,6 @@ function copyIban(btn) {
   }
 }
 
-/* ══════════════════════════════
-   RSVP FORM
-══════════════════════════════ */
-function toggleAcompanantes(val) {
-  var fg = document.getElementById('fg-acompanantes');
-  if (fg) fg.style.display = val === 'si' ? 'flex' : 'none';
-}
-
-document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var form = this;
-  var btn = form.querySelector('.rsvp-btn');
-  var asistencia = form.querySelector('[name="asistencia"]').value;
-  var activeBtn = document.querySelector('.lang-btn.active');
-  var lang = activeBtn ? (activeBtn.title === 'Español' ? 'es' : activeBtn.title === 'English' ? 'en' : 'sq') : 'es';
-  var type = (asistencia === 'si') ? 'si' : 'no';
-
-  var msgs = {
-    si: {
-      es: '¡Muchas gracias! Nos alegra mucho contar contigo. En los próximos meses te mantendremos informado. ¡Hasta pronto! 🤍',
-      en: 'Thank you so much! We are so happy you can make it. We will keep you updated in the coming months. See you soon! 🤍',
-      sq: 'Shumë faleminderit! Jemi të lumtur që do të jeni me ne. Shihemi shpejt! 🤍'
-    },
-    no: {
-      es: 'Lamentamos que no puedas acompañarnos, pero te agradecemos mucho que nos lo hayas hecho saber. ¡Estarás en nuestros pensamientos ese día! 🤍',
-      en: 'We are sorry you cannot join us, but thank you for letting us know. You will be in our thoughts on that special day! 🤍',
-      sq: 'Na vjen keq, por faleminderit që na lajmërove. Do të jesh në mendimet tona atë ditë! 🤍'
-    }
-  };
-
-  function showMsg() {
-    form.style.display = 'none';
-    var ok = document.getElementById('rsvpOk');
-    ok.innerHTML = msgs[type][lang];
-    ok.style.display = 'block';
-  }
-
-  btn.disabled = true;
-
-  try {
-    var formData = new FormData(form);
-    fetch('https://formspree.io/f/mqedjlqy', {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    }).then(function() { showMsg(); }).catch(function() { showMsg(); });
-  } catch(err) {
-    showMsg();
-  }
-});
 </script>
 </body>
 </html>
