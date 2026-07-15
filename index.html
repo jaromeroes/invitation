@@ -783,54 +783,76 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
       </div>
       <div class="g-filters">
         <button class="g-pill active" onclick="gFilter('all',this)" data-i18n="g-filter-all">Todo</button>
-        <button class="g-pill" onclick="gFilter('barrios',this)" data-i18n="g-filter-barrios">Barrios</button>
-        <button class="g-pill" onclick="gFilter('tapear',this)" data-i18n="g-filter-tapear">Comer y tapear</button>
         <button class="g-pill" onclick="gFilter('ver',this)" data-i18n="g-filter-ver">Qué ver</button>
+        <button class="g-pill" onclick="gFilter('tapear',this)" data-i18n="g-filter-tapear">Comer y tapear</button>
+        <button class="g-pill" onclick="gFilter('barrios',this)" data-i18n="g-filter-barrios">Barrios</button>
         <button class="g-pill" onclick="gFilter('escapadas',this)" data-i18n="g-filter-escapadas">Escapadas</button>
       </div>
       <div class="g-grid">
-        <article class="g-card" data-cat="barrios">
+        <article class="g-card" data-cat="ver">
           <div class="g-photo">
-            <span class="g-cat" data-i18n="cat-barrios">Barrios</span>
-            <img src="img/albaicin.webp" alt="Albaicín" loading="lazy">
-            <h3 class="g-name" data-i18n="g-albaicin-t">Albaicín</h3>
+            <span class="g-cat" data-i18n="cat-ver">Qué ver</span>
+            <img src="img/alhambra.webp" alt="Alhambra y Generalife" loading="lazy">
+            <h3 class="g-name" data-i18n="g-alhambra-t">Alhambra y Generalife</h3>
           </div>
           <div class="g-body">
-            <p class="g-desc" data-i18n="g-albaicin-d">Calles empedradas, casas blancas, miradores. Subid sin GPS y dejaos perder.</p>
-            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Albaic%C3%ADn+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
+            <p class="g-desc" data-i18n="g-alhambra-d">Reservad entradas con semanas de antelación. El conjunto monumental más visitado de España no es casualidad.</p>
+            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Alhambra+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
           </div>
         </article>
-        <article class="g-card" data-cat="barrios">
+        <article class="g-card" data-cat="ver">
           <div class="g-photo">
-            <span class="g-cat" data-i18n="cat-barrios">Barrios</span>
-            <img src="img/sacromonte.webp" alt="Sacromonte" loading="lazy">
-            <h3 class="g-name" data-i18n="g-sacromonte-t">Sacromonte</h3>
+            <span class="g-cat" data-i18n="cat-ver">Qué ver</span>
+            <img src="img/mirador-atardecer.webp" alt="Atardecer sobre la Alhambra desde el Mirador de San Nicolás" loading="lazy">
+            <h3 class="g-name" data-i18n="g-mirador-t">Mirador de San Nicolás</h3>
           </div>
           <div class="g-body">
-            <p class="g-desc" data-i18n="g-sacromonte-d">El barrio gitano y las cuevas. Un espectáculo de flamenco aquí es otra historia.</p>
-            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Sacromonte+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
+            <p class="g-desc" data-i18n="g-mirador-d">La postal de la ciudad: la Alhambra con Sierra Nevada al fondo. Mejor al atardecer.</p>
+            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Mirador+de+San+Nicol%C3%A1s+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
           </div>
         </article>
-        <article class="g-card" data-cat="barrios">
+        <article class="g-card" data-cat="ver">
           <div class="g-photo">
-            <span class="g-cat" data-i18n="cat-barrios">Barrios</span>
-            <img src="img/realejo.webp" alt="Realejo" loading="lazy">
-            <h3 class="g-name" data-i18n="g-realejo-t">Realejo</h3>
+            <span class="g-cat" data-i18n="cat-ver">Qué ver</span>
+            <img src="img/catedral.webp?v=2" alt="Catedral y Capilla Real" loading="lazy">
+            <h3 class="g-name" data-i18n="g-catedral-t">Catedral y Capilla Real</h3>
           </div>
           <div class="g-body">
-            <p class="g-desc" data-i18n="g-realejo-d">Antigua judería. Mucho arte urbano (mirad las paredes) y bares menos turísticos.</p>
-            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Realejo+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
+            <p class="g-desc" data-i18n="g-catedral-d">El descanso de los Reyes Católicos, en pleno centro.</p>
+            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Catedral+de+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
           </div>
         </article>
-        <article class="g-card" data-cat="barrios">
+        <article class="g-card" data-cat="ver">
           <div class="g-photo">
-            <span class="g-cat" data-i18n="cat-barrios">Barrios</span>
-            <img src="img/carrera-darro.webp" alt="Carrera del Darro" loading="lazy">
-            <h3 class="g-name" data-i18n="g-darro-t">Carrera del Darro</h3>
+            <span class="g-cat" data-i18n="cat-ver">Qué ver</span>
+            <img src="img/palacio-carlos-v.webp" alt="Patio circular del Palacio de Carlos V" loading="lazy">
+            <h3 class="g-name" data-i18n="g-carlosv-t">Palacio de Carlos V</h3>
           </div>
           <div class="g-body">
-            <p class="g-desc" data-i18n="g-darro-d">La calle más bonita de Granada, paralela al río bajo la Alhambra.</p>
-            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Carrera+del+Darro+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
+            <p class="g-desc" data-i18n="g-carlosv-d">El patio circular renacentista dentro de la Alhambra. La entrada es libre.</p>
+            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Palacio+de+Carlos+V+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
+          </div>
+        </article>
+        <article class="g-card" data-cat="ver">
+          <div class="g-photo">
+            <span class="g-cat" data-i18n="cat-ver">Qué ver</span>
+            <img src="img/alcaiceria.webp" alt="Callejones de la Alcaicería" loading="lazy">
+            <h3 class="g-name" data-i18n="g-alcaiceria-t">Alcaicería</h3>
+          </div>
+          <div class="g-body">
+            <p class="g-desc" data-i18n="g-alcaiceria-d">El antiguo zoco de la seda: callejones estrechos de artesanía junto a la Catedral.</p>
+            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Alcaicer%C3%ADa+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
+          </div>
+        </article>
+        <article class="g-card" data-cat="ver">
+          <div class="g-photo">
+            <span class="g-cat" data-i18n="cat-ver">Qué ver</span>
+            <img src="img/centro-historico.webp" alt="Plaza Nueva en el centro histórico de Granada" loading="lazy">
+            <h3 class="g-name" data-i18n="g-centro-t">Centro histórico</h3>
+          </div>
+          <div class="g-body">
+            <p class="g-desc" data-i18n="g-centro-d">Plaza Nueva, Bib-Rambla y Gran Vía. El corazón de la ciudad, todo a pie.</p>
+            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Plaza+Nueva+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
           </div>
         </article>
         <article class="g-card" data-cat="tapear">
@@ -891,7 +913,7 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
         <article class="g-card" data-cat="tapear">
           <div class="g-photo">
             <span class="g-cat" data-i18n="cat-tapear">Comer y tapear</span>
-            <img src="img/local-alameda.webp" alt="Fachada del Restaurante Alameda" loading="lazy">
+            <img src="img/local-alameda.webp?v=2" alt="Fachada del Restaurante Alameda" loading="lazy">
             <h3 class="g-name" data-i18n="g-alameda-t">Restaurante Alameda</h3>
           </div>
           <div class="g-body">
@@ -924,7 +946,7 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
         <article class="g-card" data-cat="tapear">
           <div class="g-photo">
             <span class="g-cat" data-i18n="cat-tapear">Comer y tapear</span>
-            <img src="img/local-rosariovarela.webp" alt="Interior de Rosario Varela" loading="lazy">
+            <img src="img/local-rosariovarela.webp?v=2" alt="Interior de Rosario Varela" loading="lazy">
             <h3 class="g-name" data-i18n="g-rosariovarela-t">Rosario Varela</h3>
           </div>
           <div class="g-body">
@@ -935,7 +957,7 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
         <article class="g-card" data-cat="tapear">
           <div class="g-photo">
             <span class="g-cat" data-i18n="cat-tapear">Comer y tapear</span>
-            <img src="img/local-carmela.webp" alt="Fachada de Carmela, Granada" loading="lazy">
+            <img src="img/local-carmela.webp?v=2" alt="Fachada de Carmela, Granada" loading="lazy">
             <h3 class="g-name" data-i18n="g-carmela-t">Carmela</h3>
           </div>
           <div class="g-body">
@@ -943,48 +965,48 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
             <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante+Carmela+La+Colcha+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
           </div>
         </article>
-        <article class="g-card" data-cat="ver">
+        <article class="g-card" data-cat="barrios">
           <div class="g-photo">
-            <span class="g-cat" data-i18n="cat-ver">Qué ver</span>
-            <img src="img/alhambra.webp" alt="Alhambra y Generalife" loading="lazy">
-            <h3 class="g-name" data-i18n="g-alhambra-t">Alhambra y Generalife</h3>
+            <span class="g-cat" data-i18n="cat-barrios">Barrios</span>
+            <img src="img/albaicin.webp?v=2" alt="Albaicín" loading="lazy">
+            <h3 class="g-name" data-i18n="g-albaicin-t">Albaicín</h3>
           </div>
           <div class="g-body">
-            <p class="g-desc" data-i18n="g-alhambra-d">Reservad entradas con semanas de antelación. El conjunto monumental más visitado de España no es casualidad.</p>
-            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Alhambra+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
+            <p class="g-desc" data-i18n="g-albaicin-d">Calles empedradas, casas blancas, miradores. Subid sin GPS y dejaos perder.</p>
+            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Albaic%C3%ADn+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
           </div>
         </article>
-        <article class="g-card" data-cat="ver">
+        <article class="g-card" data-cat="barrios">
           <div class="g-photo">
-            <span class="g-cat" data-i18n="cat-ver">Qué ver</span>
-            <img src="img/mirador-san-nicolas.webp" alt="Mirador de San Nicolás" loading="lazy">
-            <h3 class="g-name" data-i18n="g-mirador-t">Mirador de San Nicolás</h3>
+            <span class="g-cat" data-i18n="cat-barrios">Barrios</span>
+            <img src="img/sacromonte.webp" alt="Sacromonte" loading="lazy">
+            <h3 class="g-name" data-i18n="g-sacromonte-t">Sacromonte</h3>
           </div>
           <div class="g-body">
-            <p class="g-desc" data-i18n="g-mirador-d">La postal de la ciudad: la Alhambra con Sierra Nevada al fondo. Mejor al atardecer.</p>
-            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Mirador+de+San+Nicol%C3%A1s+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
+            <p class="g-desc" data-i18n="g-sacromonte-d">El barrio gitano y las cuevas. Un espectáculo de flamenco aquí es otra historia.</p>
+            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Sacromonte+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
           </div>
         </article>
-        <article class="g-card" data-cat="ver">
+        <article class="g-card" data-cat="barrios">
           <div class="g-photo">
-            <span class="g-cat" data-i18n="cat-ver">Qué ver</span>
-            <img src="img/catedral.webp" alt="Catedral y Capilla Real" loading="lazy">
-            <h3 class="g-name" data-i18n="g-catedral-t">Catedral y Capilla Real</h3>
+            <span class="g-cat" data-i18n="cat-barrios">Barrios</span>
+            <img src="img/realejo.webp?v=2" alt="Realejo" loading="lazy">
+            <h3 class="g-name" data-i18n="g-realejo-t">Realejo</h3>
           </div>
           <div class="g-body">
-            <p class="g-desc" data-i18n="g-catedral-d">El descanso de los Reyes Católicos, en pleno centro.</p>
-            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Catedral+de+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
+            <p class="g-desc" data-i18n="g-realejo-d">Antigua judería. Mucho arte urbano (mirad las paredes) y bares menos turísticos.</p>
+            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Realejo+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
           </div>
         </article>
-        <article class="g-card" data-cat="ver">
+        <article class="g-card" data-cat="barrios">
           <div class="g-photo">
-            <span class="g-cat" data-i18n="cat-ver">Qué ver</span>
-            <img src="img/cartuja.webp" alt="Monasterio de la Cartuja" loading="lazy">
-            <h3 class="g-name" data-i18n="g-cartuja-t">Monasterio de la Cartuja</h3>
+            <span class="g-cat" data-i18n="cat-barrios">Barrios</span>
+            <img src="img/carrera-darro.webp?v=2" alt="Carrera del Darro" loading="lazy">
+            <h3 class="g-name" data-i18n="g-darro-t">Carrera del Darro</h3>
           </div>
           <div class="g-body">
-            <p class="g-desc" data-i18n="g-cartuja-d">Barroco granadino en su versión más exuberante.</p>
-            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Monasterio+de+la+Cartuja+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
+            <p class="g-desc" data-i18n="g-darro-d">La calle más bonita de Granada, paralela al río bajo la Alhambra.</p>
+            <a class="g-map" href="https://www.google.com/maps/search/?api=1&amp;query=Carrera+del+Darro+Granada" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> <span data-i18n="g-map">Ver en el mapa</span></a>
           </div>
         </article>
         <article class="g-card" data-cat="escapadas">
@@ -1381,7 +1403,9 @@ var G = {
     'g-alhambra-t':'Alhambra y Generalife','g-alhambra-d':'Reservad entradas con semanas de antelación. El conjunto monumental más visitado de España no es casualidad.',
     'g-mirador-t':'Mirador de San Nicolás','g-mirador-d':'La postal de la ciudad: la Alhambra con Sierra Nevada al fondo. Mejor al atardecer.',
     'g-catedral-t':'Catedral y Capilla Real','g-catedral-d':'El descanso de los Reyes Católicos, en pleno centro.',
-    'g-cartuja-t':'Monasterio de la Cartuja','g-cartuja-d':'Barroco granadino en su versión más exuberante.',
+    'g-carlosv-t':'Palacio de Carlos V','g-carlosv-d':'El patio circular renacentista dentro de la Alhambra. La entrada es libre.',
+    'g-alcaiceria-t':'Alcaicería','g-alcaiceria-d':'El antiguo zoco de la seda: callejones estrechos de artesanía junto a la Catedral.',
+    'g-centro-t':'Centro histórico','g-centro-d':'Plaza Nueva, Bib-Rambla y Gran Vía. El corazón de la ciudad, todo a pie.',
     'g-navas-t':'Calle Navas','g-navas-d':'La zona de tapas por antonomasia. Pedid una caña y os llega la tapa gratis — sí, en Granada todavía pasa.',
     'g-castaneda-t':'Bodegas Castañeda','g-castaneda-d':'Clásico imprescindible, en pleno centro. Cocina granadina sin postureo.',
     'g-botilleria-t':'La Botillería','g-botilleria-d':'Tapas más actuales y una carta de vinos como pocas, en el Realejo. Para sentarse con calma.',
@@ -1426,7 +1450,9 @@ var G = {
     'g-alhambra-t':'Alhambra & Generalife','g-alhambra-d':'Book tickets weeks in advance. The most visited monument in Spain isn\'t that by chance.',
     'g-mirador-t':'Mirador de San Nicolás','g-mirador-d':'The city\'s postcard view: the Alhambra with Sierra Nevada behind it. Best at sunset.',
     'g-catedral-t':'Cathedral & Royal Chapel','g-catedral-d':'The resting place of the Catholic Monarchs, right in the centre.',
-    'g-cartuja-t':'Monasterio de la Cartuja','g-cartuja-d':'Granadan baroque at its most exuberant.',
+    'g-carlosv-t':'Palace of Charles V','g-carlosv-d':'The Renaissance circular courtyard inside the Alhambra. Free entry.',
+    'g-alcaiceria-t':'Alcaicería','g-alcaiceria-d':'The old silk market: narrow craft-shop alleys next to the Cathedral.',
+    'g-centro-t':'Historic centre','g-centro-d':'Plaza Nueva, Bib-Rambla and Gran Vía. The heart of the city, all walkable.',
     'g-navas-t':'Calle Navas','g-navas-d':'The tapas street par excellence. Order a beer and a tapa comes free — yes, that still happens in Granada.',
     'g-castaneda-t':'Bodegas Castañeda','g-castaneda-d':'An unmissable classic, right in the centre. Granadan cooking with no pretension.',
     'g-botilleria-t':'La Botillería','g-botilleria-d':'More modern tapas and a wine list like few others, in the Realejo. To sit down and take your time.',
@@ -1471,7 +1497,9 @@ var G = {
     'g-alhambra-t':'Alhambra dhe Generalife','g-alhambra-d':'Rezervoni biletat javë para. Monumenti më i vizituar i Spanjës nuk është rastësi.',
     'g-mirador-t':'Mirador de San Nicolás','g-mirador-d':'Kartolina e qytetit: Alhambra me Sierra Nevada-n në sfond. Më mirë në perëndim të diellit.',
     'g-catedral-t':'Katedralja dhe Kapela Mbretërore','g-catedral-d':'Vendi i prehjes së Mbretërve Katolikë, në qendër.',
-    'g-cartuja-t':'Monasterio de la Cartuja','g-cartuja-d':'Baroku granadin në versionin më të bujshëm.',
+    'g-carlosv-t':'Pallati i Karlit V','g-carlosv-d':'Oborri rrethor rilindas brenda Alhambrës. Hyrja është falas.',
+    'g-alcaiceria-t':'Alcaicería','g-alcaiceria-d':'Tregu i vjetër i mëndafshit: rrugica të ngushta me artizanat pranë Katedrales.',
+    'g-centro-t':'Qendra historike','g-centro-d':'Plaza Nueva, Bib-Rambla dhe Gran Vía. Zemra e qytetit, e gjitha në këmbë.',
     'g-navas-t':'Calle Navas','g-navas-d':'Rruga e tapas-eve par excellence. Porositni një birrë dhe tapa-ja vjen falas — po, në Granada ende ndodh.',
     'g-castaneda-t':'Bodegas Castañeda','g-castaneda-d':'Klasik i pashmangshëm, në qendër. Gatim granadin pa shtirje.',
     'g-botilleria-t':'La Botillería','g-botilleria-d':'Tapas më moderne dhe një kartë verërash si pak të tjera, në Realejo. Për t\'u ulur me qetësi.',
