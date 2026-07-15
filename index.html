@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
 <title>Jose & Oarda · 31 Octubre 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300&display=swap" rel="stylesheet">
 <style>
@@ -271,6 +272,8 @@ footer { background:var(--dark); border-top:1px solid rgba(196,151,58,0.1); padd
 .iban-holder { font-size: 0.78rem; color: rgba(253,246,237,0.5); margin-top: 0.9rem; font-style: italic; letter-spacing: 0.08em; }
 .iban-copy { display: inline-block; margin-top: 1.2rem; padding: 0.5rem 1.4rem; background: transparent; border: 1px solid rgba(196,151,58,0.5); color: var(--gold); font-family: 'Jost', sans-serif; font-size: 0.55rem; letter-spacing: 0.4em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s; }
 .iban-copy:hover { background: var(--gold); color: var(--dark); }
+/* iOS: evitar que el IBAN se pinte como enlace de teléfono */
+.iban-value a, .iban-value a:visited { color: inherit !important; text-decoration: none !important; pointer-events: none; }
 
 @media(max-width:600px) { .cd-dot{display:none;} .contact-row{max-width:100%;} .timeline::before{left:0.9rem;} .tl-dot{margin-left:0.6rem;} }
 
